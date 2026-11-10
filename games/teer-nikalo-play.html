@@ -1,0 +1,703 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Teer Nikalo – Vidnexa Studio</title>
+<meta name="robots" content="noindex"><meta name="description" content="Play Teer Nikalo free in your browser on Vidnexa Studio. No download, no sign-up.">
+<style>
+:root{
+  --night:#17142e; --night-2:#211d42; --tile:#2b2655; --line:#3a3470;
+  --ink:#f6f1e6; --muted:#a9a3cf;
+  --up:#f5a623; --right:#ef5b8b; --down:#2ec4b6; --left:#a495ff;
+  --heart:#ff5d73; --gold:#ffcf5a; --twig:#8a5a3b; --twig-2:#6b4329;
+  --display:system-ui,-apple-system,"Segoe UI","Noto Sans Devanagari",Roboto,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--night);color:var(--ink);font-family:var(--display);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  overflow-x:hidden;-webkit-tap-highlight-color:transparent;user-select:none}
+.app{max-width:460px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;gap:14px;padding-block:14px}
+.bar{display:flex;gap:8px;align-items:center}
+.tabs{flex:1;display:flex;gap:6px;background:var(--night-2);border:1px solid var(--line);border-radius:999px;padding:4px}
+.tab{flex:1;font:inherit;font-weight:700;font-size:.98rem;border:0;border-radius:999px;padding:7px 10px;background:transparent;color:var(--muted);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--up);color:#2a1700}
+.icon-btn{font:inherit;font-size:1.15rem;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--night-2);color:var(--ink);cursor:pointer;flex:none}
+.game{display:flex;flex-direction:column;gap:14px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:800;font-size:1.5rem;line-height:1}
+.brand small{display:block;font-weight:500;font-size:.78rem;color:var(--muted);letter-spacing:.06em;margin-top:4px}
+.stats{display:flex;align-items:center;gap:10px}
+.lvl{background:var(--night-2);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-weight:700;font-variant-numeric:tabular-nums}
+.hearts{display:flex;gap:2px;font-size:1.25rem}
+.hearts span{color:var(--heart);transition:transform .2s,opacity .2s}
+.hearts span.gone{opacity:.18;transform:scale(.8)}
+.meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.stage{position:relative;overflow:hidden;border-radius:20px;background:radial-gradient(circle at 50% 0%, #2a2459 0%, var(--night-2) 70%);border:1px solid var(--line);padding:12px}
+.aboard{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1;touch-action:manipulation}
+.snake{cursor:pointer;transition:transform .42s cubic-bezier(.5,0,.75,0),opacity .42s}
+.snake .body{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.snake.bump{animation:sbump .35s}
+.snake.blk .body,.snake.blk .head{animation:sflash .5s}
+.snake.hint .body{animation:shint 1s ease-in-out 3}
+@keyframes sbump{25%{transform:translate(var(--bx),var(--by))}50%{transform:translate(calc(var(--bx)*-.4),calc(var(--by)*-.4))}}
+@keyframes sflash{50%{stroke:#ff5d73;fill:#ff5d73}}
+@keyframes shint{50%{stroke-width:6.2}}
+.timer{font-weight:700}
+.timer.low{color:var(--heart)}
+.twig:focus-visible,.btn:focus-visible,.tab:focus-visible,.icon-btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.board{display:grid;gap:5px;aspect-ratio:1;width:100%;max-width:100%}
+.cell{position:relative;border-radius:9px;background:rgba(255,255,255,.035)}
+.arrow{position:absolute;inset:0;border:0;border-radius:9px;background:var(--tile);cursor:pointer;padding:0;display:grid;place-items:center;transition:transform .32s cubic-bezier(.5,0,.75,0),opacity .32s;z-index:1}
+.arrow svg{width:62%;height:62%;pointer-events:none}
+.arrow:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.modes{display:flex;gap:6px}
+.mode{flex:1;font:inherit;font-weight:700;font-size:.85rem;border-radius:10px;padding:6px 8px;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--muted)}
+.mode[aria-pressed="true"]{background:var(--night-2);color:var(--ink);border-color:var(--gold)}
+.mode:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.arrow.bump{animation:bump .35s}
+.arrow.blocker{animation:flash .45s}
+.arrow.hint{animation:hint 1s ease-in-out 3}
+@keyframes bump{0%,100%{translate:0 0}25%{translate:var(--bx) var(--by)}50%{translate:calc(var(--bx)*-.4) calc(var(--by)*-.4)}}
+@keyframes flash{50%{background:#5a2440}}
+@keyframes hint{50%{box-shadow:0 0 0 4px var(--gold);transform:scale(1.06)}}
+.twigs{display:flex;flex-direction:column;gap:8px}
+.twig{position:relative;display:grid;grid-template-columns:repeat(4,1fr);align-items:center;width:100%;min-height:54px;padding:4px 14px 4px 10px;border-radius:14px;
+  border:2px solid transparent;background:rgba(255,255,255,.04);cursor:pointer;font:inherit;color:inherit}
+.twig::before{content:"";position:absolute;left:8px;right:22px;top:calc(50% + 9px);height:7px;border-radius:6px;background:linear-gradient(var(--twig),var(--twig-2))}
+.twig::after{content:"";position:absolute;right:8px;top:calc(50% + 2px);width:18px;height:12px;border-radius:0 12px 0 12px;background:#5fae6a;transform:rotate(-18deg)}
+.twig.sel{border-color:var(--gold);background:rgba(255,207,90,.08)}
+.twig.shake{animation:shake .32s}
+.twig.done{background:rgba(123,211,137,.10)}
+@keyframes shake{25%{translate:-6px 0}75%{translate:6px 0}}
+.ant{position:relative;z-index:1;width:100%;max-width:58px;justify-self:center;transition:transform .18s}
+.ant svg{display:block;width:100%;height:auto}
+.twig.sel .ant.lift{transform:translateY(-8px)}
+.ant.in{animation:pop .3s ease-out}
+@keyframes pop{0%{transform:translateX(-14px) scale(.7);opacity:.2}100%{transform:none;opacity:1}}
+.boxes{display:flex;gap:10px;justify-content:center}
+.box{flex:1;max-width:150px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px 10px;border-radius:14px;background:var(--night-2);border:2px solid var(--bc,var(--line));transition:transform .25s,opacity .25s}
+.box.empty{opacity:.35}
+.box.done{transform:scale(1.08)}
+.box b{font-size:.78rem;color:var(--muted);font-weight:500}
+.slots{display:flex;gap:8px}
+.slot{width:22px;height:22px;border-radius:50%;border:2px dashed var(--line);display:grid;place-items:center}
+.slot.full{border:0;background:var(--sc);box-shadow:inset 0 -3px 0 rgba(0,0,0,.25)}
+.slot.full.pop{animation:pop2 .28s ease-out}
+@keyframes pop2{0%{transform:scale(.3)}70%{transform:scale(1.2)}100%{transform:none}}
+.tray{display:flex;gap:8px;justify-content:center;align-items:center;padding:8px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.tray .lbl{font-size:.78rem;color:var(--muted);margin-right:4px}
+.sboard{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:340/400;touch-action:manipulation}
+.screw{cursor:pointer}
+.screw .sh.nope{animation:wob .32s}
+@keyframes wob{25%{transform:rotate(-25deg)}75%{transform:rotate(25deg)}}
+.screw .sh{transform-box:fill-box;transform-origin:center}
+.plank.fall{animation:fall .65s cubic-bezier(.5,0,.9,.4) forwards}
+@keyframes fall{to{transform:translateY(480px) rotate(14deg);opacity:0}}
+.plank{transform-box:view-box}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{flex:1;min-width:120px;font:inherit;font-weight:700;font-size:1rem;border-radius:14px;padding:11px 14px;cursor:pointer;border:1px solid var(--line);background:var(--night-2);color:var(--ink)}
+.btn[disabled]{opacity:.45;cursor:default}
+.btn.primary{background:var(--up);color:#2a1700;border-color:transparent}
+.btn .tag{display:block;font-size:.7rem;font-weight:500;color:var(--muted)}
+.btn.primary .tag{color:#5a3a06}
+.how{color:var(--muted);font-size:.92rem;line-height:1.5;margin:0}
+.overlay{position:absolute;inset:0;z-index:5;display:grid;place-items:center;background:rgba(15,12,34,.84);backdrop-filter:blur(3px);padding:20px;text-align:center}
+.overlay[hidden]{display:none}
+[hidden]{display:none!important}
+.card{display:flex;flex-direction:column;gap:12px;align-items:center;max-width:300px}
+.card h2{margin:0;font-size:2rem;line-height:1.1;text-wrap:balance}
+.card p{margin:0;color:var(--muted)}
+.stars{font-size:2rem;color:var(--gold);letter-spacing:.1em}
+.stars .off{opacity:.2}
+.card .btn{width:100%}
+@media (prefers-reduced-motion:reduce){.arrow{transition:opacity .2s}.snake.bump,.snake.hint .body,.snake.blk .body,.twig.shake,.ant.in{animation:none}}
+</style>
+
+<div class="app">
+  <div class="bar">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tabArrow" aria-selected="true">🏹 तीर</button>
+      <button class="tab" role="tab" id="tabAnt" aria-selected="false">🐜 चींटी</button>
+      <button class="tab" role="tab" id="tabScrew" aria-selected="false">🔩 पेंच</button>
+    </div>
+    <button class="icon-btn" id="soundBtn" aria-label="आवाज़ बंद/चालू">🔊</button>
+  </div>
+
+  <section class="game" id="gArrow">
+    <div class="modes"><button class="mode" data-mode="A" aria-pressed="true">A · मुड़े तीर</button><button class="mode" data-mode="B" aria-pressed="false">B · क्लासिक (हार्ड)</button></div>
+    <div class="top">
+      <div class="brand">तीर निकालो<small>ARROW PUZZLE</small></div>
+      <div class="stats"><div class="lvl" id="aLvl">लेवल 1</div><div class="hearts" id="aHearts"></div></div>
+    </div>
+    <div class="meta"><span id="aLeft">बचे तीर: 0</span><span id="aGrid">5 × 5</span><span class="timer" id="aTimer">⏱ 0:00</span></div>
+    <div class="stage"><svg class="aboard" id="aBoard" aria-label="तीरों वाला बोर्ड"></svg><div class="overlay" id="aOverlay" hidden></div></div>
+    <div class="actions">
+      <button class="btn" id="aHint">💡 हिंट</button>
+      <button class="btn" id="aRestart">↺ दोबारा</button>
+    </div>
+    <p class="how">हर तीर अपनी नोक (▶) की दिशा में ही निकलता है, चाहे वो कितना भी मुड़ा हो। नोक के आगे बोर्ड के किनारे तक रास्ता खाली हो तो बाहर। आगे कोई तीर अड़ा हो तो टक्कर और एक दिल कम। टाइम ख़त्म होने से पहले बोर्ड खाली करो।</p>
+  </section>
+
+  <section class="game" id="gArrowB" hidden>
+    <div class="modes"><button class="mode" data-mode="A" aria-pressed="false">A · मुड़े तीर</button><button class="mode" data-mode="B" aria-pressed="true">B · क्लासिक (हार्ड)</button></div>
+    <div class="top">
+      <div class="brand">तीर निकालो<small>CLASSIC · HARD</small></div>
+      <div class="stats"><div class="lvl" id="bLvl">लेवल 1</div><div class="hearts" id="bHearts"></div></div>
+    </div>
+    <div class="meta"><span id="bLeft">बचे तीर: 0</span><span id="bGrid">5 × 5</span><span class="timer" id="bTimer">⏱ 0:00</span></div>
+    <div class="stage"><div class="board" id="bBoard"></div><div class="overlay" id="bOverlay" hidden></div></div>
+    <div class="actions">
+      <button class="btn" id="bHint">💡 हिंट</button>
+      <button class="btn" id="bRestart">↺ दोबारा</button>
+    </div>
+    <p class="how">वही पुराना खेल, पर अब कठिन: पूरा भरा बोर्ड, रंग से दिशा का कोई इशारा नहीं, तीर ज़्यादातर अंदर की तरफ़ मुँह किए हुए, और टाइमर। तीर पर टैप करो — आगे किनारे तक रास्ता खाली हो तो बाहर, वरना टक्कर और एक दिल कम।</p>
+  </section>
+
+  <section class="game" id="gAnt" hidden>
+    <div class="top">
+      <div class="brand">चींटी सॉर्ट<small>ANT SORT PUZZLE</small></div>
+      <div class="stats"><div class="lvl" id="nLvl">लेवल 1</div></div>
+    </div>
+    <div class="meta"><span id="nMoves">चालें: 0</span><span id="nInfo">3 रंग · 5 टहनियाँ</span></div>
+    <div class="stage"><div class="twigs" id="nTwigs"></div><div class="overlay" id="nOverlay" hidden></div></div>
+    <div class="actions">
+      <button class="btn" id="nUndo">↶ वापस</button>
+      <button class="btn" id="nExtra">🌿 +1 टहनी</button>
+      <button class="btn" id="nRestart">↺ दोबारा</button>
+    </div>
+    <p class="how">एक टहनी पर टैप करो, फिर दूसरी पर — आख़िरी एक जैसे रंग की चींटियाँ वहाँ चली जाएँगी, अगर वहाँ खाली जगह हो और आख़िरी चींटी उसी रंग की हो (या टहनी खाली हो)। हर टहनी पर एक ही रंग की 4 चींटियाँ जमा दो।</p>
+  </section>
+
+  <section class="game" id="gScrew" hidden>
+    <div class="top">
+      <div class="brand">पेंच खोलो<small>SCREW PUZZLE</small></div>
+      <div class="stats"><div class="lvl" id="sLvl">लेवल 1</div></div>
+    </div>
+    <div class="boxes" id="sBoxes"></div>
+    <div class="tray" id="sTray"></div>
+    <div class="stage"><svg class="sboard" id="sBoard" viewBox="0 0 340 400" aria-label="पेंच वाला बोर्ड"></svg><div class="overlay" id="sOverlay" hidden></div></div>
+    <div class="actions">
+      <button class="btn" id="sExtra">➕ ट्रे में 1 जगह</button>
+      <button class="btn" id="sRestart">↺ दोबारा</button>
+    </div>
+    <p class="how">सिर्फ़ वही पेंच खुलेगा जिसके ऊपर कोई पट्टी न हो। खुला पेंच अपने रंग के डिब्बे में जाएगा, डिब्बा न हो तो नीचे वाली ट्रे में। सारे पेंच निकलते ही पट्टी नीचे गिर जाएगी। ट्रे भर गई तो हार — सोचकर पेंच खोलो।</p>
+  </section>
+</div>
+
+<script>
+let ac=null, muted=false, noiseBuf=null;
+try{ muted=localStorage.getItem("hub-muted")==="1" }catch(e){}
+const soundBtn=document.getElementById("soundBtn");
+soundBtn.textContent=muted?"🔇":"🔊";
+soundBtn.onclick=()=>{ muted=!muted; soundBtn.textContent=muted?"🔇":"🔊"; try{localStorage.setItem("hub-muted",muted?"1":"0")}catch(e){} if(!muted) tick(); };
+function ctx(){
+  if(muted) return null;
+  if(!ac){ try{ ac=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ return null; } }
+  if(ac.state==="suspended") ac.resume();
+  if(!noiseBuf){ noiseBuf=ac.createBuffer(1,ac.sampleRate*0.2,ac.sampleRate); const d=noiseBuf.getChannelData(0); for(let i=0;i<d.length;i++) d[i]=Math.random()*2-1; }
+  return ac;
+}
+function tone(f1,f2,dur,type,vol,delay=0){
+  const a=ctx(); if(!a) return;
+  const t=a.currentTime+delay, o=a.createOscillator(), g=a.createGain();
+  o.type=type; o.frequency.setValueAtTime(f1,t); o.frequency.exponentialRampToValueAtTime(f2,t+dur);
+  g.gain.setValueAtTime(vol,t); g.gain.exponentialRampToValueAtTime(0.001,t+dur);
+  o.connect(g).connect(a.destination); o.start(t); o.stop(t+dur+0.02);
+}
+function noise(freq,dur,vol,delay=0){
+  const a=ctx(); if(!a) return;
+  const t=a.currentTime+delay, s=a.createBufferSource(), f=a.createBiquadFilter(), g=a.createGain();
+  s.buffer=noiseBuf; f.type="bandpass"; f.frequency.value=freq; f.Q.value=1.4;
+  g.gain.setValueAtTime(vol,t); g.gain.exponentialRampToValueAtTime(0.001,t+dur);
+  s.connect(f).connect(g).connect(a.destination); s.start(t); s.stop(t+dur);
+}
+function chuk(){ noise(2200,0.05,0.5); tone(1300,320,0.09,"triangle",0.35); noise(900,0.12,0.12,0.03); }
+function thud(){ tone(170,55,0.18,"sine",0.6); noise(300,0.06,0.25); }
+function tick(){ tone(700,1050,0.05,"triangle",0.25); }
+function patter(){ for(let k=0;k<3;k++) noise(3200,0.025,0.22,k*0.045); }
+function chime(){ [523,659,784,1046].forEach((f,k)=>tone(f,f*1.01,0.28,"sine",0.28,k*0.11)); }
+function sad(){ [392,330,262].forEach((f,k)=>tone(f,f*0.97,0.3,"sine",0.25,k*0.16)); }
+function buzz(ms){ try{navigator.vibrate&&navigator.vibrate(ms)}catch(e){} }
+function save(k,v){ try{localStorage.setItem(k,v)}catch(e){} }
+function load(k){ try{return localStorage.getItem(k)}catch(e){return null} }
+
+const GAMES={arrow:["gArrow","tabArrow"],ant:["gAnt","tabAnt"],screw:["gScrew","tabScrew"]};
+let arrowMode=load("arrow-mode")==="A"?"A":"B";
+function showGame(which){
+  if(!GAMES[which]) which="arrow";
+  for(const k in GAMES){
+    document.getElementById(GAMES[k][0]).hidden=k!==which;
+    document.getElementById(GAMES[k][1]).setAttribute("aria-selected",k===which);
+  }
+  if(which==="arrow"&&arrowMode==="B"){ document.getElementById("gArrow").hidden=true; document.getElementById("gArrowB").hidden=false; }
+  else document.getElementById("gArrowB").hidden=true;
+  save("hub-tab",which);
+}
+document.querySelectorAll(".mode").forEach(b=>b.onclick=()=>{ tick(); arrowMode=b.dataset.mode; save("arrow-mode",arrowMode); showGame("arrow"); });
+for(const k in GAMES) document.getElementById(GAMES[k][1]).onclick=()=>{ tick(); showGame(k); };
+
+/* GAME 1: ARROWS (bent snake arrows + timer) */
+(function(){
+  const DR=[-1,0,1,0], DC=[0,1,0,-1];
+  const PAL=["#f5a623","#ef5b8b","#2ec4b6","#a495ff","#7bd389","#4aa3ff","#ff8a3d"];
+  const svg=document.getElementById("aBoard"), overlay=document.getElementById("aOverlay"), timerEl=document.getElementById("aTimer");
+  let level=Math.max(1,parseInt(load("teer-level"))||1), n=5, own=[], snakes=[], hearts=3, busy=false, timeLeft=0, timeExtra=false, heartExtra=false;
+  const sizeFor=l=>Math.min(5+Math.floor((l-1)/2),11);
+  const rand=k=>Math.floor(Math.random()*k);
+  const shuffle=a=>{ for(let i=a.length-1;i>0;i--){ const j=rand(i+1); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+  const rc=i=>[Math.floor(i/n),i%n];
+  function rayBlock(head,d,self){
+    let [r,c]=rc(head); r+=DR[d]; c+=DC[d];
+    while(r>=0&&r<n&&c>=0&&c<n){ const i=r*n+c; if(own[i]!==-1&&own[i]!==self) return i; r+=DR[d]; c+=DC[d]; }
+    return -1;
+  }
+  function rayLen(head,d){ const [r,c]=rc(head); return d===0?r:d===1?n-1-c:d===2?n-1-r:c; }
+  function rayHitsSelf(head,d,set){
+    let [r,c]=rc(head); r+=DR[d]; c+=DC[d];
+    while(r>=0&&r<n&&c>=0&&c<n){ if(set.has(r*n+c)) return true; r+=DR[d]; c+=DC[d]; }
+    return false;
+  }
+  function dirOf(a,b){ const [r1,c1]=rc(a),[r2,c2]=rc(b); return r2<r1?0:c2>c1?1:r2>r1?2:3; }
+  function generate(){
+    n=sizeFor(level); own=new Array(n*n).fill(-1); snakes=[];
+    const maxLen=Math.min(3+Math.floor(level/4),7);
+    for(const start of shuffle([...own.keys()])){
+      if(own[start]!==-1) continue;
+      let best=null;
+      for(let attempt=0;attempt<8&&!best;attempt++){
+        const L=2+rand(maxLen-1), path=[start], used=new Set([start]);
+        while(path.length<L){
+          const [r,c]=rc(path[path.length-1]);
+          const nb=shuffle([0,1,2,3]).map(d=>[r+DR[d],c+DC[d]]).filter(([a,b])=>a>=0&&a<n&&b>=0&&b<n&&own[a*n+b]===-1&&!used.has(a*n+b));
+          if(!nb.length) break;
+          const nx=nb[0][0]*n+nb[0][1]; path.push(nx); used.add(nx);
+        }
+        if(path.length<2) break;
+        const opts=[];
+        for(const p of [path,path.slice().reverse()]){
+          const h=p[p.length-1], d=dirOf(p[p.length-2],h);
+          if(rayBlock(h,d,-2)===-1&&!rayHitsSelf(h,d,used)) opts.push({cells:p,d,len:rayLen(h,d)});
+        }
+        if(opts.length){ opts.sort((a,b)=>b.len-a.len); best=opts[Math.random()<.75?0:opts.length-1]; }
+      }
+      if(!best){
+        const ds=shuffle([0,1,2,3]).filter(d=>rayBlock(start,d,-2)===-1);
+        if(ds.length){ ds.sort((a,b)=>rayLen(start,b)-rayLen(start,a)); best={cells:[start],d:ds[0]}; }
+      }
+      if(best){ const k=snakes.length; snakes.push({cells:best.cells,d:best.d,col:PAL[rand(PAL.length)],alive:true}); best.cells.forEach(i=>own[i]=k); }
+    }
+  }
+  function start(){
+    generate(); hearts=3; busy=false; timeExtra=false; heartExtra=false; overlay.hidden=true;
+    const factor=Math.max(0.5,1-level*0.02);
+    timeLeft=Math.round((snakes.length*2.4+10)*factor)+5;
+    render();
+  }
+  const cx=i=>rc(i)[1]*10+5, cy=i=>rc(i)[0]*10+5;
+  function render(){
+    svg.setAttribute("viewBox",`0 0 ${n*10} ${n*10}`);
+    let out="";
+    for(let i=0;i<n*n;i++) out+=`<circle cx="${cx(i)}" cy="${cy(i)}" r=".9" fill="#ffffff" fill-opacity=".12"/>`;
+    snakes.forEach((s,k)=>{
+      if(!s.alive) return;
+      const pts=s.cells.map(i=>`${cx(i)},${cy(i)}`).join(" ");
+      const h=s.cells[s.cells.length-1], hx=cx(h), hy=cy(h), dx=DC[s.d], dy=DR[s.d];
+      const tail=s.cells.length===1?`${hx-dx*3},${hy-dy*3} `:"";
+      const tip=[hx+dx*4.2,hy+dy*4.2], b1=[hx-dx*.6+dy*3.1,hy-dy*.6-dx*3.1], b2=[hx-dx*.6-dy*3.1,hy-dy*.6+dx*3.1];
+      out+=`<g class="snake" data-k="${k}">
+        <polyline points="${tail}${pts}" fill="none" stroke="transparent" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline class="body" points="${tail}${pts}" stroke="${s.col}" stroke-width="3.4"/>
+        <circle cx="${cx(s.cells[0])}" cy="${cy(s.cells[0])}" r="1.5" fill="${s.col}"/>
+        <polygon class="head" points="${tip.join(",")} ${b1.join(",")} ${b2.join(",")}" fill="${s.col}" stroke="${s.col}" stroke-width=".6" stroke-linejoin="round"/></g>`;
+    });
+    svg.innerHTML=out;
+    svg.querySelectorAll(".snake").forEach(g=>g.addEventListener("click",()=>tap(+g.dataset.k,g)));
+    hud();
+  }
+  function hud(){
+    document.getElementById("aLvl").textContent="लेवल "+level;
+    document.getElementById("aGrid").textContent=n+" × "+n;
+    document.getElementById("aLeft").textContent="बचे तीर: "+snakes.filter(s=>s.alive).length;
+    document.getElementById("aHearts").innerHTML=[0,1,2].map(k=>`<span class="${k<hearts?"":"gone"}">♥</span>`).join("");
+    const m=Math.floor(Math.max(0,timeLeft)/60), s=Math.max(0,timeLeft)%60;
+    timerEl.textContent=`⏱ ${m}:${String(s).padStart(2,"0")}`;
+    timerEl.classList.toggle("low",timeLeft<=10);
+  }
+  function tap(k,g){
+    if(busy) return; const s=snakes[k]; if(!s.alive) return;
+    const head=s.cells[s.cells.length-1], blocker=rayBlock(head,s.d,k);
+    if(blocker===-1){
+      s.alive=false; s.cells.forEach(i=>own[i]=-1);
+      const far=n*10+40;
+      g.style.transform=`translate(${DC[s.d]*far}px,${DR[s.d]*far}px)`; g.style.opacity="0"; g.style.pointerEvents="none";
+      setTimeout(()=>g.remove(),440);
+      chuk(); buzz(10);
+      document.getElementById("aLeft").textContent="बचे तीर: "+snakes.filter(x=>x.alive).length;
+      if(snakes.every(x=>!x.alive)){ busy=true; setTimeout(win,460); }
+    }else{
+      g.style.setProperty("--bx",DC[s.d]*3+"px"); g.style.setProperty("--by",DR[s.d]*3+"px");
+      g.classList.remove("bump"); void g.getBoundingClientRect(); g.classList.add("bump");
+      const bg=svg.querySelector(`.snake[data-k="${own[blocker]}"]`);
+      if(bg){ bg.classList.remove("blk"); void bg.getBoundingClientRect(); bg.classList.add("blk"); }
+      hearts--; hud(); thud(); buzz([30,40,30]);
+      if(hearts<=0){ busy=true; setTimeout(()=>lose("hearts"),450); }
+    }
+  }
+  setInterval(()=>{
+    if(busy||document.getElementById("gArrow").hidden||document.hidden) return;
+    timeLeft--; hud();
+    if(timeLeft<=5&&timeLeft>0) tone(880,880,0.06,"square",0.08);
+    if(timeLeft<=0){ busy=true; lose("time"); }
+  },1000);
+  function show(html){ overlay.innerHTML=`<div class="card">${html}</div>`; overlay.hidden=false; }
+  function win(){
+    chime();
+    const s=[0,1,2].map(k=>`<span class="${k<hearts?"":"off"}">★</span>`).join("");
+    show(`<div class="stars">${s}</div><h2>लेवल ${level} पूरा!</h2><p>${timeLeft} सेकंड बचे। ${hearts===3?"एक भी टक्कर नहीं, शानदार।":"अगली बार कम टक्कर में करो।"}</p>
+      <button class="btn primary" id="aNext">अगला लेवल →</button>`);
+    document.getElementById("aNext").onclick=()=>{ tick(); level++; save("teer-level",level); start(); };
+  }
+  function lose(why){
+    sad();
+    const left=snakes.filter(x=>x.alive).length;
+    const can=why==="time"?!timeExtra:!heartExtra;
+    const revive=can?`<button class="btn primary" id="aRevive">${why==="time"?"+20 सेकंड और पाओ":"+1 दिल और पाओ"}<span class="tag">हर लेवल में एक बार</span></button>`:"";
+    show(`<div class="stars">${why==="time"?"⏰":"💔"}</div><h2>${why==="time"?"टाइम ख़त्म!":"दिल ख़त्म!"}</h2><p>${left} तीर बचे थे।</p>
+      ${revive}<button class="btn" id="aRetry">↺ लेवल दोबारा</button>`);
+    const r=document.getElementById("aRevive");
+    if(r) r.onclick=()=>{ tick(); if(why==="time"){ timeExtra=true; timeLeft=20; } else { heartExtra=true; hearts=1; } busy=false; overlay.hidden=true; hud(); };
+    document.getElementById("aRetry").onclick=()=>{ tick(); start(); };
+  }
+  document.getElementById("aRestart").onclick=()=>{ tick(); start(); };
+  document.getElementById("aHint").onclick=()=>{
+    if(busy) return; tick();
+    const k=snakes.findIndex((s,k)=>s.alive&&rayBlock(s.cells[s.cells.length-1],s.d,k)===-1);
+    const g=k>=0&&svg.querySelector(`.snake[data-k="${k}"]`);
+    if(g){ g.classList.remove("hint"); void g.getBoundingClientRect(); g.classList.add("hint"); }
+  };
+  start();
+})();
+
+/* GAME 1B: CLASSIC ARROWS, HARD */
+(function(){
+  const DR=[-1,0,1,0], DC=[0,1,0,-1];
+  const PAL=["#f5a623","#ef5b8b","#2ec4b6","#a495ff","#7bd389","#4aa3ff"];
+  const boardEl=document.getElementById("bBoard"), overlay=document.getElementById("bOverlay"), timerEl=document.getElementById("bTimer");
+  let level=Math.max(1,parseInt(load("teer-b-level"))||1), size=6, grid=[], cols=[], hearts=3, busy=false, timeLeft=0, timeExtra=false, heartExtra=false;
+  const sizeFor=l=>Math.min(6+Math.floor((l-1)/2),10);
+  const rand=n=>Math.floor(Math.random()*n);
+  const dist=(n,r,c,d)=>d===0?r:d===1?n-1-c:d===2?n-1-r:c;
+  function pathClear(g,n,r,c,d){
+    let rr=r+DR[d], cc=c+DC[d];
+    while(rr>=0&&rr<n&&cc>=0&&cc<n){ if(g[rr*n+cc]!==-1) return rr*n+cc; rr+=DR[d]; cc+=DC[d]; }
+    return null;
+  }
+  function generate(n){
+    const g=new Array(n*n).fill(-1), edge=i=>Math.min(Math.floor(i/n),i%n,n-1-Math.floor(i/n),n-1-i%n);
+    const cells=[...g.keys()].map(i=>[i,edge(i)+Math.random()*1.6]).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
+    for(let pass=0;pass<4;pass++) for(const i of cells){
+      if(g[i]!==-1) continue;
+      const r=Math.floor(i/n), c=i%n, ok=[0,1,2,3].filter(d=>pathClear(g,n,r,c,d)===null);
+      if(!ok.length) continue;
+      ok.sort((a,b)=>dist(n,r,c,b)-dist(n,r,c,a));
+      g[i]=ok[Math.random()<.88?0:rand(ok.length)];
+    }
+    return g;
+  }
+  const ARROW='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 8h-4.5v10h-5V11H5z" fill="currentColor"/></svg>';
+  function start(){
+    size=sizeFor(level); grid=generate(size); cols=grid.map(()=>PAL[rand(PAL.length)]);
+    hearts=3; busy=false; timeExtra=false; heartExtra=false; overlay.hidden=true;
+    const count=grid.filter(x=>x!==-1).length, factor=Math.max(0.5,1-level*0.025);
+    timeLeft=Math.round((count*1.5+8)*factor)+5;
+    render();
+  }
+  function render(){
+    boardEl.style.gridTemplateColumns=`repeat(${size},1fr)`; boardEl.innerHTML="";
+    grid.forEach((d,i)=>{
+      const cell=document.createElement("div"); cell.className="cell";
+      if(d!==-1){
+        const b=document.createElement("button");
+        b.className="arrow"; b.dataset.i=i; b.innerHTML=ARROW; b.style.color=cols[i];
+        b.querySelector("svg").style.transform=`rotate(${d*90}deg)`;
+        b.setAttribute("aria-label",["ऊपर","दाएँ","नीचे","बाएँ"][d]+" वाला तीर");
+        b.addEventListener("click",()=>tap(i,b)); cell.appendChild(b);
+      }
+      boardEl.appendChild(cell);
+    });
+    hud();
+  }
+  function hud(){
+    document.getElementById("bLvl").textContent="लेवल "+level;
+    document.getElementById("bGrid").textContent=size+" × "+size;
+    document.getElementById("bLeft").textContent="बचे तीर: "+grid.filter(x=>x!==-1).length;
+    document.getElementById("bHearts").innerHTML=[0,1,2].map(k=>`<span class="${k<hearts?"":"gone"}">♥</span>`).join("");
+    const t=Math.max(0,timeLeft);
+    timerEl.textContent=`⏱ ${Math.floor(t/60)}:${String(t%60).padStart(2,"0")}`;
+    timerEl.classList.toggle("low",timeLeft<=10);
+  }
+  function tap(i,el){
+    if(busy) return; const d=grid[i]; if(d===-1) return;
+    const blocker=pathClear(grid,size,Math.floor(i/size),i%size,d);
+    if(blocker===null){
+      grid[i]=-1; const far=(size+2)*120;
+      el.style.transform=`translate(${DC[d]*far}%,${DR[d]*far}%)`; el.style.opacity="0"; el.disabled=true;
+      setTimeout(()=>el.remove(),340); hud(); chuk(); buzz(10);
+      if(grid.every(x=>x===-1)){ busy=true; setTimeout(win,380); }
+    }else{
+      el.style.setProperty("--bx",DC[d]*18+"%"); el.style.setProperty("--by",DR[d]*18+"%");
+      el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump");
+      const bEl=boardEl.querySelector(`[data-i="${blocker}"]`);
+      if(bEl){ bEl.classList.remove("blocker"); void bEl.offsetWidth; bEl.classList.add("blocker"); }
+      hearts--; hud(); thud(); buzz([30,40,30]);
+      if(hearts<=0){ busy=true; setTimeout(()=>lose("hearts"),450); }
+    }
+  }
+  setInterval(()=>{
+    if(busy||document.getElementById("gArrowB").hidden||document.hidden) return;
+    timeLeft--; hud();
+    if(timeLeft<=5&&timeLeft>0) tone(880,880,0.06,"square",0.08);
+    if(timeLeft<=0){ busy=true; lose("time"); }
+  },1000);
+  function show(html){ overlay.innerHTML=`<div class="card">${html}</div>`; overlay.hidden=false; }
+  function win(){
+    chime();
+    const s=[0,1,2].map(k=>`<span class="${k<hearts?"":"off"}">★</span>`).join("");
+    show(`<div class="stars">${s}</div><h2>लेवल ${level} पूरा!</h2><p>${timeLeft} सेकंड बचे। ${hearts===3?"एक भी टक्कर नहीं, शानदार।":"अगली बार कम टक्कर में करो।"}</p>
+      <button class="btn primary" id="bNext">अगला लेवल →</button>`);
+    document.getElementById("bNext").onclick=()=>{ tick(); level++; save("teer-b-level",level); start(); };
+  }
+  function lose(why){
+    sad();
+    const left=grid.filter(x=>x!==-1).length;
+    const can=why==="time"?!timeExtra:!heartExtra;
+    const revive=can?`<button class="btn primary" id="bRevive">${why==="time"?"+20 सेकंड और पाओ":"+1 दिल और पाओ"}<span class="tag">हर लेवल में एक बार</span></button>`:"";
+    show(`<div class="stars">${why==="time"?"⏰":"💔"}</div><h2>${why==="time"?"टाइम ख़त्म!":"दिल ख़त्म!"}</h2><p>${left} तीर बचे थे।</p>
+      ${revive}<button class="btn" id="bRetry">↺ लेवल दोबारा</button>`);
+    const r=document.getElementById("bRevive");
+    if(r) r.onclick=()=>{ tick(); if(why==="time"){ timeExtra=true; timeLeft=20; } else { heartExtra=true; hearts=1; } busy=false; overlay.hidden=true; hud(); };
+    document.getElementById("bRetry").onclick=()=>{ tick(); start(); };
+  }
+  document.getElementById("bRestart").onclick=()=>{ tick(); start(); };
+  document.getElementById("bHint").onclick=()=>{
+    if(busy) return; tick();
+    for(let i=0;i<grid.length;i++) if(grid[i]!==-1&&pathClear(grid,size,Math.floor(i/size),i%size,grid[i])===null){
+      const el=boardEl.querySelector(`[data-i="${i}"]`);
+      if(el){ el.classList.remove("hint"); void el.offsetWidth; el.classList.add("hint"); } return;
+    }
+  };
+  start();
+})();
+
+/* GAME 2: ANT SORT */
+(function(){
+  const CAP=4;
+  const ANT_COLORS=["#ef5b8b","#f5a623","#2ec4b6","#a495ff","#7bd389","#4aa3ff","#ff8a3d"];
+  const twigsEl=document.getElementById("nTwigs"), overlay=document.getElementById("nOverlay");
+  let level=Math.max(1,parseInt(load("ant-level"))||1), twigs=[], sel=null, moves=0, history=[], extraUsed=false, busy=false, colorsN=3;
+  const ANT=c=>`<svg viewBox="0 0 60 34" aria-hidden="true"><g stroke="${c}" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <path d="M24 17 L18 6 M24 17 L16 28 M31 17 L31 5 M31 17 L31 29 M38 17 L44 6 M38 17 L46 28"/><path d="M50 10 Q55 4 58 6 M50 10 Q56 9 58 13"/></g>
+    <g fill="${c}"><ellipse cx="13" cy="18" rx="11" ry="8"/><ellipse cx="31" cy="17" rx="7" ry="5.5"/><circle cx="47" cy="15" r="6.5"/></g>
+    <circle cx="49.5" cy="13" r="1.8" fill="#17142e"/></svg>`;
+  const colorsFor=l=>Math.min(3+Math.floor((l-1)/2),7);
+  function generate(){
+    colorsN=colorsFor(level);
+    let bag=[]; for(let c=0;c<colorsN;c++) for(let k=0;k<CAP;k++) bag.push(c);
+    let t;
+    do{ bag.sort(()=>Math.random()-.5); t=[]; for(let i=0;i<colorsN;i++) t.push(bag.slice(i*CAP,i*CAP+CAP)); }
+    while(t.some(b=>b.every(x=>x===b[0])));
+    t.push([],[]); return t;
+  }
+  function start(){ twigs=generate(); sel=null; moves=0; history=[]; extraUsed=false; busy=false; overlay.hidden=true; render(); }
+  function topGroup(b){ if(!b.length) return 0; const c=b[b.length-1]; let k=0; for(let i=b.length-1;i>=0&&b[i]===c;i--) k++; return k; }
+  function isDone(b){ return b.length===CAP && b.every(x=>x===b[0]); }
+  function render(arrivedIdx=-1,arrivedN=0){
+    twigsEl.innerHTML="";
+    twigs.forEach((b,ti)=>{
+      const row=document.createElement("button");
+      row.className="twig"+(sel===ti?" sel":"")+(isDone(b)?" done":"");
+      row.setAttribute("aria-label",`टहनी ${ti+1}: ${b.length} चींटियाँ`);
+      const lift=sel===ti?topGroup(b):0;
+      b.forEach((c,k)=>{
+        const a=document.createElement("span");
+        a.className="ant"+(k>=b.length-lift?" lift":"")+(ti===arrivedIdx&&k>=b.length-arrivedN?" in":"");
+        a.style.gridColumn=k+1; a.innerHTML=ANT(ANT_COLORS[c]); row.appendChild(a);
+      });
+      row.addEventListener("click",()=>tap(ti,row));
+      twigsEl.appendChild(row);
+    });
+    document.getElementById("nLvl").textContent="लेवल "+level;
+    document.getElementById("nMoves").textContent="चालें: "+moves;
+    document.getElementById("nInfo").textContent=`${colorsN} रंग · ${twigs.length} टहनियाँ`;
+    document.getElementById("nUndo").disabled=!history.length;
+    document.getElementById("nExtra").disabled=extraUsed;
+  }
+  function tap(ti,row){
+    if(busy) return;
+    if(sel===null){ if(!twigs[ti].length || isDone(twigs[ti])) { thud(); shake(row); return; } sel=ti; tick(); render(); return; }
+    if(sel===ti){ sel=null; tick(); render(); return; }
+    const src=twigs[sel], dst=twigs[ti], c=src[src.length-1];
+    const space=CAP-dst.length, ok=space>0 && (!dst.length || dst[dst.length-1]===c);
+    if(!ok){ thud(); buzz([30,40,30]); shake(row); return; }
+    const m=Math.min(topGroup(src),space);
+    history.push(twigs.map(b=>b.slice()));
+    for(let k=0;k<m;k++) dst.push(src.pop());
+    sel=null; moves++; patter(); buzz(8);
+    render(ti,m);
+    if(isDone(dst)) setTimeout(()=>tone(880,1320,0.12,"sine",0.25),120);
+    if(twigs.every(b=>!b.length||isDone(b))){ busy=true; setTimeout(win,420); }
+  }
+  function shake(row){ row.classList.remove("shake"); void row.offsetWidth; row.classList.add("shake"); }
+  function win(){
+    chime();
+    const par=colorsN*3, stars=moves<=par?3:moves<=par*1.5?2:1;
+    const s=[0,1,2].map(k=>`<span class="${k<stars?"":"off"}">★</span>`).join("");
+    overlay.innerHTML=`<div class="card"><div class="stars">${s}</div><h2>सारी चींटियाँ घर पहुँचीं!</h2><p>${moves} चालों में लेवल ${level} पूरा।</p>
+      <button class="btn primary" id="nNext">अगला लेवल →</button></div>`;
+    overlay.hidden=false;
+    document.getElementById("nNext").onclick=()=>{ tick(); level++; save("ant-level",level); start(); };
+  }
+  document.getElementById("nUndo").onclick=()=>{ if(busy||!history.length) return; twigs=history.pop(); sel=null; tick(); render(); };
+  document.getElementById("nExtra").onclick=()=>{ if(busy||extraUsed) return; extraUsed=true; twigs.push([]); sel=null; chime(); render(); };
+  document.getElementById("nRestart").onclick=()=>{ tick(); start(); };
+  start();
+})();
+
+/* GAME 3: SCREW PUZZLE */
+(function(){
+  const W=340,H=400,HW=17;
+  const SC=["#ef5b8b","#f5a623","#2ec4b6","#a495ff","#7bd389"];
+  const SN=["गुलाबी","पीला","फ़िरोज़ी","बैंगनी","हरा"];
+  const PC=["#c98f5a","#8f7ad0","#4f9fc0","#c9739a","#6fae73","#d0a24a"];
+  const svg=document.getElementById("sBoard"), overlay=document.getElementById("sOverlay");
+  let level=Math.max(1,parseInt(load("screw-level"))||1), planks=[], boxes=[], queue=[], tray=[], trayCap=5, busy=false, extraUsed=false, lastBoxPop=null;
+  const rand=n=>Math.floor(Math.random()*n);
+  const shuffle=a=>{ for(let i=a.length-1;i>0;i--){ const j=rand(i+1); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+  function unscrewSound(){ for(let k=0;k<3;k++) tone(1600-k*250,1200-k*250,0.035,"square",0.06,k*0.04); tone(500,900,0.08,"triangle",0.25,0.13); }
+  function clink(){ tone(1400,1500,0.07,"sine",0.25); tone(2100,2000,0.09,"sine",0.12,0.03); }
+  function generate(){
+    const n=Math.min(5+level,13), ps=[], pts=[];
+    let tries=0;
+    while(ps.length<n&&tries<800){
+      tries++;
+      const len=110+Math.random()*110, ang=[0,0,90,30,-30,60,-60][rand(7)]*Math.PI/180;
+      const ax=Math.abs(Math.cos(ang)*len/2), ay=Math.abs(Math.sin(ang)*len/2), m=22;
+      const cx=m+ax+Math.random()*Math.max(0,W-2*m-2*ax), cy=m+ay+Math.random()*Math.max(0,H-2*m-2*ay);
+      const d=len/2-17, ends=[[cx-Math.cos(ang)*d,cy-Math.sin(ang)*d],[cx+Math.cos(ang)*d,cy+Math.sin(ang)*d]];
+      if(ends.some(p=>pts.some(q=>Math.hypot(p[0]-q[0],p[1]-q[1])<30))) continue;
+      pts.push(...ends);
+      ps.push({cx,cy,len,ang,col:PC[ps.length%PC.length],alive:true,falling:false,screws:ends.map(p=>({x:p[0],y:p[1],c:-1,alive:true}))});
+    }
+    let total=ps.reduce((s,p)=>s+p.screws.length,0);
+    const byLen=[...ps].sort((a,b)=>b.len-a.len);
+    for(let k=0;total%3&&k<byLen.length;k++){
+      const p=byLen[k];
+      if(pts.some(q=>Math.hypot(p.cx-q[0],p.cy-q[1])<26)) continue;
+      p.screws.push({x:p.cx,y:p.cy,c:-1,alive:true}); pts.push([p.cx,p.cy]); total++;
+    }
+    while(total%3){ const p=ps[ps.length-1]; total-=p.screws.length; ps.pop(); }
+    const nc=Math.min(3+Math.floor((level-1)/2),5), trip=[];
+    for(let i=0;i<total/3;i++) trip.push(i%nc);
+    shuffle(trip);
+    const colors=shuffle(trip.flatMap(c=>[c,c,c]));
+    let k=0; ps.forEach(p=>p.screws.forEach(s=>s.c=colors[k++]));
+    planks=ps; queue=trip.slice();
+    boxes=[queue.shift(),queue.shift()].map(c=>c===undefined?null:{c,n:0});
+  }
+  function covered(pi,s){
+    for(let j=pi+1;j<planks.length;j++){
+      const p=planks[j]; if(!p.alive||p.falling) continue;
+      const dx=s.x-p.cx, dy=s.y-p.cy, lx=dx*Math.cos(p.ang)+dy*Math.sin(p.ang), ly=-dx*Math.sin(p.ang)+dy*Math.cos(p.ang);
+      if(Math.abs(lx)<=p.len/2+6 && Math.abs(ly)<=HW+6) return true;
+    }
+    return false;
+  }
+  function start(){ generate(); tray=[]; trayCap=5; extraUsed=false; busy=false; overlay.hidden=true; render(); }
+  function render(){
+    let out="";
+    planks.forEach((p,pi)=>{
+      if(!p.alive&&!p.falling) return;
+      const deg=p.ang*180/Math.PI;
+      out+=`<g class="plank${p.falling?" fall":""}"><g transform="translate(${p.cx.toFixed(1)} ${p.cy.toFixed(1)}) rotate(${deg})">
+        <rect x="${-p.len/2}" y="${-HW}" width="${p.len}" height="${HW*2}" rx="${HW}" fill="${p.col}" fill-opacity=".86" stroke="rgba(0,0,0,.35)" stroke-width="1.5"/>
+        <rect x="${-p.len/2+8}" y="${-HW+4}" width="${p.len-16}" height="5" rx="2.5" fill="#fff" fill-opacity=".18"/></g>`;
+      p.screws.forEach(s=>{ out+=`<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="9" fill="#17142e" fill-opacity=".85"/>`; });
+      p.screws.forEach((s,si)=>{
+        if(!s.alive) return;
+        out+=`<g class="screw" data-p="${pi}" data-s="${si}" transform="translate(${s.x.toFixed(1)} ${s.y.toFixed(1)})"><g class="sh">
+          <circle r="12" fill="#0f0c22" fill-opacity=".35" cy="2"/><circle r="11" fill="${SC[s.c]}"/><circle r="11" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="1.5"/>
+          <path d="M-5.5 0H5.5" stroke="#2a1d10" stroke-width="2.6" stroke-linecap="round" transform="rotate(${(pi*37+si*61)%180})"/></g>
+          <circle r="16" fill="transparent"/></g>`;
+      });
+      out+=`</g>`;
+    });
+    svg.innerHTML=out;
+    svg.querySelectorAll(".screw").forEach(g=>g.addEventListener("click",()=>tap(+g.dataset.p,+g.dataset.s,g)));
+    hud();
+  }
+  function hud(){
+    document.getElementById("sLvl").textContent="लेवल "+level;
+    document.getElementById("sBoxes").innerHTML=boxes.map((b,i)=>{
+      if(!b) return `<div class="box empty"><b>खाली</b><div class="slots"><span class="slot"></span><span class="slot"></span><span class="slot"></span></div></div>`;
+      return `<div class="box${b.n===3?" done":""}" style="--bc:${SC[b.c]}"><b>${SN[b.c]} डिब्बा</b><div class="slots">${[0,1,2].map(k=>
+        `<span class="slot${k<b.n?" full":""}${lastBoxPop&&lastBoxPop[0]===i&&lastBoxPop[1]===k?" pop":""}" style="--sc:${SC[b.c]}"></span>`).join("")}</div></div>`;
+    }).join("");
+    let t=`<span class="lbl">ट्रे</span>`;
+    for(let k=0;k<trayCap;k++) t+=`<span class="slot${k<tray.length?" full":""}" style="--sc:${k<tray.length?SC[tray[k]]:"transparent"}"></span>`;
+    document.getElementById("sTray").innerHTML=t;
+    document.getElementById("sExtra").disabled=extraUsed;
+    lastBoxPop=null;
+  }
+  function tap(pi,si,g){
+    if(busy) return;
+    const p=planks[pi], s=p.screws[si];
+    if(!s.alive||p.falling) return;
+    if(covered(pi,s)){ const sh=g.querySelector(".sh"); sh.classList.remove("nope"); void sh.getBoundingClientRect(); sh.classList.add("nope"); thud(); buzz([20,30,20]); return; }
+    const bi=boxes.findIndex(b=>b&&b.c===s.c&&b.n<3);
+    if(bi<0&&tray.length>=trayCap){ thud(); busy=true; setTimeout(lose,200); return; }
+    s.alive=false; unscrewSound(); buzz(10);
+    if(bi>=0){ boxes[bi].n++; lastBoxPop=[bi,boxes[bi].n-1]; } else tray.push(s.c);
+    if(p.screws.every(x=>!x.alive)){ p.falling=true; setTimeout(()=>{ p.falling=false; p.alive=false; render(); },650); setTimeout(()=>noise(400,0.15,0.3),250); }
+    render();
+    settle();
+  }
+  function settle(){
+    const full=boxes.findIndex(b=>b&&b.n===3);
+    if(full>=0){
+      busy=true;
+      setTimeout(()=>{
+        clink();
+        const c=queue.shift(); boxes[full]=c===undefined?null:{c,n:0};
+        let moved=true;
+        while(moved){ moved=false;
+          for(let i=0;i<boxes.length;i++){ const b=boxes[i]; if(!b) continue;
+            const t=tray.indexOf(b.c); if(t>=0&&b.n<3){ tray.splice(t,1); b.n++; moved=true; } }
+        }
+        busy=false; hud(); settle();
+      },320);
+      return;
+    }
+    if(planks.every(p=>!p.alive||p.falling)&&!tray.length&&boxes.every(b=>!b)){ busy=true; setTimeout(win,700); }
+  }
+  function show(html){ overlay.innerHTML=`<div class="card">${html}</div>`; overlay.hidden=false; }
+  function win(){
+    chime();
+    show(`<div class="stars">★★★</div><h2>सारे पेंच खुल गए!</h2><p>लेवल ${level} पूरा, उस्ताद।</p>
+      <button class="btn primary" id="sNext">अगला लेवल →</button>`);
+    document.getElementById("sNext").onclick=()=>{ tick(); level++; save("screw-level",level); start(); };
+  }
+  function lose(){
+    sad();
+    show(`<div class="stars">🧰</div><h2>ट्रे भर गई!</h2><p>अब किसी पेंच के लिए जगह नहीं बची।</p>
+      ${extraUsed?"":`<button class="btn primary" id="sRevive">ट्रे में +1 जगह लो<span class="tag">हर लेवल में एक बार</span></button>`}
+      <button class="btn" id="sRetry">↺ लेवल दोबारा</button>`);
+    const r=document.getElementById("sRevive");
+    if(r) r.onclick=()=>{ tick(); extraUsed=true; trayCap++; busy=false; overlay.hidden=true; hud(); };
+    document.getElementById("sRetry").onclick=()=>{ tick(); start(); };
+  }
+  document.getElementById("sExtra").onclick=()=>{ if(busy||extraUsed) return; extraUsed=true; trayCap++; chime(); hud(); };
+  document.getElementById("sRestart").onclick=()=>{ tick(); start(); };
+  start();
+})();
+
+showGame(load("hub-tab"));
+</script>
+</body></html>

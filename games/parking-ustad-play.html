@@ -1,0 +1,441 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Parking Ustad – Vidnexa Studio</title>
+<meta name="robots" content="noindex"><meta name="description" content="Play Parking Ustad free in your browser on Vidnexa Studio. No download, no sign-up.">
+<style>
+:root{
+  --grass:#7cc066; --hud:#ffffff; --ink:#22303c; --deep:#1f3a27; --gold:#ffc531; --gold-dark:#c98a00;
+  --red:#ff4d5e; --green:#22b35e; --amber:#ffd23f;
+  --font:system-ui,-apple-system,"Segoe UI","Noto Sans Devanagari",Roboto,sans-serif;
+  --sh-bg:#7cc066; --sh-fg:#1f3a27; --sh-muted:#2f5a3a; --sh-accent:#ffc531; --sh-on-accent:#3a2600; --sh-node:#9fd48a; --sh-done:#22b35e; --sh-hard:#ff4d5e;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--grass);color:var(--ink);font-family:var(--font);overflow:hidden;user-select:none;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+.app{height:100%;display:flex;flex-direction:column;gap:6px;max-width:560px;margin:0 auto;
+  padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));padding-block:10px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.topL{display:flex;align-items:center;gap:8px}
+.pill{background:var(--hud);border-radius:999px;height:38px;display:flex;align-items:center;gap:6px;padding:0 12px;box-shadow:0 3px 0 rgba(0,0,0,.14);font-weight:800;color:var(--ink);font-size:1.1rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill .star{color:var(--gold);font-size:1.15rem;line-height:1}
+.hardTag{background:var(--red);color:#fff;border-radius:999px;padding:0 7px;font-size:.66rem;line-height:1.6}
+.hearts{display:flex;gap:2px;font-size:1.45rem;line-height:1;filter:drop-shadow(0 2px 0 rgba(0,0,0,.15))}
+.hearts span{color:var(--red);transition:opacity .2s,transform .2s}
+.hearts span.lost{opacity:.22;transform:scale(.8);filter:grayscale(1)}
+.coins{display:flex;align-items:center;gap:6px;background:var(--hud);border-radius:999px;height:38px;padding:0 12px 0 6px;box-shadow:0 3px 0 rgba(0,0,0,.14);font-weight:800;font-size:1.05rem;font-variant-numeric:tabular-nums}
+.coin{width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3c4,var(--gold) 45%,var(--gold-dark));flex:none}
+.prog{display:flex;flex-direction:column;gap:2px}
+.progLab{display:flex;justify-content:space-between;font-weight:700;font-size:.82rem;color:var(--deep);font-variant-numeric:tabular-nums}
+.bar{position:relative;height:13px;border-radius:7px;background:rgba(0,0,0,.18)}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:7px;background:var(--amber);transition:width .3s}
+.bar i::after{content:"";position:absolute;left:4px;right:4px;top:2px;height:3px;border-radius:2px;background:rgba(255,255,255,.45)}
+.msg{margin:0;text-align:center;color:var(--deep);font-weight:700;font-size:.9rem;line-height:1.3;min-height:2.6em;display:flex;align-items:center;justify-content:center}
+.msg.warn{color:#b3001b}
+.msg.new{color:#7a2a00}
+.stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;margin-left:calc(-1*max(12px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(12px,env(safe-area-inset-right,0px)))}
+#scene{width:100%;height:100%;display:block}
+.car{cursor:pointer}
+.boost{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-bottom:2px}
+.bwrap{display:flex;flex-direction:column;align-items:center;gap:3px}
+.bbtn{position:relative;width:58px;height:58px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 0 rgba(0,0,0,.26);font-size:1.55rem;cursor:pointer;padding:0}
+.bbtn:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,.26)}
+.bbtn:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.bbtn.armed{box-shadow:0 0 0 4px var(--amber),0 4px 0 rgba(0,0,0,.26)}
+.badge{position:absolute;top:-5px;right:-6px;min-width:22px;height:22px;padding:0 4px;border-radius:11px;background:#ff3b4e;color:#fff;font-size:.75rem;font-weight:800;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
+.badge.ad{background:var(--gold-dark);font-size:.62rem}
+.blab{font-size:.78rem;font-weight:700;color:var(--deep)}
+.overlay{position:fixed;inset:0;z-index:20;background:rgba(14,30,18,.62);display:flex;align-items:center;justify-content:center;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.card{background:#fff;border-radius:22px;padding:22px;width:100%;max-width:330px;text-align:center;display:flex;flex-direction:column;gap:12px;animation:pop .3s cubic-bezier(.3,1.5,.5,1)}
+.card h2{margin:0;font-size:1.9rem;font-weight:800;line-height:1.1}
+.card p{margin:0;color:#4a5a50}
+.stars{font-size:2.3rem;letter-spacing:.1em;color:var(--gold);line-height:1}
+.stars .off{color:#dfe3dd}
+.reward{display:flex;align-items:center;justify-content:center;gap:8px;font-size:1.5rem;font-weight:800;color:var(--gold-dark)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{font:inherit;font-weight:800;font-size:1.05rem;color:var(--ink);background:#eef1ec;border:0;border-radius:14px;padding:11px 8px;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;line-height:1.2;box-shadow:0 3px 0 rgba(0,0,0,.14)}
+.btn small{font-weight:600;font-size:.74rem;opacity:.8}
+.btn:disabled{opacity:.4;cursor:default}
+.btn:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.btn.gold{background:linear-gradient(180deg,#ffd76a,var(--gold-dark));color:#3a2600}
+.lprog{height:12px;border-radius:6px;background:#e7ebe5;overflow:hidden}
+.lprog i{display:block;height:100%;background:linear-gradient(90deg,var(--amber),#ff8a3d)}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+@media (prefers-reduced-motion:reduce){.card{animation:none}}
+.home{position:fixed;inset:0;z-index:40;background:var(--sh-bg);color:var(--sh-fg);display:flex;justify-content:center;overflow:auto;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.home-in{width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;gap:14px;padding-block:28px 20px;margin:auto}
+.home-title{margin:0;font-size:2.6rem;font-weight:800;line-height:1;letter-spacing:-.01em;text-align:center;color:var(--sh-accent);text-wrap:balance}
+.home-sub{margin:0;color:var(--sh-muted);text-align:center;font-size:1rem;max-width:30ch}
+.path{display:flex;flex-direction:column;align-items:center;gap:10px;padding-block:8px}
+.node{width:58px;height:58px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;
+  transform:translateX(calc(var(--x)*46px));background:var(--sh-node);color:var(--sh-muted);font-size:1.15rem;position:relative;
+  box-shadow:inset 0 -4px 0 rgba(0,0,0,.25)}
+.node b{font-weight:800}
+.node i{font-style:normal;font-size:.55rem;font-weight:700;margin-top:2px}
+.node.done{background:var(--sh-done);color:#fff;font-size:1.5rem;font-weight:800}
+.node.cur{background:var(--sh-accent);color:var(--sh-on-accent);width:74px;height:74px;font-size:1.5rem;animation:nodePulse 1.6s ease-in-out infinite}
+.node.hard{box-shadow:inset 0 -4px 0 rgba(0,0,0,.25),0 0 0 3px var(--sh-hard)}
+.node.hard i{color:var(--sh-hard)}
+.node.cur.hard i{color:inherit}
+.btn.big{font-size:1.35rem;padding:14px 10px;width:100%;max-width:300px;border-radius:18px}
+.home-row{display:flex;align-items:center;justify-content:center;gap:12px}
+.iconbtn{font:inherit;font-size:1.25rem;line-height:1;width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;
+  background:var(--sh-node);color:var(--sh-fg);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.iconbtn:focus-visible{outline:2px solid var(--sh-accent);outline-offset:2px}
+.top .iconbtn{width:38px;height:38px;font-size:1.05rem}
+@keyframes nodePulse{50%{box-shadow:inset 0 -4px 0 rgba(0,0,0,.25),0 0 0 8px color-mix(in srgb,var(--sh-accent) 30%,transparent)}}
+@media (prefers-reduced-motion:reduce){.node.cur{animation:none}}
+</style>
+
+<div class="app">
+  <div class="top">
+    <div class="topL">
+      <button class="iconbtn" id="homeBtn" aria-label="होम">☰</button>
+      <div class="pill"><span class="star">★</span><span>स्तर <span id="lvl">1</span></span><span class="hardTag" id="hardTag" hidden>कठिन</span></div>
+    </div>
+    <div class="hearts" id="hearts" aria-label="बचे हुए दिल"></div>
+    <div class="coins"><span class="coin"></span><span id="coins">0</span></div>
+  </div>
+  <div class="prog">
+    <div class="progLab"><span>गाड़ियाँ निकालीं</span><span id="progTxt">0 / 0</span></div>
+    <div class="bar"><i id="progBar" style="width:0%"></i></div>
+  </div>
+  <p class="msg" id="msg"></p>
+  <div class="stage" id="stage"><svg id="scene" role="img" aria-label="पार्किंग"></svg></div>
+  <div class="boost">
+    <div class="bwrap"><button class="bbtn" id="bHint" aria-label="संकेत">💡<span class="badge" id="nHint"></span></button><span class="blab">संकेत</span></div>
+    <div class="bwrap"><button class="bbtn" id="bShow" aria-label="छिपी दिशा दिखाओ">👁️<span class="badge" id="nShow"></span></button><span class="blab">दिशा दिखाओ</span></div>
+    <div class="bwrap"><button class="bbtn" id="bHammer" aria-label="एक गाड़ी हटाओ">🔨<span class="badge" id="nHammer"></span></button><span class="blab">हटाओ</span></div>
+  </div>
+</div>
+
+<div class="overlay" id="win" hidden><div class="card">
+  <h2 style="color:var(--green)">पार्किंग खाली!</h2>
+  <div class="stars" id="stars"></div>
+  <div class="reward"><span class="coin"></span><span id="reward">+10</span></div>
+  <p id="winNote"></p>
+  <button class="btn gold" id="next">अगला स्तर →</button>
+</div></div>
+<div class="overlay" id="lose" hidden><div class="card">
+  <h2 style="color:var(--red)">दिल ख़त्म!</h2>
+  <p id="loseNote"></p>
+  <div class="lprog"><i id="loseBar"></i></div>
+  <div class="row">
+    <button class="btn" id="retry">फिर से शुरू</button>
+    <button class="btn gold" id="revive">+1 दिल<small>30 सिक्के</small></button>
+  </div>
+</div></div>
+<div class="home" id="home" hidden>
+  <div class="home-in">
+    <h1 class="home-title" id="homeTitle"></h1>
+    <p class="home-sub" id="homeSub"></p>
+    <div class="path" id="path" aria-label="स्तरों का रास्ता"></div>
+    <button class="btn gold big" id="playBtn">खेलें</button>
+    <div class="home-row">
+      <div class="coins"><span class="coin"></span><span id="homeCoins">0</span></div>
+      <button class="iconbtn" id="soundBtn" aria-label="आवाज़">🔊</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const Bridge={
+  load(key){try{return localStorage.getItem(key)}catch(e){return null}},
+  save(key,val){try{localStorage.setItem(key,val)}catch(e){}},
+  buzz(){try{navigator.vibrate&&navigator.vibrate(30)}catch(e){}}
+};
+const Shell={sound:true,
+  init(o){this.o=o;
+    try{const st=JSON.parse(Bridge.load(o.key+"_settings")||"{}");if(st.sound===false)this.sound=false}catch(e){}
+    document.getElementById("homeTitle").textContent=o.title;
+    document.getElementById("homeSub").textContent=o.sub;
+    document.getElementById("playBtn").onclick=()=>{this.hide();o.onPlay&&o.onPlay()};
+    document.getElementById("soundBtn").onclick=()=>{this.sound=!this.sound;Bridge.save(o.key+"_settings",JSON.stringify({sound:this.sound}));this.paintSound()};
+    document.getElementById("homeBtn").onclick=()=>this.show();
+    this.paintSound();this.show()},
+  paintSound(){const b=document.getElementById("soundBtn");b.textContent=this.sound?"🔊":"🔇";b.setAttribute("aria-label",this.sound?"आवाज़ बंद करें":"आवाज़ चालू करें")},
+  show(){const L=this.o.level(),o=this.o;
+    document.getElementById("homeCoins").textContent=o.coins();
+    document.getElementById("playBtn").innerHTML=`स्तर ${L} खेलें`+(o.isHard(L)?"<small>कठिन स्तर · इनाम दोगुना</small>":"<small>तैयार हैं?</small>");
+    const path=document.getElementById("path");path.innerHTML="";
+    const from=Math.max(1,L-2);
+    for(let n=from+6;n>=from;n--){const d=document.createElement("div");
+      d.className="node"+(n<L?" done":n===L?" cur":" lock")+(o.isHard(n)?" hard":"");
+      d.style.setProperty("--x",[0,1,0,-1][n%4]);
+      d.innerHTML=n<L?"✓":`<b>${n}</b>${o.isHard(n)?"<i>कठिन</i>":""}`;
+      path.appendChild(d)}
+    document.getElementById("home").hidden=false},
+  hide(){document.getElementById("home").hidden=true}
+};
+
+function rngFor(L,salt){let a=(L*2654435761+salt*97)>>>0;
+  return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+let NC=5,NR=6;
+const isHard=L=>L%10===0;
+function cellsOf(c){const a=[];for(let i=0;i<c.len;i++)a.push(c.h?[c.r,c.c+i]:[c.r+i,c.c]);return a}
+function grid(list){const g=Array.from({length:NR},()=>Array(NC).fill(null));list.forEach(c=>cellsOf(c).forEach(([r,k])=>g[r][k]=c));return g}
+function path(c){const a=[];
+  if(c.h){if(c.d>0)for(let k=c.c+c.len;k<NC;k++)a.push([c.r,k]);else for(let k=c.c-1;k>=0;k--)a.push([c.r,k])}
+  else{if(c.d>0)for(let r=c.r+c.len;r<NR;r++)a.push([r,c.c]);else for(let r=c.r-1;r>=0;r--)a.push([r,c.c])}
+  return a}
+function blocker(c,list,g){g=g||grid(list);const p=path(c);for(let i=0;i<p.length;i++){const o=g[p[i][0]][p[i][1]];if(o)return{car:o,free:i}}return null}
+function clearable(list){let l=list.slice(),moved=true;
+  while(l.length&&moved){moved=false;for(const c of l){if(!blocker(c,l)){l=l.filter(x=>x!==c);moved=true;break}}}
+  return !l.length}
+function laneOf(c){return c.h?(c.d>0?"r":"l")+c.r:(c.d>0?"b":"t")+c.c}
+const SIZES=[[5,6],[5,6],[6,7],[6,7],[6,8]];
+function failTarget(L){return Math.min(.55,L<2?.15:L<3?.25:L<5?.3:L<10?.38:L<20?.45:.5)+(isHard(L)?.2:0)}
+function makeLevel(L){const R=rngFor(L,11),R2=rngFor(L,77);[NC,NR]=SIZES[Math.min(L-1,SIZES.length-1)];const hard=isHard(L);
+  const target=Math.round(NC*NR*(L<2?.6:.68+(hard?.05:0))),goal=failTarget(L);
+  let best=null;
+  for(let attempt=0;attempt<60;attempt++){const list=[];let used=0;
+    for(let t=0;t<2500&&used<target;t++){
+      const len=R()<(L<2?0:.16)?3:2,h=R()<.5,d=R()<.5?1:-1;
+      const r=Math.floor(R()*(h?NR:NR-len+1)),c=Math.floor(R()*(h?NC-len+1:NC));
+      const car={id:0,r,c,len,h,d};const g=grid(list);
+      if(cellsOf(car).some(([a,b])=>g[a][b]))continue;
+      if(!clearable([...list,car]))continue;
+      list.push(car);used+=len}
+    if(used<target*.85)continue;
+    const lv=finish(L,list,R);
+    let fail=0;const T=40;for(let k=0;k<T;k++)if(play(lv,R2,"adult")>=3)fail++;
+    const dist=Math.abs(fail/T-goal);
+    if(!best||dist<best.dist)best={lv,dist};
+    if(dist<.05)break}
+  [NC,NR]=[best.lv.NC,best.lv.NR];return best.lv}
+function finish(L,list,R){const hard=isHard(L);
+  const COLS=["#d7263d","#1f6fe5","#f3f2ec","#2b2f36","#2e9e5b","#e86a1f","#9aa6b5","#7a1420","#3fa7d6","#8e44ad"];
+  const TYPES=["sedan","hatch","suv","sedan","taxi","hatch","suv"];
+  list.forEach((c,i)=>{c.id=i;c.col=COLS[Math.floor(R()*COLS.length)];c.type=c.len===3?"bus":TYPES[Math.floor(R()*TYPES.length)];c.myst=false});
+  const nm=L<3?0:Math.min(1+Math.floor(L/3),6)+(hard?2:0);
+  const g=grid(list);const blocked=list.filter(c=>blocker(c,list,g));
+  for(let i=blocked.length-1;i>0;i--){const j=R()*(i+1)|0;[blocked[i],blocked[j]]=[blocked[j],blocked[i]]}
+  blocked.slice(0,nm).forEach(c=>c.myst=true);
+  const nb=L<5?0:Math.min((L<11?1:L<21?2:3)+(hard?1:0),4);
+  const lanes={};list.forEach(c=>{const k=laneOf(c);lanes[k]=(lanes[k]||0)+1});
+  const keys=Object.keys(lanes).sort((a,b)=>lanes[b]-lanes[a]||(R()-.5));
+  const barriers=keys.slice(0,nb).map(k=>{const period=3.4+R()*1.4;return{key:k,side:k[0],idx:+k.slice(1),period,phase:R()*period}});
+  return{NC,NR,list,barriers,hard}}
+function play(lv,R,kind){const keep=[NC,NR];[NC,NR]=[lv.NC,lv.NR];let list=lv.list.map(c=>({...c}));let mist=0;const bad=new Set();
+  for(let guard=0;guard<400&&list.length;guard++){const g=grid(list);
+    let looks=list.filter(c=>{if(bad.has(c.id))return false;if(c.myst)return true;const p=path(c);
+      if(kind==="kid")return !p.length||!g[p[0][0]][p[0][1]];
+      const b=blocker(c,list,g);if(!b)return true;return b.free>=2&&R()<.35});
+    if(kind==="adult"){const plain=looks.filter(c=>!c.myst);if(plain.length)looks=plain}
+    if(!looks.length)looks=list;
+    const c=looks[R()*looks.length|0];
+    if(c.myst)c.myst=false;
+    if(blocker(c,list,g)){mist++;bad.add(c.id);continue}
+    if(lv.barriers.some(b=>b.key===laneOf(c))&&R()<(kind==="kid"?.45:.12)){mist++;continue}
+    const cells=cellsOf(c);list=list.filter(x=>x!==c);bad.clear();
+    list.forEach(o=>{if(o.myst&&cellsOf(o).some(([r,k])=>cells.some(([a,b])=>Math.abs(a-r)+Math.abs(b-k)===1)))o.myst=false})}
+  [NC,NR]=keep;return mist}
+
+const $=id=>document.getElementById(id);
+const CELL=44,ROAD=19,RO=15,TOP=58,SIDE=RO+ROAD/2+2,BOT=SIDE,SPEED=420;
+const ITEM_COST=20;
+let level=1,coins=0,base=null,cars=[],hearts=3,mistakes=0,total=0,busy=false,over=false,hammerArmed=false,t0=0,lastReward=0,wonLevel=1;
+let inv={hint:2,show:1,hammer:1};
+try{const s=JSON.parse(Bridge.load("cop2")||"{}");if(s.level)level=s.level;if(s.coins!=null)coins=s.coins;if(s.inv)inv=s.inv}catch(e){}
+const save=()=>Bridge.save("cop2",JSON.stringify({level,coins,inv}));
+let actx;function beep(f,d=.08,t="triangle",v=.12){if(!Shell.sound)return;try{actx=actx||new(window.AudioContext||window.webkitAudioContext)();
+  const o=actx.createOscillator(),g=actx.createGain();o.type=t;o.frequency.value=f;g.gain.setValueAtTime(v,actx.currentTime);
+  g.gain.exponentialRampToValueAtTime(.001,actx.currentTime+d);o.connect(g).connect(actx.destination);o.start();o.stop(actx.currentTime+d)}catch(e){}}
+function say(t,kind){const m=$("msg");m.textContent=t;m.className="msg"+(kind?" "+kind:"")}
+
+const f=n=>Math.round(n*10)/10;
+function arrowSvg(x,y,a){return `<polygon points="${f(x+a)},${f(y)} ${f(x-a*.75)},${f(y-a)} ${f(x-a*.35)},${f(y)} ${f(x-a*.75)},${f(y+a)}" fill="#fff" stroke="rgba(0,0,0,.55)" stroke-width="1.6" stroke-linejoin="round"/>`}
+function carSvg(L,Wd,col,type,myst,ang=0){const l=L/2,w=Wd/2,bus=type==="bus";let s="";
+  if(type==="taxi")col="#f5c400";
+  const rx=bus?6:type==="suv"?w*.5:w*.75;
+  s+=`<rect x="${f(-l-5)}" y="${f(-CELL/2)}" width="${f(L+10)}" height="${CELL}" fill="transparent"/>`;
+  s+=`<rect x="${f(-l+2)}" y="${f(-w+4)}" width="${f(L)}" height="${f(Wd)}" rx="${f(rx)}" fill="rgba(0,0,0,.32)"/>`;
+  const ww=Math.min(L*.15,13);
+  for(const x of bus?[l*.68,-l*.42,-l*.7]:[l*.56,-l*.56])for(const y of[-w,w])s+=`<rect x="${f(x-ww/2)}" y="${f(y-3.2)}" width="${f(ww)}" height="6.4" rx="2" fill="#141414"/><rect x="${f(x-ww*.25)}" y="${f(y-1.2)}" width="${f(ww*.5)}" height="2.4" rx="1" fill="#8d949c"/>`;
+  s+=`<rect class="paint" x="${f(-l)}" y="${f(-w)}" width="${f(L)}" height="${f(Wd)}" rx="${f(rx)}" fill="${col}"/>`;
+  s+=`<rect x="${f(-l)}" y="${f(-w)}" width="${f(L)}" height="${f(Wd)}" rx="${f(rx)}" fill="url(#shadeA)"/>`;
+  let ax=0;
+  if(bus){
+    s+=`<rect x="${f(-l+5)}" y="${f(-w+4)}" width="${f(L-16)}" height="${f(Wd-8)}" rx="4" fill="rgba(255,255,255,.16)"/>`;
+    for(let x=-l+7;x<l-16;x+=12)for(const y of[-w+1,w-4.5])s+=`<rect x="${f(x)}" y="${f(y)}" width="9" height="3.5" rx="1" fill="#22313f"/>`;
+    s+=`<rect x="${f(l-9)}" y="${f(-w+3)}" width="6" height="${f(Wd-6)}" rx="2" fill="url(#glass)"/>`;
+    s+=`<rect x="${f(-l*.62)}" y="${f(-w*.45)}" width="13" height="${f(w*.9)}" rx="2" fill="#dfe3e8"/><rect x="${f(l*.22)}" y="${f(-w*.45)}" width="13" height="${f(w*.9)}" rx="2" fill="#dfe3e8"/>`;
+    for(const y of[-w*.58,w*.58])s+=`<ellipse cx="${f(l-2.4)}" cy="${f(y)}" rx="2" ry="3" fill="#fffbe2"/><rect x="${f(-l)}" y="${f(y-3)}" width="2.6" height="6" rx="1" fill="#c4121e"/>`;
+    ax=-l*.08;
+  }else{
+    const G={sedan:[.44,.12,-.44,-.64],hatch:[.46,.16,-.6,-.84],suv:[.5,.22,-.64,-.86],taxi:[.44,.12,-.44,-.64]}[type];
+    s+=`<rect x="${f(l-2)}" y="${f(-w*.42)}" width="1.6" height="${f(w*.84)}" fill="rgba(0,0,0,.35)"/>`;
+    s+=`<line x1="${f(l*.52)}" y1="0" x2="${f(l*.9)}" y2="0" stroke="rgba(255,255,255,.22)" stroke-width="1.2"/>`;
+    s+=`<polygon points="${f(l*G[1])},${f(-w*.8)} ${f(l*G[0])},${f(-w*.62)} ${f(l*G[0])},${f(w*.62)} ${f(l*G[1])},${f(w*.8)}" fill="url(#glass)"/>`;
+    s+=`<polygon points="${f(l*G[1]-1)},${f(-w*.5)} ${f(l*G[0]-3)},${f(-w*.44)} ${f(l*G[0]-5)},${f(-w*.3)}" fill="rgba(255,255,255,.35)"/>`;
+    s+=`<rect x="${f(l*G[2])}" y="${f(-w*.76)}" width="${f(l*(G[1]-G[2]))}" height="${f(w*1.52)}" rx="4" fill="${col}"/><rect x="${f(l*G[2])}" y="${f(-w*.76)}" width="${f(l*(G[1]-G[2]))}" height="${f(w*1.52)}" rx="4" fill="rgba(255,255,255,.16)"/>`;
+    s+=`<polygon points="${f(l*G[2])},${f(-w*.76)} ${f(l*G[3])},${f(-w*.58)} ${f(l*G[3])},${f(w*.58)} ${f(l*G[2])},${f(w*.76)}" fill="url(#glass)"/>`;
+    if(type==="suv")for(const y of[-w*.6,w*.6])s+=`<line x1="${f(l*G[2]+3)}" y1="${f(y)}" x2="${f(l*G[1]-3)}" y2="${f(y)}" stroke="#1d2024" stroke-width="1.8" stroke-linecap="round"/>`;
+    if(type==="taxi")for(let x=-l+6,k=0;x<l-8;x+=4,k++)if(k%2===0)for(const y of[-w+.8,w-3.2])s+=`<rect x="${f(x)}" y="${f(y)}" width="4" height="2.4" fill="#1b1b1b"/>`;
+    for(const y of[-w*.58,w*.58])s+=`<ellipse cx="${f(l-2.8)}" cy="${f(y)}" rx="2.4" ry="3.4" fill="#fffbe2"/><rect x="${f(-l)}" y="${f(y-3)}" width="2.6" height="6" rx="1" fill="#c4121e"/>`;
+    for(const y of[-w-1.8,w+1.8])s+=`<ellipse cx="${f(l*G[1])}" cy="${f(y)}" rx="3.2" ry="2" fill="${col}" stroke="rgba(0,0,0,.35)" stroke-width=".8"/>`;
+    ax=l*(G[1]+G[2])/2;
+  }
+  if(myst)s+=`<circle cx="${f(ax)}" cy="0" r="${f(Wd*.3)}" fill="#fff" stroke="#22303c" stroke-width="1.6"/><text x="${f(ax)}" y="${f(Wd*.12)}" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="${f(Wd*.42)}" fill="#22303c" transform="rotate(${-ang} ${f(ax)} 0)">?</text>`;
+  else s+=arrowSvg(ax,0,Wd*.21);
+  return s}
+
+const svg=$("scene");let gCars,gFx,gBar,carEls=new Map(),movers=[],barEls=[];
+const DEFS=`<defs>
+ <linearGradient id="shadeA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".32" stop-color="#fff" stop-opacity="0"/><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5c7a94"/><stop offset=".55" stop-color="#1c2a38"/><stop offset="1" stop-color="#2f4558"/></linearGradient>
+ <radialGradient id="lamp"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".55"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient>
+ <pattern id="tex" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="rgba(255,255,255,.07)"/><circle cx="4" cy="4" r=".6" fill="rgba(0,0,0,.08)"/></pattern>
+</defs>`;
+const tree=(x,y,r)=>`<circle cx="${x+2}" cy="${y+4}" r="${r}" fill="rgba(0,0,0,.18)"/><circle cx="${x}" cy="${y}" r="${r}" fill="#3f9a4c"/><circle cx="${x-r*.3}" cy="${y-r*.3}" r="${r*.55}" fill="#5bb866"/>`;
+const flowers=(x,y,c)=>[[0,0],[5,3],[-4,4],[2,-4],[7,-2]].map(([a,b])=>`<circle cx="${x+a}" cy="${y+b}" r="2.3" fill="${c}"/>`).join("");
+
+function buildScene(){const W=NC*CELL,H=NR*CELL;
+  svg.setAttribute("viewBox",`${-SIDE} ${-TOP} ${W+2*SIDE} ${H+TOP+BOT}`);
+  let s=DEFS;
+  s+=`<rect x="${-SIDE-200}" y="${-TOP-200}" width="${W+2*SIDE+400}" height="${H+TOP+BOT+400}" fill="#7cc066"/>`;
+  for(let y=-TOP-200;y<H+BOT+200;y+=32)s+=`<rect x="${-SIDE-200}" y="${y}" width="${W+2*SIDE+400}" height="16" fill="#86c870"/>`;
+  s+=`<rect x="${W/2-ROAD/2}" y="${-TOP-200}" width="${ROAD}" height="${TOP+200-RO}" fill="#4d525b"/>`;
+  s+=`<line x1="${W/2}" y1="${-TOP-200}" x2="${W/2}" y2="${-RO-12}" stroke="#f4d35e" stroke-width="1.6" stroke-dasharray="7 7"/>`;
+  for(let k=0;k<4;k++)s+=`<rect x="${W/2-ROAD/2+2+k*5.8}" y="${-RO-ROAD/2-16}" width="3.4" height="11" fill="#f1f1ea"/>`;
+  s+=`<rect x="${-RO}" y="${-RO}" width="${W+2*RO}" height="${H+2*RO}" rx="16" fill="none" stroke="#4d525b" stroke-width="${ROAD}"/>`;
+  s+=`<rect x="${-RO}" y="${-RO}" width="${W+2*RO}" height="${H+2*RO}" rx="16" fill="none" stroke="#f4d35e" stroke-width="1.4" stroke-dasharray="7 7"/>`;
+  s+=`<rect x="-5" y="-5" width="${W+10}" height="${H+10}" rx="7" fill="#cfd4d9"/>`;
+  s+=`<rect x="0" y="0" width="${W}" height="${H}" rx="3" fill="#686d76"/><rect x="0" y="0" width="${W}" height="${H}" fill="url(#tex)"/>`;
+  for(let i=1;i<NC;i++)s+=`<line x1="${i*CELL}" y1="4" x2="${i*CELL}" y2="${H-4}" stroke="rgba(255,255,255,.55)" stroke-width="1.8"/>`;
+  for(let i=1;i<NR;i++)s+=`<line x1="4" y1="${i*CELL}" x2="${W-4}" y2="${i*CELL}" stroke="rgba(255,255,255,.2)" stroke-width="1"/>`;
+  const gx=W/2,gy=-RO-ROAD/2-26;
+  s+=`<rect x="${gx-ROAD/2-30}" y="${gy-4}" width="22" height="18" rx="3" fill="#e9e2cf" stroke="#9b8f72" stroke-width="1.2"/><rect x="${gx-ROAD/2-32}" y="${gy-7}" width="26" height="6" rx="2" fill="#c0392b"/><rect x="${gx-ROAD/2-26}" y="${gy+2}" width="14" height="6" rx="1.5" fill="url(#glass)"/>`;
+  s+=`<rect x="${gx+ROAD/2+2}" y="${gy-4}" width="7" height="20" rx="2" fill="#3a3f47"/><g transform="rotate(-70 ${gx+ROAD/2+5} ${gy})"><rect x="${gx+ROAD/2+5}" y="${gy-3}" width="${ROAD+8}" height="6" rx="3" fill="#fff"/><rect x="${gx+ROAD/2+11}" y="${gy-3}" width="5" height="6" fill="#e3263b"/><rect x="${gx+ROAD/2+21}" y="${gy-3}" width="5" height="6" fill="#e3263b"/></g>`;
+  s+=`<rect x="${gx-14}" y="${-TOP+2}" width="28" height="14" rx="3" fill="#1f8a4c"/><text x="${gx}" y="${-TOP+12.5}" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="9" fill="#fff">EXIT</text>`;
+  for(const [x,y] of [[-SIDE+3,-RO-ROAD/2-4],[W+SIDE-3,-RO-ROAD/2-4],[-SIDE+3,H+RO+ROAD/2+2],[W+SIDE-3,H+RO+ROAD/2+2]])s+=`<circle cx="${x}" cy="${y}" r="22" fill="url(#lamp)"/><circle cx="${x}" cy="${y}" r="3.5" fill="#3a3f47"/><circle cx="${x}" cy="${y}" r="1.8" fill="#fff6c9"/>`;
+  s+=tree(-SIDE+12,-TOP+12,10)+tree(W+SIDE-12,-TOP+14,11)+tree(W*.2,-TOP+12,7)+flowers(W*.8,-TOP+12,"#ff6f91")+flowers(W*.3,-TOP+20,"#ffd23f");
+  const ar=(x,y,a)=>`<polygon transform="translate(${x} ${y}) rotate(${a})" points="6,0 -3,-5 -1,0 -3,5" fill="rgba(255,255,255,.75)"/>`;
+  s+=ar(W*.2,-RO,0)+ar(W*.8,-RO,180)+ar(-RO,H*.5,-90)+ar(W+RO,H*.5,-90)+ar(W*.5,H+RO,180);
+  s+=`<g id="gBar"></g><g id="gCars"></g><g id="gFx"></g>`;
+  svg.innerHTML=s;gCars=$("gCars");gFx=$("gFx");gBar=$("gBar");carEls.clear();movers=[];
+  barEls=base.barriers.map(b=>{const g=document.createElementNS("http://www.w3.org/2000/svg","g");
+    let px,py,rot;
+    if(b.side==="r"){px=W+7;py=b.idx*CELL+3;rot=90}else if(b.side==="l"){px=-7;py=b.idx*CELL+3;rot=90}
+    else if(b.side==="t"){px=b.idx*CELL+3;py=-7;rot=0}else{px=b.idx*CELL+3;py=H+7;rot=0}
+    const out=(b.side==="r"||b.side==="t")?-1:1;
+    g.setAttribute("transform",`translate(${px} ${py}) rotate(${rot})`);
+    const len=CELL-6;
+    g.innerHTML=`<g class="arm"><rect x="0" y="-2.6" width="${len}" height="5.2" rx="2.4" fill="#fff" stroke="rgba(0,0,0,.25)" stroke-width=".6"/>${[.2,.45,.7].map(p=>`<rect x="${len*p}" y="-2.6" width="${len*.12}" height="5.2" fill="#e3263b"/>`).join("")}</g><circle r="6" fill="#3a3f47" stroke="#fff" stroke-width="1.2"/><circle class="lampc" r="3.8" fill="#2ecc71"/>`;
+    gBar.appendChild(g);return{b,g,arm:g.querySelector(".arm"),lamp:g.querySelector(".lampc"),out,ang:0}});
+  cars.forEach(addCar)}
+
+function geomC(c){const W=(c.h?c.len:1)*CELL,H=(c.h?1:c.len)*CELL;return{x:c.c*CELL+W/2,y:c.r*CELL+H/2,L:c.len*CELL-10,Wd:CELL*.68,ang:c.h?(c.d>0?0:180):(c.d>0?90:-90)}}
+function addCar(c){const g=document.createElementNS("http://www.w3.org/2000/svg","g");const q=geomC(c);
+  g.setAttribute("class","car");g.dataset.id=c.id;g.setAttribute("transform",`translate(${q.x} ${q.y}) rotate(${q.ang})`);
+  g.innerHTML=carSvg(q.L,q.Wd,c.col,c.type,c.myst,q.ang);g.addEventListener("click",()=>tap(c.id));
+  gCars.appendChild(g);carEls.set(c.id,g)}
+function repaint(c){const g=carEls.get(c.id);if(!g)return;const q=geomC(c);g.innerHTML=carSvg(q.L,q.Wd,c.col,c.type,c.myst,q.ang)}
+
+const now=()=>(performance.now()-t0)/1000;
+function barState(b,t){const p=((t+b.phase)%b.period)/b.period;return p<.5?(p>.5-.7/b.period?"amber":"open"):"closed"}
+
+function moveAlong(el,pts,speed,done,keepAngle){movers.push({el,pts,i:0,d:0,speed,done,keepAngle,ang:keepAngle??Math.atan2(pts[1][1]-pts[0][1],pts[1][0]-pts[0][0])*180/Math.PI})}
+let last=performance.now();
+function frame(nowMs){const dt=Math.min(.05,(nowMs-last)/1000);last=nowMs;const t=now();
+  for(const m of [...movers]){let rem=m.speed*dt;
+    while(rem>0&&m.i<m.pts.length-1){const a=m.pts[m.i],b=m.pts[m.i+1],sl=Math.hypot(b[0]-a[0],b[1]-a[1]);
+      if(m.d+rem<sl){m.d+=rem;rem=0}else{rem-=sl-m.d;m.d=0;m.i++}}
+    if(m.i>=m.pts.length-1){movers.splice(movers.indexOf(m),1);m.done&&m.done();continue}
+    const a=m.pts[m.i],b=m.pts[m.i+1],sl=Math.hypot(b[0]-a[0],b[1]-a[1])||1,u=m.d/sl;
+    const x=a[0]+(b[0]-a[0])*u,y=a[1]+(b[1]-a[1])*u;
+    if(m.keepAngle==null){const target=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;let diff=((target-m.ang+540)%360)-180;m.ang+=diff*Math.min(1,dt*14)}
+    m.el.setAttribute("transform",`translate(${f(x)} ${f(y)}) rotate(${f(m.ang)})`)}
+  for(const be of barEls){const st=barState(be.b,t),target=st==="closed"?0:-82*be.out*-1;
+    be.ang+=(target-be.ang)*Math.min(1,dt*10);be.arm.setAttribute("transform",`rotate(${f(be.ang)})`);
+    be.lamp.setAttribute("fill",st==="open"?"#2ecc71":st==="amber"?"#ffb000":"#ff3b30")}
+  requestAnimationFrame(frame)}
+
+function exitPts(c,q){const W=NC*CELL,H=NR*CELL,x0=-RO,x1=W+RO,y0=-RO,y1=H+RO,per=2*(x1-x0)+2*(y1-y0);
+  const e=c.h?[c.d>0?x1:x0,q.y]:[q.x,c.d>0?y1:y0];
+  const sOf=([x,y])=>y===y0?x-x0:x===x1?(x1-x0)+(y-y0):y===y1?(x1-x0)+(y1-y0)+(x1-x):2*(x1-x0)+(y1-y0)+(y1-y);
+  const C=[[x0,y0,0],[x1,y0,x1-x0],[x1,y1,(x1-x0)+(y1-y0)],[x0,y1,2*(x1-x0)+(y1-y0)]];
+  const G=[W/2,y0],se=sOf(e),sg=sOf(G),cw=((sg-se)%per+per)%per,pts=[[q.x,q.y],e];
+  if(cw<=per-cw){const cs=C.map(k=>[k,((k[2]-se)%per+per)%per]).filter(([,d])=>d>0&&d<cw).sort((a,b)=>a[1]-b[1]);cs.forEach(([k])=>pts.push([k[0],k[1]]))}
+  else{const cs=C.map(k=>[k,((se-k[2])%per+per)%per]).filter(([,d])=>d>0&&d<per-cw).sort((a,b)=>a[1]-b[1]);cs.forEach(([k])=>pts.push([k[0],k[1]]))}
+  pts.push(G,[W/2,-TOP-60]);return pts}
+
+function revealAround(c){const cells=cellsOf(c);let any=false;
+  cars.forEach(o=>{if(o.myst&&cellsOf(o).some(([r,k])=>cells.some(([a,b])=>Math.abs(a-r)+Math.abs(b-k)===1))){o.myst=false;repaint(o);any=true}});
+  if(any)beep(990,.06)}
+
+function tap(id){if(busy||over)return;const c=cars.find(x=>x.id===id);if(!c)return;
+  const el=carEls.get(id);const q=geomC(c);
+  if(hammerArmed){hammerArmed=false;$("bHammer").classList.remove("armed");useItem("hammer");removeCar(c,true);return}
+  if(c.myst){c.myst=false;repaint(c)}
+  const b=blocker(c,cars);const vx=c.h?c.d:0,vy=c.h?0:c.d;
+  if(b){crash(c,el,q,b.free*CELL+CELL*.15,vx,vy,b.car);say("आगे दूर खड़ी गाड़ी ने रास्ता रोक दिया! पूरी लेन देखें।","warn");return}
+  const bar=barEls.find(be=>be.b.key===laneOf(c));
+  if(bar){const ta=path(c).length*CELL/SPEED;if(barState(bar.b,now()+ta)!=="open"){crash(c,el,q,path(c).length*CELL+3,vx,vy,null);say("डंडा बंद था! हरी बत्ती पर ही निकालें।","warn");return}}
+  removeCar(c,false)}
+
+function removeCar(c,lifted){const el=carEls.get(c.id);const q=geomC(c);
+  revealAround(c);cars=cars.filter(x=>x!==c);carEls.delete(c.id);
+  if(lifted){el.style.transition="opacity .35s";el.setAttribute("transform",`translate(${q.x} ${q.y}) rotate(${q.ang}) scale(1.25)`);el.style.opacity="0";beep(300,.15,"square",.06);setTimeout(()=>el.remove(),380)}
+  else{gFx.appendChild(el);moveAlong(el,exitPts(c,q),SPEED,()=>el.remove());beep(320,.18,"sawtooth",.04);setTimeout(()=>beep(560,.07),110)}
+  ui();if(!cars.length)setTimeout(win,700)}
+
+function crash(c,el,q,dist,vx,vy,other){busy=true;mistakes++;hearts--;Bridge.buzz();
+  const p0=[q.x,q.y],p1=[q.x+vx*dist,q.y+vy*dist];
+  moveAlong(el,[p0,p1],SPEED*1.1,()=>{beep(110,.18,"square",.1);
+    if(other){const oe=carEls.get(other.id);if(oe){const oq=geomC(other);let k=0;const iv=setInterval(()=>{k++;oe.setAttribute("transform",`translate(${oq.x+(k%2?2:-2)*vx} ${oq.y+(k%2?2:-2)*vy}) rotate(${oq.ang})`);if(k>5){clearInterval(iv);oe.setAttribute("transform",`translate(${oq.x} ${oq.y}) rotate(${oq.ang})`)}},40)}}
+    moveAlong(el,[p1,p0],SPEED*.6,()=>{busy=false;ui();if(hearts<=0)lose()},q.ang)},q.ang)}
+
+function ui(){$("lvl").textContent=level;$("coins").textContent=coins;
+  $("hearts").innerHTML=Array.from({length:Math.max(hearts,3)},(_,i)=>`<span class="${i<hearts?"":"lost"}">♥</span>`).join("");
+  const done=total-cars.length;$("progTxt").textContent=`${done} / ${total}`;$("progBar").style.width=(total?done/total*100:0)+"%";
+  for(const [k,id] of [["hint","nHint"],["show","nShow"],["hammer","nHammer"]]){const n=inv[k];$(id).textContent=n>0?n:ITEM_COST;$(id).classList.toggle("ad",n<=0)}}
+function useItem(k){if(inv[k]>0){inv[k]--;save();ui()}}
+// A booster costs a coin price when the free stock runs out.
+function withItem(k,fn){if(over||busy)return;if(inv[k]>0){fn();return}
+  if(coins>=ITEM_COST){coins-=ITEM_COST;inv[k]++;save();ui();fn()}else say("सिक्के कम हैं। लेवल पूरे करके सिक्के कमाइए।","warn")}
+
+$("bHint").onclick=()=>withItem("hint",()=>{const g=grid(cars);
+  const c=cars.find(x=>!blocker(x,cars,g)&&!barEls.some(be=>be.b.key===laneOf(x)))||cars.find(x=>!blocker(x,cars,g));if(!c)return;useItem("hint");
+  const el=carEls.get(c.id),q=geomC(c);const glow=document.createElementNS("http://www.w3.org/2000/svg","rect");
+  Object.entries({x:-q.L/2-5,y:-q.Wd/2-5,width:q.L+10,height:q.Wd+10,rx:14,fill:"rgba(255,210,63,.35)",stroke:"#ffd23f","stroke-width":3}).forEach(([a,v])=>glow.setAttribute(a,v));
+  el.insertBefore(glow,el.firstChild);let k=0;const iv=setInterval(()=>{k++;glow.setAttribute("opacity",k%2?.3:1);if(k>9){clearInterval(iv);glow.remove()}},250);beep(880,.1)});
+$("bShow").onclick=()=>withItem("show",()=>{const m=cars.filter(c=>c.myst);if(!m.length){say("अभी कोई छिपी दिशा वाली गाड़ी नहीं है।");return}useItem("show");m.forEach(c=>{c.myst=false;repaint(c)});beep(990,.08)});
+$("bHammer").onclick=()=>withItem("hammer",()=>{hammerArmed=!hammerArmed;$("bHammer").classList.toggle("armed",hammerArmed);if(hammerArmed)say("अब जिस गाड़ी को हटाना है उस पर टैप करें।")});
+
+function lose(){over=true;const left=cars.length;$("loseNote").textContent=left<=3?`बस ${left} गाड़ियाँ बची थीं! इतने पास आकर मत छोड़िए।`:`अभी ${left} गाड़ियाँ बची हैं।`;
+  $("loseBar").style.width=((total-left)/total*100)+"%";$("revive").disabled=coins<30;$("lose").hidden=false}
+function revive(){hearts=1;over=false;$("lose").hidden=true;ui()}
+$("revive").onclick=()=>{if(coins<30)return;coins-=30;save();revive()};
+$("retry").onclick=()=>start(false);
+
+function win(){over=true;const stars=mistakes===0?3:mistakes===1?2:1;const reward=(10+Math.min(level,100)*2+stars*5)*(base.hard?2:1);
+  lastReward=reward;wonLevel=level;coins+=reward;level++;save();
+  $("stars").innerHTML=[0,1,2].map(i=>`<span class="${i<stars?"":"off"}">★</span>`).join("");
+  $("reward").textContent="+"+reward;
+  $("winNote").textContent=stars===3?"एक भी टक्कर नहीं, शानदार ड्राइविंग!":`${mistakes} टक्कर हुईं। बिना टक्कर के 3 सितारे मिलते हैं।`;
+  $("win").hidden=false;[523,659,784,1046].forEach((fq,k)=>setTimeout(()=>beep(fq,.15),k*110))}
+$("next").onclick=()=>{start(true)};
+
+function intro(){const L=level;
+  if(L===1)return["गाड़ी पर टैप करें। तीर की दिशा में पूरी लेन खाली हो तभी निकलेगी। दूर खड़ी गाड़ी भी रास्ता रोकती है!",""];
+  if(base.hard)return["कठिन स्तर! ज़्यादा जाल, इनाम दोगुना।","new"];
+  if(L===3)return["नई चीज़: ❓ वाली गाड़ी। इसकी दिशा तब दिखेगी जब बगल की गाड़ी हटेगी।","new"];
+  if(L===5)return["नई चीज़: लेन पर डंडा! हरी बत्ती पर ही निकालें, लाल पर टक्कर होगी।","new"];
+  if(L===11)return["अब दो लेन पर डंडे हैं। दोनों की बत्ती देखते रहें!","new"];
+  if(L===21)return["अब तीन डंडे! जल्दबाज़ी मत कीजिए।","new"];
+  return[base.barriers.length?"हरी बत्ती देखकर ही डंडे वाली लेन से निकालें।":"हर गाड़ी की पूरी लेन देखें, सिर्फ़ अगला खाना नहीं।",""]}
+
+function start(fresh){if(fresh||!base)base=makeLevel(level);NC=base.NC;NR=base.NR;
+  cars=base.list.map(c=>({...c}));total=cars.length;hearts=3;mistakes=0;busy=false;over=false;hammerArmed=false;$("bHammer").classList.remove("armed");
+  t0=performance.now();$("hardTag").hidden=!base.hard;$("win").hidden=true;$("lose").hidden=true;
+  buildScene();const [m,k]=intro();say(m,k);ui()}
+
+$("homeBtn").onclick=()=>Shell.show();
+start(true);requestAnimationFrame(frame);
+Shell.init({key:"cop2",title:"Parking Ustad",sub:"फँसी गाड़ियाँ निकालो, गेट से बाहर भेजो। पर ध्यान से, हर गाड़ी जितनी आसान दिखती है उतनी है नहीं!",level:()=>level,coins:()=>coins,isHard});
+</script>
+</body></html>

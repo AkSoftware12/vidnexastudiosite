@@ -1,0 +1,135 @@
+# Vidnexa Studio
+
+> Vidnexa Studio is an independent studio from India that makes Android apps, 50 free online tools and 13 free browser games. Tools run inside the visitor's browser: files and text are not uploaded. No sign-up is needed. Contact: info@vidnexastudio.com
+
+## Apps
+- [Vidnexa Player](https://vidnexastudio.com/apps/vidnexa-player/): A clean video player for your Android phone.
+- [Vidnexa: HD Video Downloader](https://vidnexastudio.com/apps/vidnexa-hd-video-downloader/): Save videos in HD to your phone.
+- [Papervo](https://vidnexastudio.com/apps/papervo/): Our next app. Coming soon.
+
+## Free online tools
+### Text tools (https://vidnexastudio.com/tools/category/text/)
+- [Word Counter](https://vidnexastudio.com/tools/word-counter/): The Word Counter counts words, characters (with and without spaces), sentences, paragraphs and estimated reading time as you type or paste.
+- [Case Converter](https://vidnexastudio.com/tools/case-converter/): The Case Converter changes text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case and more in one click.
+- [Lorem Ipsum Generator](https://vidnexastudio.com/tools/lorem-ipsum-generator/): The Lorem Ipsum Generator creates placeholder paragraphs, sentences or words so you can fill a design or mockup before the real copy is ready.
+- [Remove Duplicate Lines](https://vidnexastudio.com/tools/remove-duplicate-lines/): The Remove Duplicate Lines tool deletes repeated lines from a list and keeps each unique line once, in a single click.
+- [Text Sorter](https://vidnexastudio.com/tools/text-sorter/): The Text Sorter sorts lines A to Z, Z to A, by length, or shuffles them randomly, right in your browser.
+- [Slug Generator](https://vidnexastudio.com/tools/slug-generator/): The Slug Generator turns a title or phrase into a clean, lowercase, hyphen-separated URL slug that is safe for web addresses.
+- [Text Reverser](https://vidnexastudio.com/tools/text-reverser/): The Text Reverser reverses the letters, the order of words, or the order of lines in any text you paste.
+- [Text to Speech](https://vidnexastudio.com/tools/text-to-speech/): The Text to Speech tool reads any text aloud using the voices built into your device and browser, with adjustable speed and pitch.
+- [Typing Speed Test](https://vidnexastudio.com/tools/typing-speed-test/): The Typing Speed Test measures your typing speed in words per minute (WPM) and your accuracy in under a minute.
+### Calculators (https://vidnexastudio.com/tools/category/calc/)
+- [Age Calculator](https://vidnexastudio.com/tools/age-calculator/): The Age Calculator finds your exact age in years, months and days from your date of birth, and shows how many days until your next birthday.
+- [EMI Calculator](https://vidnexastudio.com/tools/emi-calculator/): The EMI Calculator works out your monthly loan instalment, total interest and total payment from the loan amount, interest rate and tenure.
+- [Percentage Calculator](https://vidnexastudio.com/tools/percentage-calculator/): The Percentage Calculator finds a percentage of a number, what percent one number is of another, and the percentage increase or decrease between two values.
+- [BMI Calculator](https://vidnexastudio.com/tools/bmi-calculator/): The BMI Calculator estimates your body mass index from height and weight and shows which standard range it falls into, with a healthy weight range for your height.
+- [SIP Calculator](https://vidnexastudio.com/tools/sip-calculator/): The SIP Calculator estimates the future value of a monthly SIP investment from the monthly amount, expected annual return and number of years.
+- [GST Calculator](https://vidnexastudio.com/tools/gst-calculator/): The GST Calculator adds GST to a price or removes it from a GST-inclusive price, and splits the tax into CGST and SGST.
+- [Discount Calculator](https://vidnexastudio.com/tools/discount-calculator/): The Discount Calculator shows the final price after a percentage discount and how much money you save.
+- [Date Difference Calculator](https://vidnexastudio.com/tools/date-difference-calculator/): The Date Difference Calculator tells you the number of days, weeks, months and years between two dates.
+- [Simple & Compound Interest Calculator](https://vidnexastudio.com/tools/interest-calculator/): The Interest Calculator computes simple or compound interest and the final amount from the principal, rate and time.
+- [Unit Converter](https://vidnexastudio.com/tools/unit-converter/): The Unit Converter converts length, weight, area, volume, speed, data size and temperature between common units instantly.
+- [Random Number Generator](https://vidnexastudio.com/tools/random-number-generator/): The Random Number Generator picks one or many random numbers between a minimum and maximum you choose, with or without repeats.
+- [Online Stopwatch](https://vidnexastudio.com/tools/stopwatch/): The Stopwatch is a simple online timer that counts up in hours, minutes, seconds and hundredths, with lap times.
+### Image & PDF (https://vidnexastudio.com/tools/category/image/)
+- [Image Compressor](https://vidnexastudio.com/tools/image-compressor/): The Image Compressor reduces the file size of JPG, PNG and WebP photos right in your browser, without uploading them anywhere.
+- [Image Resizer](https://vidnexastudio.com/tools/image-resizer/): The Image Resizer changes the width and height of an image in pixels, with an option to keep the aspect ratio.
+- [Image Converter](https://vidnexastudio.com/tools/image-converter/): The Image Converter converts pictures between PNG, JPG and WebP formats right in your browser.
+- [Image to Base64](https://vidnexastudio.com/tools/image-to-base64/): The Image to Base64 tool turns an image into a Base64 data URI that you can paste straight into HTML, CSS or JSON.
+- [Image to PDF](https://vidnexastudio.com/tools/image-to-pdf/): The Image to PDF tool combines one or more images into a single PDF file in your browser, with page size and order options.
+- [PDF Merge](https://vidnexastudio.com/tools/pdf-merge/): The PDF Merge tool joins several PDF files into one document in your browser, in the order you choose.
+- [PDF Split](https://vidnexastudio.com/tools/pdf-split/): The PDF Split tool extracts selected pages or page ranges from a PDF and saves them as a new file, right in your browser.
+- [PDF Editor](https://vidnexastudio.com/tools/pdf-editor/): The PDF Editor lets you click on existing text and change it in the same font, size and colour, and also add text, images, a drawn signature, ticks, highlights and white boxes, all in your browser.
+- [PDF Page Organizer](https://vidnexastudio.com/tools/pdf-organizer/): The PDF Page Organizer shows every page of a PDF as a thumbnail so you can rotate, delete, reorder and add pages, then download the new PDF.
+- [PDF to Image](https://vidnexastudio.com/tools/pdf-to-image/): The PDF to Image tool turns each page of a PDF into a PNG or JPG picture and lets you download pages one by one or all together as a ZIP.
+- [PDF Page Numbers and Watermark](https://vidnexastudio.com/tools/pdf-page-numbers-watermark/): The PDF Page Numbers and Watermark tool adds page numbers or a text watermark to every page of a PDF, with a live preview of the first page.
+### Developer & utility (https://vidnexastudio.com/tools/category/dev/)
+- [QR Code Generator](https://vidnexastudio.com/tools/qr-code-generator/): The QR Code Generator creates free QR codes for links, text and Wi-Fi details that you can download as an image.
+- [Password Generator](https://vidnexastudio.com/tools/password-generator/): The Password Generator creates strong, random passwords of the length you choose, using letters, numbers and symbols.
+- [JSON Formatter & Validator](https://vidnexastudio.com/tools/json-formatter/): The JSON Formatter pretty-prints, minifies and validates JSON and points to the exact place of any error.
+- [Base64 Encoder & Decoder](https://vidnexastudio.com/tools/base64-encoder-decoder/): The Base64 Encoder Decoder converts text to Base64 and decodes Base64 text back to the original, with Unicode support.
+- [URL Encoder & Decoder](https://vidnexastudio.com/tools/url-encoder-decoder/): The URL Encoder Decoder percent-encodes text so it is safe in a web address, or decodes percent-encoded text back to normal.
+- [Colour Converter](https://vidnexastudio.com/tools/color-converter/): The Color Converter converts colours between HEX, RGB and HSL and shows a live preview of the colour.
+- [UUID Generator](https://vidnexastudio.com/tools/uuid-generator/): The UUID Generator creates random version 4 UUIDs, one at a time or in bulk, ready to copy.
+- [Hash Generator](https://vidnexastudio.com/tools/hash-generator/): The Hash Generator creates SHA-1, SHA-256, SHA-384 and SHA-512 hashes of any text in your browser.
+- [Unix Timestamp Converter](https://vidnexastudio.com/tools/timestamp-converter/): The Timestamp Converter converts a Unix timestamp to a readable date and a date back to a Unix timestamp, in your local time and UTC.
+### Video & audio (https://vidnexastudio.com/tools/category/video/)
+- [Video Compressor](https://vidnexastudio.com/tools/video-compressor/): The Video Compressor makes a video file smaller by lowering its resolution and bitrate, right in your browser with no upload.
+- [Video Trimmer](https://vidnexastudio.com/tools/video-trimmer/): The Video Trimmer cuts the start and end off a video and saves just the part you want, in your browser.
+- [Video Speed Changer](https://vidnexastudio.com/tools/video-speed-changer/): The Video Speed Changer makes a video faster or plays it in slow motion and saves the result, in your browser.
+- [Video to GIF Converter](https://vidnexastudio.com/tools/video-to-gif/): The Video to GIF tool turns a short moment of a video into an animated GIF in your browser.
+- [Video to Audio Extractor](https://vidnexastudio.com/tools/video-to-audio/): The Video to Audio tool extracts the sound from a video and saves it as an audio file in your browser.
+- [Video Frame Extractor](https://vidnexastudio.com/tools/video-frame-extractor/): The Video Frame Extractor saves any frame of a video as a PNG or JPG image, right in your browser.
+- [Video Info Viewer](https://vidnexastudio.com/tools/video-info/): The Video Info tool shows a video's resolution, duration, file size and estimated bitrate without uploading the file.
+- [Screen Recorder](https://vidnexastudio.com/tools/screen-recorder/): The Screen Recorder records your screen, a window or a browser tab, with optional sound, and saves it as a video, all in your browser.
+- [Voice Recorder](https://vidnexastudio.com/tools/voice-recorder/): The Voice Recorder records audio from your microphone and lets you play it back and download it, with no upload.
+
+## Browser games
+- [Snake](https://vidnexastudio.com/games/snake/): Eat, grow and don't hit the wall.
+- [2048](https://vidnexastudio.com/games/2048/): Slide and merge tiles to reach 2048.
+- [Memory Match](https://vidnexastudio.com/games/memory-match/): 12 levels of flipping cards.
+- [Tic Tac Toe](https://vidnexastudio.com/games/tic-tac-toe/): 3×3, 4×4 or 5×5 against a clever computer.
+- [Glow Chain](https://vidnexastudio.com/games/glow-chain/): Repeat the growing pattern of lights and sounds.
+- [Mole Mallet](https://vidnexastudio.com/games/mole-mallet/): 10 levels of fast moles. Beware the bombs.
+- [Mine Radar](https://vidnexastudio.com/games/mine-radar/): Clear the field without hitting a mine.
+- [Sky Hop](https://vidnexastudio.com/games/sky-hop/): Tap to hop through the moving gaps.
+- [Sliding Puzzle](https://vidnexastudio.com/games/sliding-puzzle/): Numbers or a picture, 3×3 to 5×5.
+- [Teer Nikalo](https://vidnexastudio.com/games/teer-nikalo/): Three arrow, ant and screw puzzles in one free game.
+- [Parking Ustad](https://vidnexastudio.com/games/parking-ustad/): Slide cars out of a tight parking lot before you run out of hearts.
+- [Bus Bharo](https://vidnexastudio.com/games/bus-bharo/): Clear the car jam and fill each bus with passengers of its colour.
+- [Gulal Pop](https://vidnexastudio.com/games/gulal-pop/): Send gulal bowls round the belt to pop every colour of the rangoli.
+
+## Guides and how-tos
+- [How to Calculate EMI: Formula, Example and Ways to Reduce It](https://vidnexastudio.com/blog/how-to-calculate-emi/): Learn how loan EMI is calculated, see a worked example with the formula, and find simple ways to lower your monthly instalment and total interest.
+- [How a SIP Works: Compounding Explained Simply](https://vidnexastudio.com/blog/how-sip-works-and-compounding/): Understand what a SIP is, how compounding grows regular monthly investments over time, and how to use a SIP calculator sensibly.
+- [How GST Works: How to Add or Remove GST From a Price](https://vidnexastudio.com/blog/how-gst-works-add-and-remove-gst/): A simple guide to GST rates, CGST, SGST and IGST, with formulas to add GST to a price or remove it from a GST-inclusive amount.
+- [How to Calculate Percentage: 3 Easy Methods With Examples](https://vidnexastudio.com/blog/how-to-calculate-percentage/): Learn how to find a percentage of a number, what percent one number is of another, and percentage increase or decrease, with simple examples.
+- [How to Calculate Age and the Days Between Two Dates](https://vidnexastudio.com/blog/how-to-calculate-age-and-days-between-dates/): A clear guide to calculating exact age in years, months and days, and counting the number of days between two dates, including leap years.
+- [What Is BMI? How It Is Calculated and What It Can and Cannot Tell You](https://vidnexastudio.com/blog/what-is-bmi-and-how-to-use-it/): Understand BMI, the formula, the standard ranges and why it is only a rough screening number, not a full measure of your health.
+- [How to Compress Images Without Losing Quality (Free, in Your Browser)](https://vidnexastudio.com/blog/how-to-compress-images-without-losing-quality/): Learn how image compression works, which quality setting to use, and how to make photos smaller for websites, forms and email without uploading them.
+- [PNG vs JPG vs WebP: Which Image Format Should You Use?](https://vidnexastudio.com/blog/png-vs-jpg-vs-webp/): Compare PNG, JPG and WebP for photos, logos, screenshots and websites, and learn how to convert between them for free.
+- [How to Merge and Split PDF Files for Free Without Uploading Them](https://vidnexastudio.com/blog/how-to-merge-and-split-pdf-files/): Step-by-step guide to joining several PDFs into one, extracting pages from a PDF and turning images into a PDF, all inside your browser.
+- [How to Clean Up Text: Remove Duplicates, Sort Lines and Fix Capitalisation](https://vidnexastudio.com/blog/how-to-clean-up-text-lists/): Practical ways to clean lists and text with a duplicate line remover, a text sorter, a case converter and a slug generator.
+- [How to Improve Your Typing Speed: Practical Tips and a Free Test](https://vidnexastudio.com/blog/how-to-improve-typing-speed/): Learn what a good typing speed is, how WPM is measured, and the habits that raise speed and accuracy with a few minutes of daily practice.
+- [How Browser-Based Tools Work (And Why Your Files Stay Private)](https://vidnexastudio.com/blog/how-browser-based-tools-work-without-uploading/): Understand how online tools can compress images, merge PDFs and edit video inside your browser without uploading files, and how to check it yourself.
+- [How QR Codes Work and How to Make One for Free](https://vidnexastudio.com/blog/how-qr-codes-work-and-how-to-make-one/): Learn what a QR code stores, how phones read it, how to create QR codes for links and Wi-Fi, and tips for printing codes that scan every time.
+- [How to Create a Strong Password (and How a Generator Helps)](https://vidnexastudio.com/blog/how-to-create-a-strong-password/): Learn what makes a password strong, why length matters most, and how to use a password generator and a password manager safely.
+- [What Is JSON? How to Format It and Fix Common Errors](https://vidnexastudio.com/blog/what-is-json-and-how-to-fix-json-errors/): A beginner-friendly guide to JSON, with examples, the most common syntax errors and how to use a JSON formatter to fix them quickly.
+- [Base64 and URL Encoding Explained With Simple Examples](https://vidnexastudio.com/blog/base64-and-url-encoding-explained/): What Base64 and percent-encoding are, why they exist, when to use them and how to encode or decode text and images safely.
+- [Unix Timestamps and UUIDs Explained for Beginners](https://vidnexastudio.com/blog/how-unix-timestamps-and-uuids-work/): What a Unix timestamp is, how it converts to a date, what a UUID is and when developers use them, with free converters.
+- [How to Compress, Trim and Change Video Speed in Your Browser](https://vidnexastudio.com/blog/how-to-compress-trim-and-speed-up-videos-in-browser/): Learn how to make a video smaller, cut unwanted parts and create slow-motion or fast-forward clips without installing an app or uploading the file.
+- [How to Make a GIF, Extract Audio and Save Frames From a Video](https://vidnexastudio.com/blog/how-to-make-gif-extract-audio-and-save-video-frames/): Three useful tricks for video files: turn a moment into a GIF, pull the sound out as audio and save any frame as an image, all free in your browser.
+- [How to Record Your Screen and Your Voice Online (No Software)](https://vidnexastudio.com/blog/how-to-record-your-screen-and-voice-online/): A simple guide to recording your screen, a window or a tab and your voice in the browser, with tips for clear sound and privacy.
+- [How to Play 2048: Rules, Tips and a Winning Strategy](https://vidnexastudio.com/blog/how-to-play-2048-tips-and-strategy/): Learn the rules of 2048 and the strategies that help you reach the 2048 tile and beyond, including the corner method.
+- [How to Play Snake: Modes, Controls and Tips for a High Score](https://vidnexastudio.com/blog/how-to-play-snake-modes-and-tips/): Everything about the classic Snake game: controls, the Classic, Wrap-around and Rocks modes, golden stars and tips to beat your best score.
+- [How to Play Mine Radar: Rules, Flags and Strategy for Beginners](https://vidnexastudio.com/blog/how-to-play-mine-radar-rules-and-tips/): Learn how Mine Radar works: reading the numbers, placing flags, the quick-open trick and simple logic to clear the board.
+- [Memory and Reflex Games: How to Play Memory Match, Glow Chain, Mole Mallet and Sky Hop](https://vidnexastudio.com/blog/memory-and-reflex-games-guide/): Rules and tips for four quick brain and reflex games, plus an honest look at what playing games like these can and cannot do for you.
+- [How to Play Teer Nikalo, Parking Ustad, Bus Bharo and Gulal Pop](https://vidnexastudio.com/blog/how-to-play-puzzle-games-teer-nikalo-parking-ustad-bus-bharo-gulal-pop/): A guide to four Vidnexa puzzle games with rules, boosters and tips for planning your moves and clearing every level.
+- [How to Win at Tic Tac Toe and Solve the Sliding Puzzle](https://vidnexastudio.com/blog/how-to-play-tic-tac-toe-and-sliding-puzzle/): Winning strategy for Tic Tac Toe on 3 by 3 and bigger boards, and a layer-by-layer method for solving the sliding tile puzzle.
+- [How to Edit a PDF for Free: Add Text, Sign, Highlight and Cover Mistakes](https://vidnexastudio.com/blog/how-to-edit-a-pdf-for-free-add-text-sign-and-highlight/): Edit a PDF in your browser: add text to a form, sign, insert an image, highlight and cover a mistake, plus what a browser-only editor cannot do.
+- [How to Rotate, Reorder and Delete PDF Pages, Add Page Numbers and a Watermark](https://vidnexastudio.com/blog/how-to-rotate-reorder-delete-pdf-pages-add-page-numbers-and-watermark/): Fix a messy PDF in your browser: rotate sideways pages, move or delete pages, add numbers and a watermark, and turn pages into images.
+
+## Main pages
+- [Home](https://vidnexastudio.com/): Overview of apps, tools, games and guides
+- [All apps](https://vidnexastudio.com/apps/)
+- [All free tools](https://vidnexastudio.com/tools/)
+- [All browser games](https://vidnexastudio.com/games/)
+- [All guides](https://vidnexastudio.com/blog/)
+- [Text tools tools](https://vidnexastudio.com/tools/category/text/)
+- [Calculators tools](https://vidnexastudio.com/tools/category/calc/)
+- [Image & PDF tools](https://vidnexastudio.com/tools/category/image/)
+- [Developer & utility tools](https://vidnexastudio.com/tools/category/dev/)
+- [Video & audio tools](https://vidnexastudio.com/tools/category/video/)
+
+## Company and help
+- [Open-source notices](https://vidnexastudio.com/licenses/)
+- [FAQ](https://vidnexastudio.com/faq/): Answers to common questions
+- [About](https://vidnexastudio.com/about/)
+- [Contact](https://vidnexastudio.com/contact/)
+- [Privacy Policy](https://vidnexastudio.com/privacy-policy/)
+- [Terms of Use](https://vidnexastudio.com/terms/)
+- [Disclaimer](https://vidnexastudio.com/disclaimer/)
+
+## Optional
+- [Full text version of this site](https://vidnexastudio.com/llms-full.txt)
+- [Sitemap](https://vidnexastudio.com/sitemap.xml)

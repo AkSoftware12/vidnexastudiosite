@@ -1,0 +1,360 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Bus Bharo – Vidnexa Studio</title>
+<meta name="robots" content="noindex"><meta name="description" content="Play Bus Bharo free in your browser on Vidnexa Studio. No download, no sign-up.">
+<style>
+:root{
+  --bg:#dfe4e1; --concrete:#cfd6d2; --kerb:#b9c2bd; --asphalt:#3b4047; --line:rgba(235,236,228,.18);
+  --ink:#1f2622; --muted:#5d6a63; --saffron:#ff8a1f; --saffron-dark:#c75f05; --good:#1f9a52; --bad:#d63a3a;
+  --font:system-ui,-apple-system,"Segoe UI","Noto Sans Devanagari",Roboto,sans-serif;
+  --sh-bg:#dfe4e1; --sh-fg:#1f2622; --sh-muted:#5d6a63; --sh-accent:#ff8a1f; --sh-on-accent:#fff;
+  --sh-node:#cfd6d2; --sh-done:#1f9a52; --sh-hard:#d63a3a;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);overflow:hidden;user-select:none;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+.app{height:100%;display:flex;flex-direction:column;gap:8px;max-width:560px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.lvl{font-weight:800;font-size:1.4rem;line-height:1}
+.lvl small{display:block;font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.06em}
+.left{font-size:.95rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.left b{color:var(--ink)}
+.coins{display:flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:4px 14px 4px 6px;font-weight:700;font-size:1.05rem;font-variant-numeric:tabular-nums;box-shadow:0 1px 0 var(--kerb)}
+.coin{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe9c4,var(--saffron) 50%,var(--saffron-dark))}
+.queue{position:relative;background:var(--concrete);border-radius:12px;padding:8px 10px;display:flex;align-items:flex-end;gap:4px;min-height:46px;overflow:hidden}
+.queue .tag{position:absolute;left:10px;top:4px;font-size:.7rem;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.ppl{display:flex;align-items:flex-end;gap:4px;padding-top:12px;flex:1;min-width:0;overflow:hidden}
+.p{width:20px;height:31px;flex:none;position:relative;transition:transform .15s}
+.p::before{content:"";position:absolute;left:5px;top:0;width:9px;height:9px;border-radius:50%;background:#f0c9a4;box-shadow:inset 0 -2px 0 rgba(0,0,0,.12)}
+.p::after{content:"";position:absolute;left:1px;bottom:0;width:16px;height:17px;border-radius:7px 7px 3px 3px;background:var(--k);box-shadow:inset 0 -3px 0 rgba(0,0,0,.18)}
+.p.first{transform:translateY(-3px) scale(1.12)}
+.more{font-weight:700;color:var(--muted);font-size:.9rem;padding-left:4px;white-space:nowrap}
+.station{background:var(--asphalt);border-radius:12px;padding:8px;display:grid;gap:6px;grid-template-columns:repeat(var(--bays),1fr)}
+.bay{position:relative;height:58px;border:2px dashed rgba(255,255,255,.28);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.bay .num{position:absolute;bottom:2px;right:6px;font-size:.65rem;color:rgba(255,255,255,.35);font-weight:700}
+.bay.lockd{border-style:solid;border-color:rgba(255,255,255,.08)}
+.bay.lockd::after{content:"🔒";opacity:.5}
+.bv{width:88%;height:62%;border-radius:9px;background:linear-gradient(180deg,rgba(255,255,255,.3),transparent 45%,rgba(0,0,0,.18)),var(--k);
+  display:flex;align-items:center;justify-content:center;gap:3px;box-shadow:0 3px 0 rgba(0,0,0,.35);animation:arrive .35s ease-out}
+.bv.leave{animation:leave .45s ease-in forwards}
+.seat{width:11px;height:11px;border-radius:3px;background:rgba(0,0,0,.28)}
+.seat.on{background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.lotWrap{max-width:100%;padding:8px;border-radius:14px;background:var(--kerb);position:relative}
+.exitTag{position:absolute;top:-2px;left:50%;transform:translate(-50%,-50%);background:var(--saffron);color:#fff;font-weight:800;font-size:.7rem;padding:0 8px;border-radius:999px;letter-spacing:.04em}
+.lot{position:relative;border-radius:8px;background-color:var(--asphalt);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:var(--cell) var(--cell)}
+.car{position:absolute;box-sizing:border-box;cursor:pointer;transition:transform .42s cubic-bezier(.5,0,.9,.5);z-index:1;outline:none}
+.car.h{padding:calc(var(--cell)*.07) calc(var(--cell)*.05)}.car.v{padding:calc(var(--cell)*.05) calc(var(--cell)*.07)}
+.car:focus-visible .body{box-shadow:0 0 0 3px #fff}
+.car.gone{z-index:3}
+.body{position:relative;width:100%;height:100%;border-radius:10px;background:linear-gradient(var(--g),rgba(255,255,255,.32),transparent 42%,rgba(0,0,0,.2)),var(--k);
+  box-shadow:0 0 0 2px rgba(255,255,255,.6),0 4px 0 rgba(0,0,0,.4);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.car.h .body{--g:180deg}.car.v .body{--g:90deg}
+.glass{position:absolute;background:rgba(18,28,38,.7);border-radius:4px}
+.arrow{position:relative;font-weight:800;color:#fff;font-size:calc(var(--cell)*.46);text-shadow:0 0 3px rgba(0,0,0,.7),0 1px 2px rgba(0,0,0,.6)}
+.car.shake .body{animation:shake .25s}
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{font:inherit;font-weight:700;font-size:1rem;color:var(--ink);background:#fff;border:0;border-radius:14px;padding:9px 6px;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;line-height:1.2;box-shadow:0 2px 0 var(--kerb)}
+.btn small{font-weight:500;font-size:.75rem;color:var(--muted)}
+.btn:disabled{opacity:.45;cursor:default}
+.btn:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+.btn.go{background:linear-gradient(180deg,#ffa54d,var(--saffron-dark));color:#fff;box-shadow:0 2px 0 #8d4304}
+.btn.go small{color:#ffe6cc}
+.msg{margin:0;text-align:center;font-size:.92rem;color:var(--muted);min-height:1.3em}
+.msg.warn{color:var(--bad);font-weight:700}
+.overlay{position:fixed;inset:0;z-index:10;background:rgba(25,32,28,.6);display:flex;align-items:center;justify-content:center;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.card{background:#fff;border-radius:20px;padding:24px 22px;width:100%;max-width:320px;text-align:center;display:flex;flex-direction:column;gap:12px;animation:pop .3s cubic-bezier(.3,1.5,.5,1)}
+.card h2{margin:0;font-size:1.9rem;font-weight:800;line-height:1.1}
+.card p{margin:0;color:var(--muted)}
+.reward{display:flex;align-items:center;justify-content:center;gap:8px;font-size:1.5rem;font-weight:800;color:var(--saffron-dark)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.car.myst .body{background:repeating-linear-gradient(45deg,rgba(255,255,255,.08) 0 6px,transparent 6px 12px),linear-gradient(var(--g),rgba(255,255,255,.25),transparent 45%,rgba(0,0,0,.2)),#8b939b}
+.car.myst .arrow{font-size:calc(var(--cell)*.5)}
+.dirTag{position:absolute;right:10%;bottom:12%;font-size:calc(var(--cell)*.24);font-weight:800;color:#fff;opacity:.85;pointer-events:none}
+.car.reveal .body{animation:flip .45s ease-out}
+.hardTag{display:inline-block;background:var(--bad);color:#fff;border-radius:999px;padding:0 6px;font-size:.62rem;letter-spacing:.04em;margin-left:2px}
+@keyframes flip{0%{transform:scaleX(.1);filter:brightness(2)}100%{transform:none}}
+@keyframes shake{25%{transform:translate(-3px,2px)}75%{transform:translate(3px,-2px)}}
+@keyframes arrive{from{transform:translateY(-30px);opacity:0}}
+@keyframes leave{to{transform:translateX(140%);opacity:0}}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}}
+.home{position:fixed;inset:0;z-index:40;background:var(--sh-bg);color:var(--sh-fg);display:flex;justify-content:center;overflow:auto;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.home-in{width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;gap:14px;padding-block:28px 20px;margin:auto}
+.home-title{margin:0;font-size:2.6rem;font-weight:800;line-height:1;letter-spacing:-.01em;text-align:center;color:var(--sh-accent);text-wrap:balance}
+.home-sub{margin:0;color:var(--sh-muted);text-align:center;font-size:1rem;max-width:30ch}
+.path{display:flex;flex-direction:column;align-items:center;gap:10px;padding-block:8px}
+.node{width:58px;height:58px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;
+  transform:translateX(calc(var(--x)*46px));background:var(--sh-node);color:var(--sh-muted);font-size:1.15rem;position:relative;
+  box-shadow:inset 0 -4px 0 rgba(0,0,0,.25)}
+.node b{font-weight:800}
+.node i{font-style:normal;font-size:.55rem;font-weight:700;margin-top:2px}
+.node.done{background:var(--sh-done);color:#fff;font-size:1.5rem;font-weight:800}
+.node.cur{background:var(--sh-accent);color:var(--sh-on-accent);width:74px;height:74px;font-size:1.5rem;animation:nodePulse 1.6s ease-in-out infinite}
+.node.hard{box-shadow:inset 0 -4px 0 rgba(0,0,0,.25),0 0 0 3px var(--sh-hard)}
+.node.hard i{color:var(--sh-hard)}
+.node.cur.hard i{color:inherit}
+.btn.big{font-size:1.35rem;padding:14px 10px;width:100%;max-width:300px;border-radius:18px}
+.home-row{display:flex;align-items:center;justify-content:center;gap:12px}
+.iconbtn{font:inherit;font-size:1.25rem;line-height:1;width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;
+  background:var(--sh-node);color:var(--sh-fg);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.iconbtn:focus-visible{outline:2px solid var(--sh-accent);outline-offset:2px}
+.top .iconbtn{width:38px;height:38px;font-size:1.05rem}
+@keyframes nodePulse{50%{box-shadow:inset 0 -4px 0 rgba(0,0,0,.25),0 0 0 8px color-mix(in srgb,var(--sh-accent) 30%,transparent)}}
+@media (prefers-reduced-motion:reduce){.node.cur{animation:none}}
+.topL{display:flex;align-items:center;gap:10px}
+</style>
+
+<div class="app">
+  <div class="top">
+    <div class="topL"><button class="iconbtn" id="homeBtn" aria-label="होम">☰</button><div class="lvl"><small>स्तर <span class="hardTag" id="hardTag" hidden>कठिन</span></small><span id="lvl">1</span></div></div>
+    <div class="left">सवारियाँ बाकी: <b id="left">0</b></div>
+    <div class="coins"><span class="coin"></span><span id="coins">0</span></div>
+  </div>
+  <div class="queue" aria-label="लाइन में खड़ी सवारियाँ"><span class="tag">लाइन ▸ सबसे आगे</span><div class="ppl" id="ppl"></div></div>
+  <div class="station" id="station"></div>
+  <p class="msg" id="msg">लाइन में सबसे आगे वाली सवारी जिस रंग की है, उसी रंग की गाड़ी निकालें।</p>
+  <div class="stage" id="stage"><div class="lotWrap"><span class="exitTag">पार्किंग</span><div class="lot" id="lot"></div></div></div>
+  <div class="tools">
+    <button class="btn" id="restart">⟲ फिर से<small>यही स्तर</small></button>
+    <button class="btn go" id="bayBtn">+1 जगह<small>40 सिक्के</small></button>
+  </div>
+</div>
+<div class="overlay" id="win" hidden><div class="card">
+  <h2 style="color:var(--good)">सब सवारियाँ पहुँचीं!</h2>
+  <div class="reward"><span class="coin"></span><span id="reward">+10</span></div>
+  <p id="winNote"></p>
+  <button class="btn go" id="next">अगला स्तर →</button>
+</div></div>
+<div class="overlay" id="lose" hidden><div class="card">
+  <h2 style="color:var(--bad)">स्टेशन भर गया!</h2>
+  <p>सारी जगहें भरी हैं और लाइन में सबसे आगे वाली सवारी किसी भी खड़ी गाड़ी के रंग की नहीं है।</p>
+  <div class="row">
+    <button class="btn" id="retry">फिर से</button>
+    <button class="btn go" id="revive">+1 जगह<small>40 सिक्के</small></button>
+  </div>
+</div></div>
+
+<div class="home" id="home" hidden>
+  <div class="home-in">
+    <h1 class="home-title" id="homeTitle"></h1>
+    <p class="home-sub" id="homeSub"></p>
+    <div class="path" id="path" aria-label="स्तरों का रास्ता"></div>
+    <button class="btn go big" id="playBtn">खेलें</button>
+    <div class="home-row">
+      <div class="coins"><span class="coin"></span><span id="homeCoins">0</span></div>
+      <button class="iconbtn" id="soundBtn" aria-label="आवाज़">🔊</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const Bridge={
+  load(key){try{return localStorage.getItem(key)}catch(e){return null}},
+  save(key,val){try{localStorage.setItem(key,val)}catch(e){}},
+  buzz(){try{navigator.vibrate&&navigator.vibrate(30)}catch(e){}}
+};
+function rngFor(L,salt){let a=(L*2654435761+salt*97)>>>0;
+  return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const Shell={sound:true,
+  init(o){this.o=o;
+    try{const st=JSON.parse(Bridge.load(o.key+"_settings")||"{}");if(st.sound===false)this.sound=false}catch(e){}
+    document.getElementById("homeTitle").textContent=o.title;
+    document.getElementById("homeSub").textContent=o.sub;
+    document.getElementById("playBtn").onclick=()=>{this.hide();o.onPlay&&o.onPlay()};
+    document.getElementById("soundBtn").onclick=()=>{this.sound=!this.sound;Bridge.save(o.key+"_settings",JSON.stringify({sound:this.sound}));this.paintSound()};
+    document.getElementById("homeBtn").onclick=()=>this.show();
+    this.paintSound();this.show()},
+  paintSound(){const b=document.getElementById("soundBtn");b.textContent=this.sound?"🔊":"🔇";b.setAttribute("aria-label",this.sound?"आवाज़ बंद करें":"आवाज़ चालू करें")},
+  show(){const L=this.o.level(),o=this.o;
+    document.getElementById("homeCoins").textContent=o.coins();
+    document.getElementById("playBtn").innerHTML=`स्तर ${L} खेलें`+(o.isHard(L)?"<small>कठिन स्तर · इनाम दोगुना</small>":"<small>तैयार हैं?</small>");
+    const path=document.getElementById("path");path.innerHTML="";
+    const from=Math.max(1,L-2);
+    for(let n=from+6;n>=from;n--){const d=document.createElement("div");
+      d.className="node"+(n<L?" done":n===L?" cur":" lock")+(o.isHard(n)?" hard":"");
+      d.style.setProperty("--x",[0,1,0,-1][n%4]);
+      d.innerHTML=n<L?"✓":`<b>${n}</b>${o.isHard(n)?"<i>कठिन</i>":""}`;
+      path.appendChild(d)}
+    document.getElementById("home").hidden=false},
+  hide(){document.getElementById("home").hidden=true}
+};
+
+const COLORS=["#e5483f","#2f7fe8","#22a85a","#f39c1f","#9452d9","#13a9bd","#e8559b"];
+const CAP={2:4,3:6};
+const isHard=L=>L%5===0;
+let lastReward=0,wonLevel=1;
+let level=1,coins=0,NC=5,NR=5,cars=[],base=null,bays=[],nBays=4,queue=[],busy=false,extraUsed=false;
+try{const s=JSON.parse(Bridge.load("sjam")||"{}");if(s.level)level=s.level;if(s.coins!=null)coins=s.coins}catch(e){}
+const save=()=>Bridge.save("sjam",JSON.stringify({level,coins}));
+const $=id=>document.getElementById(id);
+let actx;function beep(f,d=.08,t="triangle",v=.12){if(!Shell.sound)return;try{actx=actx||new(window.AudioContext||window.webkitAudioContext)();
+  const o=actx.createOscillator(),g=actx.createGain();o.type=t;o.frequency.value=f;g.gain.setValueAtTime(v,actx.currentTime);
+  g.gain.exponentialRampToValueAtTime(.001,actx.currentTime+d);o.connect(g).connect(actx.destination);o.start();o.stop(actx.currentTime+d)}catch(e){}}
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+
+function cellsOf(c){const a=[];for(let i=0;i<c.len;i++)a.push(c.h?[c.r,c.c+i]:[c.r+i,c.c]);return a}
+function grid(list){const g=Array.from({length:NR},()=>Array(NC).fill(null));list.forEach(c=>cellsOf(c).forEach(([r,k])=>g[r][k]=c));return g}
+function path(c){const a=[];
+  if(c.h){if(c.d>0)for(let k=c.c+c.len;k<NC;k++)a.push([c.r,k]);else for(let k=c.c-1;k>=0;k--)a.push([c.r,k])}
+  else{if(c.d>0)for(let r=c.r+c.len;r<NR;r++)a.push([r,c.c]);else for(let r=c.r-1;r>=0;r--)a.push([r,c.c])}
+  return a}
+function blocker(c,list){const g=grid(list);const p=path(c);for(let i=0;i<p.length;i++){const o=g[p[i][0]][p[i][1]];if(o)return{car:o,free:i}}return null}
+function clearable(list){let l=list.slice(),moved=true;
+  while(l.length&&moved){moved=false;for(const c of l){if(!blocker(c,l)){l=l.filter(x=>x!==c);moved=true;break}}}
+  return !l.length}
+
+const SIZES=[[5,5],[5,6],[5,6],[5,6],[5,6],[6,6],[6,6],[6,6],[6,6],[6,7]];
+function makeLevel(L){const R=rngFor(L,23);[NC,NR]=SIZES[Math.min(L-1,SIZES.length-1)];
+  const target=Math.round(NC*NR*(.42+Math.min(L,20)*.01));const nCol=Math.min(3+Math.floor((L-1)/3),COLORS.length);
+  let best=null;
+  for(let attempt=0;attempt<25;attempt++){const list=[];let used=0;
+    for(let t=0;t<2000&&used<target;t++){
+      const len=R()<(L>2?.22:0)?3:2,h=R()<.5,d=R()<.5?1:-1;
+      const r=Math.floor(R()*(h?NR:NR-len+1)),c=Math.floor(R()*(h?NC-len+1:NC));
+      const car={id:0,r,c,len,h,d};const g=grid(list);
+      if(cellsOf(car).some(([a,b])=>g[a][b]))continue;
+      if(!clearable([...list,car]))continue;
+      list.push(car);used+=len}
+    const free=list.filter(c=>!blocker(c,list)).length;const score=used-free*1.5;
+    if(!best||score>best.score)best={list,score};if(used>=target*.9&&free/list.length<.5)break}
+  const list=best.list;list.forEach((c,i)=>{c.id=i;c.ci=i%nCol});
+  for(let i=list.length-1;i>0;i--){const j=R()*(i+1)|0;const a=list[i].ci;list[i].ci=list[j].ci;list[j].ci=a}
+  const hard=isHard(L),bays=L<2?4:3,goal=Math.min(.7,(L<2?.15:L<3?.3:L<5?.35:L<10?.4:.45)+(hard?.2:0));
+  const R2=rngFor(L,61);let pick=null;
+  for(let attempt=0;attempt<40;attempt++){
+    let rest=list.slice();const order=[];
+    while(rest.length){const fr=rest.filter(c=>!blocker(c,rest));const p=fr[R()*fr.length|0];order.push(p);rest=rest.filter(x=>x!==p)}
+    const win=L<2?2:(R()<(L<3?.95:L<4?.6:.75)?bays+1:bays);
+    const q=[],seats=new Map(order.map(c=>[c,CAP[c.len]]));let active=[],nx=0;
+    while(active.length<win&&nx<order.length)active.push(order[nx++]);
+    while(active.length){const c=active[R()*active.length|0];q.push(c.ci);seats.set(c,seats.get(c)-1);
+      if(!seats.get(c)){active=active.filter(x=>x!==c);if(nx<order.length)active.push(order[nx++])}}
+    const lv={NC,NR,cars:list.map(c=>({...c})),queue:q,hard,bays};
+    if(!solvable(lv))continue;
+    let fail=0;const T=40;for(let k=0;k<T;k++)if(!casualRun(lv,R2))fail++;
+    const d=Math.abs(fail/T-goal);if(!pick||d<pick.d)pick={lv,d};if(d<.06)break}
+  const lv=pick.lv;
+  const mystP=L<2?0:Math.min(.3+L*.03,.65)+(hard?.15:0);
+  lv.cars.forEach(c=>{c.myst=!!blocker(c,lv.cars)&&R()<mystP});
+  return lv}
+function solvable(lv){const cs=lv.cars,n=cs.length,q=lv.queue,B=lv.bays,seen=new Set();
+  function go(mask,qi,bays){
+    bays=bays.map(b=>b.slice());let moved=true;
+    while(moved&&qi<q.length){moved=false;const i=bays.findIndex(b=>b[0]===q[qi]);if(i>=0){bays[i][1]--;qi++;moved=true;if(!bays[i][1])bays.splice(i,1)}}
+    if(qi>=q.length&&mask===(1<<n)-1)return true;
+    if(bays.length>=B)return false;
+    const key=mask+"|"+qi+"|"+bays.map(b=>b.join(":")).sort().join(",");if(seen.has(key))return false;seen.add(key);
+    const left=cs.filter((c,i)=>!(mask>>i&1));
+    for(let i=0;i<n;i++){if(mask>>i&1)continue;const c=cs[i];if(blocker(c,left))continue;
+      if(go(mask|1<<i,qi,[...bays,[c.ci,CAP[c.len]]]))return true}
+    return false}
+  return go(0,0,[])}
+function casualRun(lv,R){let bays=[],cs=lv.cars.slice(),q=lv.queue.slice();
+  for(let s=0;s<300;s++){let moved=true;
+    while(moved&&q.length){moved=false;const b=bays.find(b=>b.ci===q[0]&&b.s>0);if(b){b.s--;q.shift();moved=true;if(!b.s)bays=bays.filter(x=>x!==b)}}
+    if(!q.length&&!cs.length)return true;if(bays.length>=lv.bays)return false;
+    const free=cs.filter(c=>!blocker(c,cs));const m=free.filter(c=>c.ci===q[0]);const p=(m.length?m:free)[R()*(m.length||free.length)|0];
+    if(!p)return false;cs=cs.filter(x=>x!==p);bays.push({ci:p.ci,s:CAP[p.len]})}
+  return false}
+
+const lot=$("lot");
+function carEl(c){const el=document.createElement("div");el.className=`car ${c.h?"h":"v"} l${c.len}`;el.dataset.id=c.id;
+  el.style.left=`calc(var(--cell)*${c.c})`;el.style.top=`calc(var(--cell)*${c.r})`;
+  el.style.width=`calc(var(--cell)*${c.h?c.len:1})`;el.style.height=`calc(var(--cell)*${c.h?1:c.len})`;
+  el.tabIndex=0;el.setAttribute("role","button");
+  const arrow=c.h?(c.d>0?"▶":"◀"):(c.d>0?"▼":"▲");
+  el.setAttribute("aria-label",`${c.len===3?"बस":"टैक्सी"}, ${CAP[c.len]} सीट, दिशा ${arrow}`);
+  const b=document.createElement("div");b.className="body";
+  if(c.myst){el.classList.add("myst");b.style.setProperty("--k","#8b939b")}else b.style.setProperty("--k",COLORS[c.ci]);
+  if(c.justRevealed){el.classList.add("reveal");c.justRevealed=false}
+  const fr=document.createElement("div");fr.className="glass";const bk=document.createElement("div");bk.className="glass";
+  if(c.len===3){
+    if(c.h)Object.assign(fr.style,{top:"20%",bottom:"20%",left:"8%",right:"8%",opacity:.55});else Object.assign(fr.style,{left:"20%",right:"20%",top:"8%",bottom:"8%",opacity:.55});
+    if(c.h)Object.assign(bk.style,{top:"18%",bottom:"18%",width:"10%",[c.d>0?"right":"left"]:"3%"});else Object.assign(bk.style,{left:"18%",right:"18%",height:"10%",[c.d>0?"bottom":"top"]:"3%"})}
+  else if(c.h){Object.assign(fr.style,{top:"18%",bottom:"18%",width:"22%",[c.d>0?"right":"left"]:"10%"});Object.assign(bk.style,{top:"22%",bottom:"22%",width:"14%",[c.d>0?"left":"right"]:"8%",opacity:.7})}
+  else{Object.assign(fr.style,{left:"18%",right:"18%",height:"22%",[c.d>0?"bottom":"top"]:"10%"});Object.assign(bk.style,{left:"22%",right:"22%",height:"14%",[c.d>0?"top":"bottom"]:"8%",opacity:.7})}
+  const a=document.createElement("div");a.className="arrow";a.textContent=c.myst?"?":arrow;
+  b.append(fr,bk,a);el.appendChild(b);
+  if(c.myst){const t=document.createElement("span");t.className="dirTag";t.textContent=arrow;el.appendChild(t)}
+  el.onclick=()=>tap(c.id);el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();tap(c.id)}};
+  return el}
+let CELL=60;
+function fit(){const st=$("stage").getBoundingClientRect();const pad=16;
+  CELL=Math.max(34,Math.floor(Math.min((st.width-pad)/NC,(st.height-pad)/NR,80)));
+  lot.style.setProperty("--cell",CELL+"px");lot.style.width=CELL*NC+"px";lot.style.height=CELL*NR+"px"}
+function renderLot(){fit();lot.innerHTML="";cars.forEach(c=>lot.appendChild(carEl(c)))}
+function renderQueue(){const box=$("ppl");box.innerHTML="";const show=Math.min(queue.length,level<3?10:7);
+  for(let i=0;i<show;i++){const p=document.createElement("div");p.className="p"+(i===0?" first":"");p.style.setProperty("--k",COLORS[queue[i]]);box.appendChild(p)}
+  if(queue.length>show){const m=document.createElement("span");m.className="more";m.textContent="+"+(queue.length-show);box.appendChild(m)}
+  $("left").textContent=queue.length}
+function renderBays(){const st=$("station");st.style.setProperty("--bays",5);st.innerHTML="";
+  for(let i=0;i<5;i++){const b=document.createElement("div");b.className="bay"+(i>=nBays?" lockd":"");
+    const bay=bays[i];
+    if(bay){const v=document.createElement("div");v.className="bv"+(bay.leaving?" leave":"");v.style.setProperty("--k",COLORS[bay.car.ci]);
+      if(bay.fresh===false)v.style.animation=bay.leaving?"":"none";
+      for(let k=0;k<CAP[bay.car.len];k++){const s=document.createElement("div");s.className="seat"+(k<bay.seated?" on":"");v.appendChild(s)}
+      b.appendChild(v);bay.fresh=false}
+    if(i<nBays){const n=document.createElement("span");n.className="num";n.textContent=i+1;b.appendChild(n)}
+    st.appendChild(b)}}
+function ui(){$("lvl").textContent=level;$("coins").textContent=coins;
+  $("bayBtn").disabled=coins<40||extraUsed||!base||nBays>base.bays;$("revive").disabled=coins<40||!base||nBays>base.bays}
+function say(t,warn){const m=$("msg");m.textContent=t;m.className="msg"+(warn?" warn":"")}
+const elOf=id=>lot.querySelector(`.car[data-id="${id}"]`);
+function shake(el){const b=el;b.classList.remove("shake");void b.offsetWidth;b.classList.add("shake")}
+
+async function tap(id){if(busy)return;const c=cars.find(x=>x.id===id);if(!c)return;const el=elOf(id);
+  const b=blocker(c,cars);
+  if(b){shake(el);const be=elOf(b.car.id);if(be)shake(be);beep(120,.15,"square",.08);say("आगे दूसरी गाड़ी खड़ी है। पहले उसे निकालें।",true);return}
+  const slot=bays.findIndex((x,i)=>i<nBays&&!x);
+  if(slot<0){shake(el);beep(120,.15,"square",.08);say("स्टेशन पर जगह नहीं है। पहले कोई गाड़ी भरने दें।",true);return}
+  busy=true;say("");
+  const cell=CELL,vx=c.h?c.d:0,vy=c.h?0:c.d,dist=(path(c).length+c.len+1.5)*cell;
+  el.classList.add("gone");el.style.transform=`translate(${vx*dist}px,${vy*dist}px)`;beep(300,.22,"sawtooth",.05);
+  cars=cars.filter(x=>x.id!==id);bays[slot]={car:c,seated:0};
+  await wait(380);el.remove();renderBays();beep(620,.07);
+  let revealed=false;cars.forEach(o=>{if(o.myst&&!blocker(o,cars)){o.myst=false;o.justRevealed=true;revealed=true}});
+  if(revealed){renderLot();beep(990,.06)}
+  await board();busy=false;check()}
+
+async function board(){
+  for(;;){if(!queue.length)break;const col=queue[0];
+    const i=bays.findIndex((b,k)=>k<nBays&&b&&!b.leaving&&b.car.ci===col&&b.seated<CAP[b.car.len]);
+    if(i<0)break;
+    bays[i].seated++;queue.shift();renderQueue();renderBays();beep(480+bays[i].seated*60,.05);
+    await wait(120);
+    if(bays[i].seated>=CAP[bays[i].car.len]){bays[i].leaving=true;renderBays();beep(784,.12);setTimeout(()=>beep(1046,.14),110);
+      await wait(460);bays[i]=null;renderBays()}}}
+
+function check(){ui();
+  if(!queue.length&&!cars.length){win();return}
+  const free=bays.some((b,i)=>i<nBays&&!b);
+  if(!free){$("lose").hidden=false;Bridge.buzz();beep(200,.3,"sawtooth",.06)}
+  else if(queue.length){const need=queue[0];const has=cars.some(c=>c.ci===need);
+    if(has)say("अगली सवारी के रंग की गाड़ी निकालें।")}}
+
+function win(){const reward=(10+Math.min(level,100)*2+(extraUsed?0:5))*(base.hard?2:1);lastReward=reward;wonLevel=level;coins+=reward;level++;save();
+  $("reward").textContent="+"+reward;$("winNote").textContent=extraUsed?"शाबाश! अगली बार बिना extra जगह के कोशिश करें, +5 बोनस मिलेगा।":"बिना extra जगह के पूरा किया, +5 बोनस!";
+  $("win").hidden=false;[523,659,784,1046].forEach((f,k)=>setTimeout(()=>beep(f,.15),k*110))}
+
+function start(fresh){if(fresh||!base)base=makeLevel(level);NC=base.NC;NR=base.NR;cars=base.cars.map(c=>({...c}));queue=base.queue.slice();
+  $("hardTag").hidden=!base.hard;
+  bays=[null,null,null,null,null];nBays=base.bays;extraUsed=false;busy=false;$("win").hidden=true;$("lose").hidden=true;
+  renderLot();renderQueue();renderBays();ui();
+  say(base.hard?`कठिन स्तर: सिर्फ़ ${base.bays} जगह, इनाम दोगुना!`:cars.some(c=>c.myst)?"? वाली गाड़ी का रंग तभी दिखेगा जब उसका रास्ता खुलेगा।":level===2?"अब स्टेशन पर सिर्फ़ 3 जगह हैं। सोच-समझकर गाड़ी निकालें!":"लाइन में सबसे आगे वाली सवारी जिस रंग की है, उसी रंग की गाड़ी निकालें।")}
+const addBay=async()=>{if(coins<40||nBays>base.bays)return false;coins-=40;nBays=base.bays+1;extraUsed=true;save();renderBays();ui();beep(700);return true};
+$("bayBtn").onclick=async()=>{if(busy)return;if(await addBay()){busy=true;await board();busy=false;check()}};
+$("revive").onclick=async()=>{if(await addBay())$("lose").hidden=true};
+$("restart").onclick=()=>{if(!busy)start(false)};$("retry").onclick=()=>start(false);$("next").onclick=()=>{start(true)};
+addEventListener("resize",()=>{if(!busy)renderLot()});
+start(true);
+Shell.init({key:"sjam",title:"Bus Bharo!",sub:"गाड़ी निकालो, स्टेशन पर लगाओ, उसी रंग की सवारी बैठाओ।",level:()=>level,coins:()=>coins,isHard});
+</script>
+</body></html>

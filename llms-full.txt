@@ -1,0 +1,2426 @@
+# Vidnexa Studio – full content
+
+Website: https://vidnexastudio.com/  Contact: info@vidnexastudio.com
+
+## Site FAQ
+
+**What is Vidnexa Studio?**
+Vidnexa Studio is an independent studio from India that makes Android apps, free online tools and browser games. Our apps are Vidnexa Player and Vidnexa: HD Video Downloader, with Papervo coming soon.
+
+**Are the tools and games on this site free?**
+Yes. All tools and games are free to use, with no sign-up or subscription. The site may show ads to cover running costs.
+
+**Do I need to create an account?**
+No. You can use every tool and game without an account.
+
+**Are my files uploaded when I use a tool?**
+No. Image, PDF, video and text tools run inside your browser, so your files and text stay on your device and are not sent to our servers.
+
+**Do the tools work on a phone?**
+Yes. Everything is designed to work on phones, tablets and computers. A few features, such as screen recording, depend on browser support and are mainly available on desktop browsers.
+
+**What is Vidnexa Player?**
+Vidnexa Player is our Android video player app. You can get it free on Google Play from the Apps page.
+
+**What is Vidnexa HD Video Downloader?**
+Vidnexa: HD Video Downloader is an Android app for saving videos you own or have permission to download. It is available on Google Play.
+
+**Is there an iPhone version of the apps?**
+Our apps are currently available for Android on Google Play. The web tools and games work on iPhone browsers too.
+
+**How accurate are the calculators?**
+They use standard formulas and give close estimates, but they are not financial, tax or medical advice. Please confirm important figures with a professional or your bank.
+
+**How do I report a problem or suggest a tool?**
+Write to us using the Contact page. Please include the tool name and a short description of the problem.
+
+## Tools
+
+### Word Counter (https://vidnexastudio.com/tools/word-counter/)
+The Word Counter counts words, characters (with and without spaces), sentences, paragraphs and estimated reading time as you type or paste.
+
+Writers, students and content teams use a word counter to stay inside limits such as 280 characters for a post, 160 for a meta description or 500 words for an essay. This tool updates live, so you can trim a sentence and see the numbers change at once. Reading time is estimated from an average adult reading speed, which makes it handy for blog posts and speeches. Everything is counted inside your browser, so private drafts are never sent to a server.
+
+How to use:
+1. Type or paste your text into the box.
+2. Numbers update live as you type.
+3. Press Clear to start again.
+
+Tips:
+- Paste your text, then delete the sentences you can live without and watch the count drop.
+- Use the character count without spaces for SMS and form fields that ignore spaces.
+- Check reading time before you publish; most readers stay for posts under five minutes.
+
+Q: Does it count spaces?
+A: It shows characters with spaces and without spaces, so you can use whichever your task needs.
+
+Q: Is my text uploaded?
+A: No. Everything is counted inside your browser and nothing is sent to a server.
+
+Q: Is there a word limit?
+A: No fixed limit. Very long texts of hundreds of thousands of words may slow an older phone, but normal documents are counted instantly.
+
+Q: Are my words stored anywhere?
+A: No. The counting happens on your device and the text is not uploaded or saved.
+
+### Case Converter (https://vidnexastudio.com/tools/case-converter/)
+The Case Converter changes text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case and more in one click.
+
+Fixing text typed with Caps Lock on, formatting a headline or renaming variables for code are all quick jobs for a case converter. Paste your text, pick a style and copy the result. Title Case capitalises each word, Sentence case capitalises only the first letter of each sentence, and the developer styles join words without spaces. The conversion runs locally in your browser, so nothing you paste leaves your device.
+
+How to use:
+1. Paste your text.
+2. Pick the case you want.
+3. Copy the result.
+
+Tips:
+- Use Sentence case to repair text that was typed in all capitals.
+- Choose camelCase or snake_case when you are naming variables or file names.
+- Review Title Case results: small words such as 'of' and 'the' may need a manual fix to match your style guide.
+
+Q: Which cases are supported?
+A: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and aLtErNaTiNg.
+
+Q: Does it work with Hindi text?
+A: Hindi has no upper or lower case, so those letters stay as they are. English letters in the same text are converted.
+
+Q: What is the difference between Title Case and Sentence case?
+A: Title Case capitalises the first letter of every word, while Sentence case capitalises only the first word of each sentence and proper nouns you type yourself.
+
+Q: Does it work with Hindi or other languages?
+A: Case only applies to scripts that have upper and lower case, such as English. Hindi and other scripts without case stay unchanged.
+
+### Lorem Ipsum Generator (https://vidnexastudio.com/tools/lorem-ipsum-generator/)
+The Lorem Ipsum Generator creates placeholder paragraphs, sentences or words so you can fill a design or mockup before the real copy is ready.
+
+Designers and developers use lorem ipsum because it looks like real text without distracting reviewers with meaning. Choose how many paragraphs, sentences or words you need, generate the text and copy it into your layout. It is useful for testing fonts, line lengths, card heights and responsive breakpoints. Generation happens in your browser instantly and there is nothing to install.
+
+How to use:
+1. Choose how many paragraphs, sentences or words.
+2. Press Generate.
+3. Copy the text into your design.
+
+Tips:
+- Generate a little more text than you need, then trim; it is easier than adding.
+- Test both short and long blocks to see how your layout behaves with different amounts of text.
+- Replace the placeholder with real copy before publishing, because search engines prefer meaningful content.
+
+Q: What is Lorem Ipsum?
+A: It is dummy text used by designers so a layout can be judged without real content.
+
+Q: Is the text random?
+A: Yes. Each press builds new text from a list of Latin-style words.
+
+Q: What does lorem ipsum mean?
+A: It is scrambled Latin-style filler text used since the 1500s by printers and designers as a stand-in for real content.
+
+Q: Is it free to use in commercial projects?
+A: Yes. Lorem ipsum is placeholder text with no copyright restrictions.
+
+### Remove Duplicate Lines (https://vidnexastudio.com/tools/remove-duplicate-lines/)
+The Remove Duplicate Lines tool deletes repeated lines from a list and keeps each unique line once, in a single click.
+
+Cleaning an email list, a keyword list, a set of URLs or log output often means getting rid of repeated lines. Paste your list, choose whether letter case and extra spaces should matter, and the tool returns only the unique lines in their original order. You can see how many duplicates were removed. All processing is local to your browser, so private lists stay private.
+
+How to use:
+1. Paste your list, one item per line.
+2. Choose whether to ignore case, trim spaces and remove empty lines.
+3. Press Remove duplicates and copy the result.
+
+Tips:
+- Turn on case-insensitive matching when 'Apple' and 'apple' should count as the same line.
+- Trim spaces first if copied data has invisible trailing spaces.
+- Sort the cleaned list afterwards with the Text Sorter if you need it in alphabetical order.
+
+Q: Is the original order kept?
+A: Yes. The first time a line appears it stays, and later copies are removed.
+
+Q: How many lines can it handle?
+A: Tens of thousands of lines work fine on a normal phone or computer.
+
+Q: Does it keep the first or last copy of a line?
+A: It keeps the first occurrence and removes the later repeats, so your original order is preserved.
+
+Q: How many lines can I paste?
+A: Tens of thousands of lines work fine on most devices. The limit is your browser's memory, not the site.
+
+### Text Sorter (https://vidnexastudio.com/tools/text-sorter/)
+The Text Sorter sorts lines A to Z, Z to A, by length, or shuffles them randomly, right in your browser.
+
+Put names in alphabetical order, rank items by length or randomise a list for a draw. Paste one item per line, choose a sort mode and copy the result. Numbers can be sorted as text or by value depending on the option, and empty lines can be removed in the same step. Nothing is uploaded; sorting is done on your device.
+
+How to use:
+1. Paste your lines.
+2. Choose a sort method.
+3. Copy the sorted list.
+
+Tips:
+- Use the shuffle option to pick a random order for a giveaway or team list.
+- Sort by length to find the shortest and longest items quickly.
+- Combine with Remove Duplicate Lines to get a clean, ordered, unique list.
+
+Q: Does it sort numbers correctly?
+A: Yes. Numbers inside text are compared as numbers, so 2 comes before 10.
+
+Q: Can I shuffle a list?
+A: Yes. Pick Shuffle to put the lines in random order.
+
+Q: Is the sorting case sensitive?
+A: By default A to Z ignores letter case so 'apple' and 'Banana' sort naturally. Check the options on the tool for stricter modes.
+
+Q: Can I sort numbers?
+A: Yes. Use the numeric option so that 10 comes after 9 instead of after 1.
+
+### Slug Generator (https://vidnexastudio.com/tools/slug-generator/)
+The Slug Generator turns a title or phrase into a clean, lowercase, hyphen-separated URL slug that is safe for web addresses.
+
+A good slug is short, readable and uses only lowercase letters, numbers and hyphens. Paste a blog title and the tool removes punctuation and accents, collapses spaces into hyphens and gives you a slug you can paste into your CMS. Short slugs that contain the main keyword are easier to read in search results and easier to share. The conversion runs locally in your browser.
+
+How to use:
+1. Type or paste your title.
+2. Choose options such as removing small words.
+3. Copy the slug.
+
+Tips:
+- Remove filler words such as 'a', 'the' and 'and' to keep the slug short.
+- Do not change a slug after publishing unless you add a redirect from the old address.
+- Use hyphens, not underscores; search engines treat hyphens as word separators.
+
+Q: What is a slug?
+A: The readable last part of a web address, like my-first-post.
+
+Q: Are accents removed?
+A: Yes. Letters like é become e so the link works everywhere.
+
+Q: Why use hyphens instead of spaces in a URL?
+A: Spaces become %20 in a URL, which looks messy. Hyphens keep the address readable and are the common convention.
+
+Q: Does the slug affect SEO?
+A: A short, descriptive slug helps users understand a link, and it is a small positive signal. Content quality matters far more.
+
+### Text Reverser (https://vidnexastudio.com/tools/text-reverser/)
+The Text Reverser reverses the letters, the order of words, or the order of lines in any text you paste.
+
+Reverse a word to check a palindrome, flip a list upside down or create mirrored text for fun. Choose reverse letters, reverse words or reverse lines, and the result appears immediately. It handles ordinary Unicode text, and everything is processed in your browser without uploading anything.
+
+How to use:
+1. Paste your text.
+2. Pick a reverse mode.
+3. Copy the result.
+
+Tips:
+- Use reverse lines to flip the order of a numbered list or a log.
+- Compare the original and reversed text to test whether a phrase is a palindrome.
+- Emoji made of several parts may flip in unexpected ways, so check the result.
+
+Q: What is the difference between the modes?
+A: Characters flips every letter. Words reverses word order. Each word flips letters inside each word. Lines reverses line order.
+
+Q: Does it work with emoji?
+A: Most emoji work. A few joined emoji may split when reversed.
+
+Q: What is the difference between reversing letters and reversing words?
+A: Reversing letters flips the whole text character by character, while reversing words keeps each word readable but changes their order.
+
+Q: Will it work on Hindi text?
+A: It reverses the characters, but joined characters in Hindi may not look correct when flipped, so it is best suited to English text.
+
+### Text to Speech (https://vidnexastudio.com/tools/text-to-speech/)
+The Text to Speech tool reads any text aloud using the voices built into your device and browser, with adjustable speed and pitch.
+
+Paste an email, a study note or an article and listen instead of reading. Pick a voice, set the speed and pitch and press play. The available voices and languages depend on your device and browser, so a phone, a laptop and a tablet may offer different options. Speech is generated locally by your browser's own speech engine and the text is not sent to our servers.
+
+How to use:
+1. Type or paste text.
+2. Choose a voice and speed.
+3. Press Speak.
+
+Tips:
+- Slow the speed down slightly when you are learning pronunciation.
+- Break very long text into sections if the voice stops partway; some browsers limit one utterance.
+- Try a different browser if you do not see a voice for your language.
+
+Q: Which voices are available?
+A: The voices come from your own device and browser, so the list is different on each phone or computer.
+
+Q: Is any audio uploaded?
+A: No. Speech is made on your device.
+
+Q: Why do I see different voices on different devices?
+A: The tool uses the voices installed on your device and browser, which differ between Android, iOS, Windows and macOS.
+
+Q: Can I download the audio?
+A: No. Browsers do not allow recording the built-in speech output directly, so the tool plays it aloud only.
+
+### Typing Speed Test (https://vidnexastudio.com/tools/typing-speed-test/)
+The Typing Speed Test measures your typing speed in words per minute (WPM) and your accuracy in under a minute.
+
+Type the shown passage as quickly and accurately as you can and see your WPM, accuracy and mistakes when the time ends. Typing speed is counted as one word for every five characters, which is the standard used by most typing tests. Practise a few minutes every day and your score will rise steadily. The test runs entirely in your browser and your results are not stored on our servers.
+
+How to use:
+1. Read the passage shown.
+2. Start typing it in the box. The timer starts on your first key.
+3. See your speed and accuracy at the end.
+
+Tips:
+- Focus on accuracy first; speed follows naturally once mistakes drop.
+- Sit upright and keep your wrists relaxed to avoid strain.
+- Try again on different days, as scores vary with practice and focus.
+
+Q: How is WPM calculated?
+A: Every 5 correct characters count as one word, divided by the minutes you took.
+
+Q: Is a good score?
+A: Around 40 WPM is typical. Above 60 WPM is quick.
+
+Q: What is a good typing speed?
+A: Most people type 35 to 45 WPM. Above 60 WPM is considered fast for office work, and professionals often reach 70 or more.
+
+Q: How is WPM calculated?
+A: Every five characters, including spaces, count as one word. WPM is that word count divided by the minutes taken.
+
+### Age Calculator (https://vidnexastudio.com/tools/age-calculator/)
+The Age Calculator finds your exact age in years, months and days from your date of birth, and shows how many days until your next birthday.
+
+Enter a date of birth and, if you like, a different date to measure against. The calculator takes leap years and different month lengths into account and returns your age in years, months and days, along with total months, weeks and days lived. It is useful for forms, school admissions, insurance and eligibility checks. The calculation is done in your browser and the dates are not stored.
+
+How to use:
+1. Pick your date of birth.
+2. Optionally change the 'age on' date.
+3. Read your exact age.
+
+Tips:
+- Change the 'age at' date to find out how old you will be on a future date, such as an exam or job deadline.
+- Check the exact rules of a form; some count age on 1 January or 1 July.
+- Use the Date Difference Calculator to count days between any two dates.
+
+Q: Can I check age on a past or future date?
+A: Yes. Change the 'Age on date' field.
+
+Q: Is my date of birth stored?
+A: No. The calculation happens in your browser only.
+
+Q: Does it handle leap years?
+A: Yes. Leap days and varying month lengths are included in the calculation.
+
+Q: Can I find the age on a past or future date?
+A: Yes. Enter any date in the 'age at' field to see the age on that day.
+
+### EMI Calculator (https://vidnexastudio.com/tools/emi-calculator/)
+The EMI Calculator works out your monthly loan instalment, total interest and total payment from the loan amount, interest rate and tenure.
+
+EMI stands for equated monthly instalment, the fixed amount you pay every month on a home, car or personal loan. Enter the principal, the annual interest rate and the tenure in months or years, and the calculator shows the EMI, the total interest paid and a year by year schedule of principal and balance. Try different tenures to see how a longer loan lowers the EMI but raises total interest. Results are estimates, and your bank's figure may differ because of fees and rounding.
+
+How to use:
+1. Enter the loan amount.
+2. Enter the yearly interest rate and the tenure.
+3. See your monthly EMI and the full breakup.
+
+Tips:
+- Compare 15 and 20 year tenures to see how much extra interest a longer loan costs.
+- A small extra payment toward principal each year can shorten the loan significantly.
+- Remember to add processing fees and insurance when comparing offers.
+
+Q: How is EMI calculated?
+A: EMI = P × r × (1+r)^n ÷ ((1+r)^n − 1), where r is the monthly rate and n is the number of months.
+
+Q: Will my bank show the same number?
+A: It can differ slightly because of processing fees and rounding.
+
+Q: What formula does the EMI calculator use?
+A: EMI = P × r × (1+r)^n / ((1+r)^n − 1), where P is the loan amount, r is the monthly interest rate and n is the number of months.
+
+Q: Why is my bank's EMI slightly different?
+A: Banks may round differently, add fees or change the rate during the loan. Treat the result here as a close estimate.
+
+### Percentage Calculator (https://vidnexastudio.com/tools/percentage-calculator/)
+The Percentage Calculator finds a percentage of a number, what percent one number is of another, and the percentage increase or decrease between two values.
+
+Use it for discounts, marks, tips, tax, growth rates and price changes. Choose the type of question, fill in the numbers and read the answer with a short explanation of the formula. For example, 20% of 450 is 90, and a rise from 80 to 100 is a 25% increase. The calculation happens in your browser and nothing is saved.
+
+How to use:
+1. Pick the question that matches yours.
+2. Fill in the two numbers.
+3. The answer appears straight away.
+
+Tips:
+- For a percentage change, always divide the difference by the original value, not the new one.
+- A 50% increase followed by a 50% decrease does not bring you back to the start.
+- Use the Discount Calculator when you want the final price after an offer.
+
+Q: How do I find the percentage increase?
+A: Subtract the old value from the new value, divide by the old value and multiply by 100.
+
+Q: Can I use decimals?
+A: Yes, decimals are fine.
+
+Q: How do I calculate X% of a number?
+A: Multiply the number by X and divide by 100. For example, 15% of 200 is 200 × 15 ÷ 100 = 30.
+
+Q: How do I find percentage increase?
+A: Subtract the old value from the new one, divide by the old value and multiply by 100.
+
+### BMI Calculator (https://vidnexastudio.com/tools/bmi-calculator/)
+The BMI Calculator estimates your body mass index from height and weight and shows which standard range it falls into, with a healthy weight range for your height.
+
+BMI is your weight in kilograms divided by your height in metres squared. Adults are generally grouped as underweight below 18.5, normal from 18.5 to 24.9, overweight from 25 to 29.9 and obese at 30 and above. Some health guidelines for South Asian adults use lower cut-offs, so ask a doctor which applies to you. BMI is a simple screening number and does not measure body fat, muscle or overall health. It is not medical advice.
+
+How to use:
+1. Enter your height in centimetres.
+2. Enter your weight in kilograms.
+3. Read your BMI and category.
+
+Tips:
+- Measure height without shoes and weight in light clothing for a better estimate.
+- Muscular people may have a high BMI without excess body fat.
+- Talk to a doctor or dietitian before making health decisions based on BMI.
+
+Q: Is BMI accurate for everyone?
+A: No. It is a rough screening number and ignores muscle, age and body type.
+
+Q: Is this medical advice?
+A: No. Please ask a doctor about your health.
+
+Q: Is BMI accurate for everyone?
+A: No. It is a rough screening tool and ignores muscle, bone density, age and body shape.
+
+Q: Can I use it for children?
+A: Not reliably. Children's BMI is judged against age and sex charts, so please ask a paediatrician.
+
+### SIP Calculator (https://vidnexastudio.com/tools/sip-calculator/)
+The SIP Calculator estimates the future value of a monthly SIP investment from the monthly amount, expected annual return and number of years.
+
+A systematic investment plan puts a fixed amount into a fund every month. Enter your monthly amount, the return you expect and the period, and the calculator shows the total invested, the estimated gains and the final value. It makes the effect of compounding easy to see: starting earlier and staying invested longer matters more than the exact return. Actual returns of market-linked investments vary and are never guaranteed, so treat the result as an illustration, not a promise or financial advice.
+
+How to use:
+1. Enter the monthly amount.
+2. Enter the expected yearly return and years.
+3. See invested amount, returns and total value.
+
+Tips:
+- Try the same monthly amount over 10, 15 and 20 years to see how compounding grows.
+- Use a conservative return when planning for important goals.
+- Increase your SIP a little each year to reach your goal sooner.
+
+Q: Are the returns guaranteed?
+A: No. Market returns change. The result is only an estimate.
+
+Q: Is this financial advice?
+A: No. It is a simple calculator for planning ideas.
+
+Q: Are the SIP returns guaranteed?
+A: No. Market-linked returns go up and down. The calculator only shows what would happen if the entered rate were earned every year.
+
+Q: What return rate should I enter?
+A: Use a realistic, cautious figure. Check the long term history of the type of fund you are considering, and remember that past returns do not guarantee future ones.
+
+### GST Calculator (https://vidnexastudio.com/tools/gst-calculator/)
+The GST Calculator adds GST to a price or removes it from a GST-inclusive price, and splits the tax into CGST and SGST.
+
+Enter the amount and the GST rate, such as 5%, 12%, 18% or 28%, and choose whether to add or remove GST. The tool returns the net price, the total GST and the CGST and SGST halves used for sales within the same state. It is useful for invoices, shop billing and checking a price quoted with tax. Rates change, so confirm the current rate for your product or service with the official GST notifications or your accountant.
+
+How to use:
+1. Enter the amount.
+2. Choose the GST rate and whether GST is included.
+3. See the net, tax and total amounts.
+
+Tips:
+- Choose 'remove GST' when the price you have already includes tax.
+- For sales between states IGST applies instead of the CGST and SGST split.
+- Always confirm the correct rate for your item with an accountant or the official GST rate list.
+
+Q: What are the GST rates?
+A: The tool offers 3%, 5%, 12%, 18% and 28%. Check the latest rate for your product with official sources.
+
+Q: What is the CGST and SGST split?
+A: For sales inside one state the GST is divided equally between the centre and the state.
+
+Q: What is the difference between CGST, SGST and IGST?
+A: CGST goes to the central government and SGST to the state when a sale is within one state. IGST is charged for sales between states.
+
+Q: How do I remove GST from a price?
+A: Divide the GST-inclusive price by (1 + rate/100). For 18% GST, divide by 1.18.
+
+### Discount Calculator (https://vidnexastudio.com/tools/discount-calculator/)
+The Discount Calculator shows the final price after a percentage discount and how much money you save.
+
+Enter the original price and the discount percentage to see the sale price and the saving. You can also add a second discount, such as an extra coupon, to see the combined effect. Remember that two discounts of 20% and 10% do not equal 30%, because the second applies to the already reduced price. The calculation is done locally and nothing is saved.
+
+How to use:
+1. Enter the original price.
+2. Enter the discount percentage (and an extra one if any).
+3. See what you pay and what you save.
+
+Tips:
+- Compare offers by the final price, not just the percentage.
+- Add shipping and taxes before deciding which deal is cheaper.
+- Remember that stacked discounts apply one after another.
+
+Q: How does a second discount work?
+A: The second discount is applied on the already reduced price, not the original.
+
+Q: Can I use it for sale shopping?
+A: Yes, it is great for quick checks.
+
+Q: How do I calculate a discount?
+A: Multiply the price by the discount percentage and divide by 100 to get the saving, then subtract it from the price.
+
+Q: Is a 20% plus 10% discount the same as 30%?
+A: No. 20% off then 10% off equals 28% off, because the 10% applies to the reduced price.
+
+### Date Difference Calculator (https://vidnexastudio.com/tools/date-difference-calculator/)
+The Date Difference Calculator tells you the number of days, weeks, months and years between two dates.
+
+Pick a start date and an end date to see the gap as total days and as years, months and days. It is helpful for project deadlines, notice periods, pregnancy or trip countdowns, and counting days since an event. You can choose to include the end date in the count. The calculation uses your browser and no dates are stored.
+
+How to use:
+1. Pick the start date.
+2. Pick the end date.
+3. Read the difference.
+
+Tips:
+- Tick the include-end-date option if both the first and last day should count.
+- Use it to count working timelines, but remember it does not skip weekends or holidays.
+- Use the Age Calculator when one of the dates is a birth date.
+
+Q: Is the end date included?
+A: The result is the gap between the two dates. Add one day if you want to count both.
+
+Q: Can the start date be later?
+A: Yes. The tool swaps them for you.
+
+Q: Does it include the last day?
+A: By default it counts the difference between the dates. Enable the include-end-date option to count both days.
+
+Q: Does it skip weekends?
+A: No. It counts calendar days, including weekends and holidays.
+
+### Simple & Compound Interest Calculator (https://vidnexastudio.com/tools/interest-calculator/)
+The Interest Calculator computes simple or compound interest and the final amount from the principal, rate and time.
+
+With simple interest the amount earned stays the same every year, calculated on the original principal. With compound interest you earn interest on previously earned interest, so savings grow faster. Choose the type, enter the principal, rate and period and, for compound interest, the compounding frequency. The result shows the interest earned and the maturity amount. Check your bank's own terms, as actual interest may be calculated differently.
+
+How to use:
+1. Enter principal, rate and years.
+2. Choose simple interest or a compounding period.
+3. See interest earned and maturity amount.
+
+Tips:
+- Use compound interest to estimate fixed deposits and savings; use simple interest for many short term loans.
+- Choose quarterly compounding to match many bank deposits.
+- Compare the same amount over 5 and 10 years to see compounding at work.
+
+Q: What is the difference?
+A: Simple interest is only on the principal. Compound interest is also on interest already earned.
+
+Q: Does it work for FD?
+A: It gives a good estimate for a fixed deposit. Banks may round differently.
+
+Q: What is the formula for compound interest?
+A: A = P(1 + r/n)^(nt), where P is the principal, r the annual rate, n the compounding periods per year and t the years.
+
+Q: What is the formula for simple interest?
+A: Simple interest = P × R × T ÷ 100, where P is the principal, R the yearly rate and T the time in years.
+
+### Unit Converter (https://vidnexastudio.com/tools/unit-converter/)
+The Unit Converter converts length, weight, area, volume, speed, data size and temperature between common units instantly.
+
+Pick a category, enter a value and see it converted into other units at the same time, such as kilometres to miles, kilograms to pounds, acres to square metres, litres to gallons or Celsius to Fahrenheit. Data units include bytes, kilobytes, megabytes and gigabytes. It is handy for cooking, travel, shopping and studying. The conversion runs in your browser using standard conversion factors.
+
+How to use:
+1. Choose the type of unit.
+2. Enter a value and pick From and To.
+3. Read the converted result.
+
+Tips:
+- Use the swap button to reverse the conversion direction quickly.
+- For temperature, remember that conversions are not a simple multiplication.
+- Check whether a recipe or document uses US or UK gallons and cups, as they differ.
+
+Q: Is bigha accurate?
+A: A bigha changes from state to state. The tool uses one common value, so check local records for land deals.
+
+Q: Which temperature units work?
+A: Celsius, Fahrenheit and Kelvin.
+
+Q: How many kilometres are in a mile?
+A: One mile is about 1.609 kilometres.
+
+Q: Does it support Indian units like acre or bigha?
+A: It supports acre and square metre style area units. Local units such as bigha vary by state, so they are not included.
+
+### Random Number Generator (https://vidnexastudio.com/tools/random-number-generator/)
+The Random Number Generator picks one or many random numbers between a minimum and maximum you choose, with or without repeats.
+
+Use it for draws, games, classroom activities, sampling or choosing who goes first. Set the range, how many numbers you need and whether repeats are allowed, then press generate. It uses your browser's built-in random source. For anything that needs cryptographic security, such as passwords, use the Password Generator instead.
+
+How to use:
+1. Set the minimum and maximum.
+2. Choose how many numbers.
+3. Press Generate.
+
+Tips:
+- Turn off repeats to draw unique numbers, like a lottery or raffle.
+- Generate a sorted list if you want an ordered result.
+- For passwords and keys use the Password Generator, which is designed for security.
+
+Q: Is it truly random?
+A: It uses your browser's secure random generator, which is far better than a simple formula.
+
+Q: Can I avoid repeats?
+A: Yes, tick 'No repeats'.
+
+Q: Is the number truly random?
+A: It is pseudo-random, produced by your browser, which is fine for games and draws but is not meant for security uses.
+
+Q: Can I get numbers without repeats?
+A: Yes. Choose the unique option and the tool draws each number only once.
+
+### Online Stopwatch (https://vidnexastudio.com/tools/stopwatch/)
+The Stopwatch is a simple online timer that counts up in hours, minutes, seconds and hundredths, with lap times.
+
+Press start to begin timing, record laps while it keeps running, and pause or reset whenever you like. It is useful for workouts, cooking, study sessions, presentations and games. The timer runs in your browser tab, so keep the tab open for the most accurate result, as some phones slow background tabs.
+
+How to use:
+1. Press Start.
+2. Press Lap to record a split.
+3. Press Pause or Reset when done.
+
+Tips:
+- Keep the page open and the screen awake for long timings.
+- Use laps to record intervals without stopping the clock.
+- Write down your times, because they are not saved after you close the page.
+
+Q: Does it keep running if I switch tabs?
+A: Yes. It measures real clock time, so the total stays correct.
+
+Q: Is there a sound?
+A: No sound is played.
+
+Q: Does the stopwatch keep running if I switch tabs?
+A: It keeps counting from the real clock, but some browsers pause updates in background tabs. The time will catch up when you return.
+
+Q: Are lap times saved?
+A: No. They exist only while the page is open.
+
+### Image Compressor (https://vidnexastudio.com/tools/image-compressor/)
+The Image Compressor reduces the file size of JPG, PNG and WebP photos right in your browser, without uploading them anywhere.
+
+Large images slow down websites and fail upload limits on forms and email. Choose your images, set the quality, and compare the original and compressed size before you download. JPG and WebP are compressed by lowering quality, which gives the biggest savings for photos. Because processing happens on your own device, your photos stay private and there is no waiting for uploads.
+
+How to use:
+1. Choose one or more images.
+2. Set the quality and output format.
+3. Download the smaller files.
+
+Tips:
+- A quality of 70 to 80 percent usually looks the same but is much smaller.
+- Resize large photos first with the Image Resizer for even bigger savings.
+- Use WebP for websites; it is typically smaller than JPG at similar quality.
+
+Q: Are my photos uploaded?
+A: No. Compression runs inside your browser.
+
+Q: Which quality should I use?
+A: Around 70 to 80 usually keeps photos looking good and cuts size a lot.
+
+Q: Is the quality reduced?
+A: A little, depending on the quality you choose. At moderate settings the difference is rarely visible.
+
+Q: Are my photos uploaded to a server?
+A: No. The compression is done inside your browser, so the photos never leave your device.
+
+### Image Resizer (https://vidnexastudio.com/tools/image-resizer/)
+The Image Resizer changes the width and height of an image in pixels, with an option to keep the aspect ratio.
+
+Resize photos for profile pictures, forms, social posts and web pages. Enter a new width or height, or a percentage, and the other side follows automatically when the aspect ratio is locked. Download the result as JPG, PNG or WebP. Resizing is done in your browser and your picture is not uploaded.
+
+How to use:
+1. Choose an image.
+2. Enter the new width or height.
+3. Press Resize & download.
+
+Tips:
+- Keep the aspect ratio locked to avoid stretched pictures.
+- Make images smaller rather than larger, because enlarging makes them blurry.
+- Follow the exact pixel size requested by the form or website you are uploading to.
+
+Q: Does it keep the aspect ratio?
+A: Yes, when 'Keep proportions' is ticked.
+
+Q: Is there a size limit?
+A: Up to 10000 pixels on each side, or whatever your device memory allows.
+
+Q: Will resizing reduce the quality?
+A: Making an image smaller keeps it sharp. Enlarging it can make it look soft, because new pixels must be guessed.
+
+Q: What size should I use for the web?
+A: For most web pages 1200 to 1600 pixels wide is enough. Use smaller sizes for thumbnails and icons.
+
+### Image Converter (https://vidnexastudio.com/tools/image-converter/)
+The Image Converter converts pictures between PNG, JPG and WebP formats right in your browser.
+
+Choose an image, pick the output format and download the new file. JPG is best for photos, PNG keeps sharp edges and transparency, and WebP is a modern format that is usually smaller on websites. When converting a transparent PNG to JPG, the transparent area becomes a solid background. Conversion runs on your device, so nothing is uploaded.
+
+How to use:
+1. Choose the format you want.
+2. Add your images.
+3. Download each converted file.
+
+Tips:
+- Choose PNG for logos and screenshots with text.
+- Choose JPG or WebP for photographs to keep the file small.
+- Remember that JPG does not support transparency.
+
+Q: Why does PNG to JPG get a white background?
+A: JPG has no transparency, so transparent areas are filled with white.
+
+Q: Can I convert many at once?
+A: Yes. Add several files.
+
+Q: Which format should I choose?
+A: Use JPG for photos, PNG for graphics needing transparency, and WebP when you want small files for a website.
+
+Q: Does converting reduce quality?
+A: Converting to JPG or WebP can lose a little quality because those formats compress. PNG keeps the pixels exactly.
+
+### Image to Base64 (https://vidnexastudio.com/tools/image-to-base64/)
+The Image to Base64 tool turns an image into a Base64 data URI that you can paste straight into HTML, CSS or JSON.
+
+A data URI lets you embed a small image directly in code without a separate file, which can save a request for tiny icons. Choose an image and copy either the full data URI or just the Base64 text. Base64 makes files about one third larger, so it is best for small images only. Conversion happens in your browser.
+
+How to use:
+1. Choose an image.
+2. Copy the Base64 text.
+3. Paste it where you need it.
+
+Tips:
+- Use it only for small icons, not big photos.
+- Compress the image first to keep the Base64 string short.
+- Copy the full data URI when pasting into an img tag or CSS url().
+
+Q: When is Base64 useful?
+A: For tiny icons inside CSS or HTML so no extra file request is needed.
+
+Q: Is the image uploaded?
+A: No.
+
+Q: Why is the Base64 text larger than the image?
+A: Base64 represents binary data using text characters, which makes it about 33 percent larger.
+
+Q: Is the image uploaded?
+A: No. The conversion is done locally in your browser.
+
+### Image to PDF (https://vidnexastudio.com/tools/image-to-pdf/)
+The Image to PDF tool combines one or more images into a single PDF file in your browser, with page size and order options.
+
+Select your JPG or PNG pictures, arrange them in the order you need and choose the page size. The tool builds one PDF that is ready to email, print or upload to a form. It is useful for scanned documents, photo notes and receipts. Your images are processed on your device and are not uploaded to any server.
+
+How to use:
+1. Add your images and arrange the order.
+2. Choose page size: same as image, or A4.
+3. Press Create PDF.
+
+Tips:
+- Reorder the pages before creating the PDF so you do not need to redo it.
+- Use Fit to page so images are not cut off.
+- Compress large photos first to keep the PDF small for email or form uploads.
+
+Q: Are my files uploaded?
+A: No. The PDF is built in your browser.
+
+Q: Is there a page limit?
+A: No fixed limit. Very large photos need more device memory.
+
+Q: Can I put several images in one PDF?
+A: Yes. Add as many images as you like and each becomes a page.
+
+Q: Is there a file size limit?
+A: No fixed limit, but very large images use a lot of memory, so compress them first on older phones.
+
+### PDF Merge (https://vidnexastudio.com/tools/pdf-merge/)
+The PDF Merge tool joins several PDF files into one document in your browser, in the order you choose.
+
+Combine invoices, scanned pages, reports or application documents into a single PDF. Add your files, drag them into the right order and press merge. Because the work is done on your device using a PDF library in your browser, your documents are not uploaded, which keeps sensitive files private. Password-protected PDFs may need to be unlocked first.
+
+How to use:
+1. Add two or more PDF files.
+2. Use the arrows to set the order.
+3. Press Merge PDFs.
+
+Tips:
+- Check the order before merging, as it decides the page order in the final file.
+- Unlock password-protected files first, otherwise they may fail to merge.
+- Compress very large scans before merging to keep the result small.
+
+Q: Are my PDFs uploaded?
+A: No. Merging happens on your device.
+
+Q: Why did merging fail?
+A: A file may be damaged or password protected. Remove the password first.
+
+Q: Is my PDF uploaded anywhere?
+A: No. The files are merged inside your browser and never leave your device.
+
+Q: Can I merge password-protected PDFs?
+A: Usually not. Remove the password in your PDF reader first, then merge.
+
+### PDF Split (https://vidnexastudio.com/tools/pdf-split/)
+The PDF Split tool extracts selected pages or page ranges from a PDF and saves them as a new file, right in your browser.
+
+Pull out just the pages you need, such as pages 1 to 3 and 7, from a long PDF. Choose the file, enter the page numbers or ranges and download the new PDF. It runs on your device, so confidential documents are not uploaded. Use it before emailing a document when you only want to share part of it.
+
+How to use:
+1. Choose a PDF.
+2. Type the pages you want, like 1-3, 5, 8-10.
+3. Press Extract pages.
+
+Tips:
+- Use commas and dashes, for example 1-3, 7, 10-12.
+- Check the page count shown after choosing your file.
+- Merge the result with other files using the PDF Merge tool if needed.
+
+Q: Can I save every page separately?
+A: Yes. Use 'Every page as separate file'.
+
+Q: Is my PDF uploaded?
+A: No.
+
+Q: How do I enter page ranges?
+A: Type pages separated by commas and use a dash for ranges, for example 1-3, 7, 10-12.
+
+Q: Does splitting change the quality?
+A: No. Pages are copied as they are, so quality stays the same.
+
+### PDF Editor (https://vidnexastudio.com/tools/pdf-editor/)
+The PDF Editor lets you click on existing text and change it in the same font, size and colour, and also add text, images, a drawn signature, ticks, highlights and white boxes, all in your browser.
+
+Use Edit text, click any line on the page and type the change. The tool reads the font, size and colour of that line, hides the old words and writes the new ones in the PDF's own font when it holds the letters you typed. If it does not, a very close matching font is used instead. You can also fill a form that is not fillable, sign a letter, or highlight important lines. Because the PDF is opened and saved on your own device, private documents such as bank forms and ID copies are not uploaded and there is no page or size limit set by the site. The old words are covered, not deleted: they stay hidden in the file and could still be found by copying or searching, so do not use it to hide private information.
+
+How to use:
+1. Choose a PDF.
+2. Pick Edit text and click a line to change it, or pick Add text, Whiteout, Highlight, Add image or Sign, then click on the page.
+3. Drag the handle to move an item and the corner square to resize it.
+4. Press Download edited PDF.
+
+Tips:
+- Use Edit text for small corrections such as a date, a name or an amount.
+- Press Enter when you finish a line, then check the page before downloading.
+- Draw your signature slowly on a phone or with a mouse; the tool trims the empty space for you.
+
+Q: Can I change the existing text in a PDF?
+A: You can cover old text with Whiteout and type new text on top. Changing the original text directly is not possible in a browser-only tool.
+
+Q: Is my PDF uploaded?
+A: No. Everything happens on your device.
+
+Q: Can I edit the original text of a PDF?
+A: Yes, line by line. Choose Edit text, click the line and type. The new text is written in the same font when the PDF contains the letters, otherwise in a close matching font. The old text is covered, not removed from the file, so it can still be found by copy or search.
+
+Q: Will the new text look exactly the same?
+A: Usually yes for common fonts such as Arial, Times New Roman, Calibri and Courier. A very decorative or custom font may look slightly different, and the page background behind the text is matched by colour, so photos or gradients can show a faint patch.
+
+Q: Which characters can I type?
+A: Basic Latin letters, numbers and common symbols. Hindi and other scripts cannot be typed yet.
+
+Q: Does Edit text work on scanned PDFs?
+A: No. A scan is a picture, so there are no words to select. Use Whiteout and Add text on top instead.
+
+### PDF Page Organizer (https://vidnexastudio.com/tools/pdf-organizer/)
+The PDF Page Organizer shows every page of a PDF as a thumbnail so you can rotate, delete, reorder and add pages, then download the new PDF.
+
+Fix a scanned file with sideways pages, remove a blank page, move the last page to the front or insert pages from a second PDF. Each page has its own buttons to move it left or right, rotate it either way or delete it. You can also add a blank page. The pages are rearranged inside your browser, so documents are not uploaded. Large PDFs take longer to show their thumbnails.
+
+How to use:
+1. Choose a PDF and wait for the page previews.
+2. Use the buttons under each page to move, rotate or delete it.
+3. Add another PDF or a blank page if you need to.
+4. Press Download PDF.
+
+Tips:
+- Rotate pages before you move them, so the preview is easy to read.
+- Use Add another PDF to combine files and sort them in one step.
+- Check the page count shown at the top before downloading.
+
+Q: Can I combine pages from two PDFs?
+A: Yes. Use Add another PDF and then arrange the pages in the order you want.
+
+Q: Is my PDF uploaded?
+A: No. The pages are rearranged on your device.
+
+Q: Can I delete several pages?
+A: Yes. Use the delete button on each page you do not want, then download.
+
+Q: Why do thumbnails load slowly?
+A: Each page is drawn one by one on your device. Long PDFs and scanned files with big images take longer.
+
+### PDF to Image (https://vidnexastudio.com/tools/pdf-to-image/)
+The PDF to Image tool turns each page of a PDF into a PNG or JPG picture and lets you download pages one by one or all together as a ZIP.
+
+Use it to share one page as a picture, put a PDF page into a slide, or post a page on social media. Choose PNG for sharp text and graphics or JPG for smaller files, pick the quality and optionally type the pages you need. Higher quality draws the page at a larger size, which gives sharper pictures but bigger files. The pages are drawn inside your browser and nothing is uploaded.
+
+How to use:
+1. Choose a PDF.
+2. Pick PNG or JPG and the quality.
+3. Optionally type the pages you want, like 1-3, 5.
+4. Press Convert, then download pages one by one or as a ZIP.
+
+Tips:
+- Choose High for most uses and Maximum only for printing or zooming in.
+- Type page numbers like 1-3, 5 to convert only the pages you need.
+- Use JPG for photos and scans, and PNG for text and diagrams.
+
+Q: Which quality should I choose?
+A: High is good for most uses. Choose Maximum for printing or zooming in, and Standard for small files.
+
+Q: Is my PDF uploaded?
+A: No. The pages are drawn on your device.
+
+Q: Is there a page limit?
+A: You can convert up to 150 pages at a time. For longer PDFs, convert in parts.
+
+Q: Why are very big pages made a little smaller?
+A: Browsers limit the size of a picture they can draw. The tool lowers the size slightly for very large pages to stay safe.
+
+### PDF Page Numbers and Watermark (https://vidnexastudio.com/tools/pdf-page-numbers-watermark/)
+The PDF Page Numbers and Watermark tool adds page numbers or a text watermark to every page of a PDF, with a live preview of the first page.
+
+Add numbers in any corner or the centre, choose a format such as Page 1 of 10, set the first number and skip the cover page. Or add a watermark like CONFIDENTIAL or DRAFT across every page, with your own size, colour, opacity and angle. The preview shows page 1 before you download. Everything is done in your browser, so your document stays on your device. The watermark and numbers are added to the page, so they cannot be removed with this tool.
+
+How to use:
+1. Choose a PDF.
+2. Choose Page numbers or Watermark and set the options.
+3. Check the preview of page 1.
+4. Press Download PDF.
+
+Tips:
+- Skip the first page when your PDF has a cover page.
+- Use a light opacity of 15 to 25 percent for watermarks so text stays easy to read.
+- Keep a copy of the original, because the numbers and watermark cannot be undone.
+
+Q: Can I skip the first page?
+A: Yes. Tick 'Do not number the first page' and the numbering starts from the second page.
+
+Q: Does the watermark go on every page?
+A: Yes. It is placed in the centre of every page.
+
+Q: Can I start numbering from a different number?
+A: Yes. Change the Start at box, for example to 5 if the PDF continues another document.
+
+Q: Can I use a logo as a watermark?
+A: Not yet. This tool adds text watermarks only. You can add a logo image with the PDF Editor.
+
+### QR Code Generator (https://vidnexastudio.com/tools/qr-code-generator/)
+The QR Code Generator creates free QR codes for links, text and Wi-Fi details that you can download as an image.
+
+Enter a web address, a message or your Wi-Fi name and password and the QR code appears instantly. Download it as a PNG and put it on a poster, menu, business card or document. The code is generated in your browser, the data is not sent to a server and the codes do not expire. Test every code with a phone camera before printing, and leave a clear margin around it.
+
+How to use:
+1. Type or paste your link or text.
+2. Pick the size, colours and error correction.
+3. Download the PNG or SVG.
+
+Tips:
+- Use dark code on a light background for the best scanning.
+- Print the code at least 2 cm wide and test it before printing many copies.
+- Shorter links produce simpler codes that scan faster.
+
+Q: Do QR codes expire?
+A: No. The code simply holds your text, so it works as long as the link you put in it works.
+
+Q: Is it free for business use?
+A: Yes. Codes you make are yours to use.
+
+Q: Do the QR codes expire?
+A: No. The code simply holds the data you entered, so it works for as long as the link or information is valid.
+
+Q: Can I make a Wi-Fi QR code?
+A: Yes. Choose the Wi-Fi option, enter the network name, password and security type, and phones can join by scanning.
+
+### Password Generator (https://vidnexastudio.com/tools/password-generator/)
+The Password Generator creates strong, random passwords of the length you choose, using letters, numbers and symbols.
+
+Pick a length, choose which character types to include and copy a new password. It uses your browser's cryptographic random generator, and the password is created on your device and never sent or stored. Longer passwords are stronger than short complex ones, so aim for at least 14 characters. Store passwords in a reliable password manager and use a different one for each account.
+
+How to use:
+1. Choose a length.
+2. Pick the character types.
+3. Press New password and copy it.
+
+Tips:
+- Use at least 14 characters for important accounts.
+- Never reuse a password across sites; use a password manager.
+- Turn on two-factor authentication wherever it is offered.
+
+Q: Is it safe?
+A: Passwords are made on your device with the browser's secure random generator and are never sent anywhere.
+
+Q: How long should a password be?
+A: Use at least 14 characters, and a different password for every site.
+
+Q: Is the generated password stored anywhere?
+A: No. It is created in your browser and disappears when you close the page.
+
+Q: How long should a password be?
+A: At least 12 characters, and 14 or more for email, banking and other important accounts.
+
+### JSON Formatter & Validator (https://vidnexastudio.com/tools/json-formatter/)
+The JSON Formatter pretty-prints, minifies and validates JSON and points to the exact place of any error.
+
+Paste JSON and choose format to add indentation, minify to remove spaces, or validate to check that it is correct. If the JSON is invalid you get a clear message and the position of the problem, such as a missing comma or quote. It is useful when working with APIs, config files and logs. Everything runs in your browser, so your data is not uploaded.
+
+How to use:
+1. Paste your JSON.
+2. Press Format or Minify.
+3. Copy the result.
+
+Tips:
+- Look for trailing commas and single quotes, the most common JSON mistakes.
+- Minify JSON before sending it in a request to save bytes.
+- Format minified API responses to read them easily.
+
+Q: Does it fix broken JSON?
+A: No. It tells you what is wrong so you can fix it.
+
+Q: Is my data sent anywhere?
+A: No.
+
+Q: Why does my JSON show an error?
+A: Common causes are a trailing comma, single quotes instead of double quotes, or an unquoted key. The error message shows where it was found.
+
+Q: Is my JSON uploaded?
+A: No. It is parsed locally in your browser.
+
+### Base64 Encoder & Decoder (https://vidnexastudio.com/tools/base64-encoder-decoder/)
+The Base64 Encoder Decoder converts text to Base64 and decodes Base64 text back to the original, with Unicode support.
+
+Base64 turns data into plain text characters so it can travel safely in URLs, emails, JSON and HTML. Paste text to encode or a Base64 string to decode and see the result at once. Base64 is not encryption, so do not use it to hide secrets. The tool runs in your browser and handles non-English characters correctly.
+
+How to use:
+1. Paste your text.
+2. Press Encode or Decode.
+3. Copy the result.
+
+Tips:
+- Remember that Base64 is encoding, not security.
+- If decoding fails, check for missing characters or extra spaces.
+- Use the Image to Base64 tool when you want to encode a picture.
+
+Q: Does it support Hindi and emoji?
+A: Yes. Text is handled as UTF-8.
+
+Q: Is Base64 encryption?
+A: No. It is only an encoding and anyone can decode it.
+
+Q: Is Base64 secure?
+A: No. Anyone can decode it, so it should never be used to protect passwords or private data.
+
+Q: Why does decoding show strange characters?
+A: The data may not be text, or the string may be damaged. Check that it is copied completely.
+
+### URL Encoder & Decoder (https://vidnexastudio.com/tools/url-encoder-decoder/)
+The URL Encoder Decoder percent-encodes text so it is safe in a web address, or decodes percent-encoded text back to normal.
+
+Characters such as spaces, ampersands and non-English letters must be encoded in URLs, for example a space becomes %20. Paste your text or URL, choose encode or decode and copy the result. It is useful for query strings, links in emails and debugging redirects. The conversion runs in your browser.
+
+How to use:
+1. Paste text or a URL.
+2. Press Encode or Decode.
+3. Copy the result.
+
+Tips:
+- Encode only the value parts of a query string, not the whole URL.
+- Decode a copied link to read what it really contains.
+- Check that plus signs and %20 are handled the way your server expects.
+
+Q: Why encode a URL?
+A: Spaces and symbols are not allowed in links, so they are replaced with % codes.
+
+Q: Which function does it use?
+A: encodeURIComponent and decodeURIComponent.
+
+Q: What does %20 mean in a URL?
+A: It is the encoded form of a space character.
+
+Q: When should I encode a URL?
+A: Whenever a link contains spaces, symbols or non-English letters in its path or query string.
+
+### Colour Converter (https://vidnexastudio.com/tools/color-converter/)
+The Color Converter converts colours between HEX, RGB and HSL and shows a live preview of the colour.
+
+Type a HEX code such as #7C3AED, or enter RGB or HSL values, and the other formats update at once. Designers and developers use it to move colours between design tools and CSS. Use the picker to explore and copy the exact value you need. Conversions are calculated locally in your browser.
+
+How to use:
+1. Pick a colour or type a value in any box.
+2. The other formats update.
+3. Copy the one you need.
+
+Tips:
+- Use HSL when you want to make a colour lighter or darker by changing one number.
+- Check text and background contrast before using a colour pair on a page.
+- Copy the format your CSS or design tool expects.
+
+Q: What is HEX?
+A: A six-digit code like #7C3AED that stands for red, green and blue.
+
+Q: Can I type a short HEX like #fff?
+A: Yes.
+
+Q: What is the difference between HEX, RGB and HSL?
+A: They describe the same colour in different ways: HEX is a compact code, RGB mixes red, green and blue, and HSL uses hue, saturation and lightness.
+
+Q: Can I use 3-digit HEX codes?
+A: Yes. A short code like #07f is the same as #0077ff.
+
+### UUID Generator (https://vidnexastudio.com/tools/uuid-generator/)
+The UUID Generator creates random version 4 UUIDs, one at a time or in bulk, ready to copy.
+
+A UUID is a 128-bit identifier that is practically unique, commonly used as a database key or request ID. Choose how many you need and copy them as a list. They are generated using your browser's secure random source and nothing is stored or sent. Version 4 UUIDs are random and carry no information about time or device.
+
+How to use:
+1. Enter how many you need.
+2. Press Generate.
+3. Copy them.
+
+Tips:
+- Generate in bulk when you need seed data for tests.
+- Use lowercase consistently if you compare IDs as text.
+- Do not use a UUID as a secret; it is an identifier, not a password.
+
+Q: Can two UUIDs be the same?
+A: It is so unlikely that for practical purposes it never happens.
+
+Q: Which version is made?
+A: Version 4 (random).
+
+Q: Can two UUIDs be the same?
+A: It is theoretically possible but so unlikely that it is ignored in practice.
+
+Q: What is a version 4 UUID?
+A: It is a UUID built from random numbers, as opposed to versions based on time or names.
+
+### Hash Generator (https://vidnexastudio.com/tools/hash-generator/)
+The Hash Generator creates SHA-1, SHA-256, SHA-384 and SHA-512 hashes of any text in your browser.
+
+A hash is a fixed-length fingerprint of data. Type or paste text and see all hashes immediately, which is useful for checking integrity or comparing values. The same input always gives the same hash and a tiny change gives a completely different one. Hashes cannot be reversed, but plain SHA hashes are not suitable for storing passwords. Hashing uses your browser's built-in crypto and nothing is uploaded.
+
+How to use:
+1. Type or paste text.
+2. Hashes appear straight away.
+3. Copy the one you need.
+
+Tips:
+- Use SHA-256 or higher for new work; SHA-1 is considered weak.
+- Watch for hidden spaces or line breaks that change the hash.
+- Use a dedicated password hashing method such as bcrypt or Argon2 for passwords.
+
+Q: Why is there no MD5?
+A: Browsers do not include MD5. SHA-256 is the better choice today.
+
+Q: Is hashing the same as encryption?
+A: No. A hash cannot be turned back into the text.
+
+Q: Can a hash be reversed?
+A: No. Hashing is one way, though short or common inputs can be guessed.
+
+Q: Which hash should I use?
+A: SHA-256 is a good default. Avoid SHA-1 for security purposes.
+
+### Unix Timestamp Converter (https://vidnexastudio.com/tools/timestamp-converter/)
+The Timestamp Converter converts a Unix timestamp to a readable date and a date back to a Unix timestamp, in your local time and UTC.
+
+Unix time counts the seconds since 1 January 1970 UTC and is used in logs, databases and APIs. Paste a timestamp in seconds or milliseconds to see the date, or pick a date to get its timestamp. The current timestamp is also shown. The conversion is done in your browser using your device's time zone and UTC.
+
+How to use:
+1. Paste a timestamp, or pick a date.
+2. Read UTC, local and ISO formats.
+3. Copy what you need.
+
+Tips:
+- A 10-digit number is usually seconds and a 13-digit number is milliseconds.
+- Always check whether a value is shown in UTC or local time.
+- Store dates as UTC timestamps and convert them only for display.
+
+Q: Seconds or milliseconds?
+A: The tool detects both. Numbers below 100 billion are treated as seconds.
+
+Q: Which time zone is used?
+A: Both UTC and your device's local time are shown.
+
+Q: What is a Unix timestamp?
+A: It is the number of seconds that have passed since 1 January 1970 at 00:00 UTC.
+
+Q: Seconds or milliseconds?
+A: Ten digits usually mean seconds and thirteen digits usually mean milliseconds.
+
+### Video Compressor (https://vidnexastudio.com/tools/video-compressor/)
+The Video Compressor makes a video file smaller by lowering its resolution and bitrate, right in your browser with no upload.
+
+Choose a video, pick a target size or quality and download a lighter file that is easier to share on WhatsApp, email or a form with an upload limit. The video is processed inside your browser, so the file is never uploaded, and processing runs in real time, so a longer video takes longer. Keep the tab open until it finishes. The output format depends on what your browser can record, usually WebM or MP4.
+
+How to use:
+1. Choose a video from your device.
+2. Pick a size and quality, or remove the sound.
+3. Press Compress, wait for it to finish, then download.
+
+Tips:
+- Lower the resolution first, as it saves the most space.
+- Keep the browser tab open and in view until processing completes.
+- Try a short clip first to find the quality you like.
+
+Q: Is my video uploaded?
+A: No. The video is re-encoded inside your browser and never leaves your device.
+
+Q: Why does it take as long as the video?
+A: The browser records the video at normal speed to create the smaller copy, so a 2 minute video takes about 2 minutes. Keep the tab open.
+
+Q: What format do I get?
+A: Usually WebM in Chrome, Edge and Firefox and MP4 in Safari. Both play in most modern players and browsers.
+
+Q: Is my video uploaded?
+A: No. The video is compressed on your device inside your browser.
+
+Q: Why does it take as long as the video?
+A: The browser re-records the video in real time, so a 2 minute clip takes about 2 minutes.
+
+### Video Trimmer (https://vidnexastudio.com/tools/video-trimmer/)
+The Video Trimmer cuts the start and end off a video and saves just the part you want, in your browser.
+
+Pick a video, set the start and end points with the sliders or time boxes and preview the section before saving. The video is processed inside your browser, so the file is never uploaded, and processing runs in real time, so a longer video takes longer. Use it to remove awkward beginnings, shorten clips for status updates or keep only a favourite moment.
+
+How to use:
+1. Choose a video and play it to find your moments.
+2. Enter the start and end time, or use the current time buttons.
+3. Press Trim video and download the clip.
+
+Tips:
+- Preview the clip before saving to check your cut points.
+- Trim before compressing for the smallest final file.
+- Keep the tab open until the download appears.
+
+Q: Is the video uploaded?
+A: No. Trimming happens on your device.
+
+Q: Is it exact to the frame?
+A: It is accurate to about a tenth of a second, which is fine for most clips.
+
+Q: Why is the clip WebM?
+A: Browsers record in WebM (or MP4 on Safari). WebM plays in Chrome, Edge, Firefox, VLC and most phones.
+
+Q: Can I cut from the middle of a video?
+A: The trimmer keeps one section, from your start point to your end point. Trim twice if you need to remove a middle part.
+
+Q: What format is the result?
+A: It depends on your browser, usually WebM or MP4.
+
+### Video Speed Changer (https://vidnexastudio.com/tools/video-speed-changer/)
+The Video Speed Changer makes a video faster or plays it in slow motion and saves the result, in your browser.
+
+Choose a speed from 0.25x slow motion up to 4x fast forward and download the new video. The video is processed inside your browser, so the file is never uploaded, and processing runs in real time, so a longer video takes longer. It is great for time-lapse effects, tutorials and dramatic slow-motion clips. Audio speed changes along with the video.
+
+How to use:
+1. Choose a video.
+2. Pick a speed from 0.5x to 2x.
+3. Press Change speed and download when it finishes.
+
+Tips:
+- Use 0.5x for gentle slow motion and 2x for a quick time-lapse.
+- Short clips work best for creative effects.
+- Keep the tab open until processing finishes.
+
+Q: Does the sound change pitch?
+A: Browsers try to keep the voice pitch natural, but very slow or fast speeds can sound odd. You can remove the sound if you prefer.
+
+Q: How long does it take?
+A: It runs at the new speed, so a video sped up to 2x finishes in half the time.
+
+Q: Is my video uploaded?
+A: No. Everything runs on your device.
+
+Q: Does the sound change too?
+A: Yes. The audio plays faster or slower along with the video.
+
+Q: Is anything uploaded?
+A: No. Everything stays on your device.
+
+### Video to GIF Converter (https://vidnexastudio.com/tools/video-to-gif/)
+The Video to GIF tool turns a short moment of a video into an animated GIF in your browser.
+
+Choose a video, select the start time, length, size and frame rate, and download your GIF. GIFs get large quickly, so keep clips to a few seconds and reduce the width for sharing. A lower frame rate and smaller size produce smaller files. The GIF is built on your device and the video is not uploaded.
+
+How to use:
+1. Choose a video and set the start time.
+2. Pick the length, width and frames per second.
+3. Press Make GIF, check the preview and download it.
+
+Tips:
+- Keep GIFs under about 5 seconds for a reasonable file size.
+- Reduce the width to 480 pixels or less for chat and social sharing.
+- Use 10 to 12 frames per second to balance smoothness and size.
+
+Q: How long can the GIF be?
+A: Up to 10 seconds. GIF files grow very fast, so short clips at 320 px wide work best.
+
+Q: Why is my GIF large?
+A: GIF is an old format. Lower the width, the frames per second or the length to shrink it.
+
+Q: Is it uploaded?
+A: No. Frames are captured and the GIF is built inside your browser.
+
+Q: Why is my GIF so large?
+A: GIF is an old format that stores every frame as an image. Shorten the clip, shrink the width or lower the frame rate.
+
+Q: Does the GIF have sound?
+A: No. GIF files cannot contain audio.
+
+### Video to Audio Extractor (https://vidnexastudio.com/tools/video-to-audio/)
+The Video to Audio tool extracts the sound from a video and saves it as an audio file in your browser.
+
+Choose a video and download its soundtrack as WAV audio, handy for saving a song, lecture or voice note from a clip you own. The video is processed inside your browser, so the file is never uploaded, and processing runs in real time, so a longer video takes longer. Only extract audio from videos you own or have permission to use.
+
+How to use:
+1. Choose a video file.
+2. Pick WAV (fast, large) or WebM/Opus (small, takes as long as the video).
+3. Press Extract audio, listen to the preview and download.
+
+Tips:
+- Use it only on videos you have the rights to.
+- WAV files are large; convert them to MP3 in an audio app if you need small files.
+- Trim the video first if you only need part of the audio.
+
+Q: Can I get an MP3?
+A: Not directly. Browsers cannot make MP3 files on their own, so you get WAV or WebM/Opus audio. Most players and editors open both.
+
+Q: Which option should I choose?
+A: WAV is quick and works well for short clips. WebM/Opus makes a much smaller file but runs at normal speed.
+
+Q: Is my video uploaded?
+A: No. The audio is extracted on your device.
+
+Q: What audio format do I get?
+A: A WAV file, which keeps full quality but is larger than MP3.
+
+Q: Is the video uploaded?
+A: No. The audio is extracted on your device.
+
+### Video Frame Extractor (https://vidnexastudio.com/tools/video-frame-extractor/)
+The Video Frame Extractor saves any frame of a video as a PNG or JPG image, right in your browser.
+
+Load a video, scrub to the exact moment and save that frame as a picture. It is useful for thumbnails, screenshots and keeping a still from a clip. Frames are captured at the video's own resolution and nothing is uploaded.
+
+How to use:
+1. Choose a video.
+2. Drag the slider or step frame by frame to the moment you want.
+3. Press Save this frame.
+
+Tips:
+- Use the arrow buttons to step to the exact frame you want.
+- Choose PNG for the best quality and JPG for smaller files.
+- Pause on a sharp frame, as motion can blur some moments.
+
+Q: What size is the image?
+A: It matches the video's resolution, for example 1920 by 1080 for a full HD video.
+
+Q: PNG or JPG?
+A: PNG keeps every detail. JPG is smaller and fine for sharing.
+
+Q: Is the video uploaded?
+A: No. It stays on your device.
+
+Q: What resolution will the image have?
+A: The same as the video, for example 1920 by 1080 for a Full HD clip.
+
+Q: Can I save many frames?
+A: You can save one frame at a time as often as you like.
+
+### Video Info Viewer (https://vidnexastudio.com/tools/video-info/)
+The Video Info tool shows a video's resolution, duration, file size and estimated bitrate without uploading the file.
+
+Choose a video to see its width and height, length, size, type and approximate bitrate. This helps when a form asks for a specific resolution or when you want to know why a file is large. Information is read locally from the file and the video is not sent anywhere.
+
+How to use:
+1. Choose a video file.
+2. Read the details shown instantly.
+3. Use them to decide how to compress or trim the file.
+
+Tips:
+- Compare the bitrate to see why one video is much bigger than another.
+- Check the resolution before uploading to a service with limits.
+- Use the Video Compressor if the size is too large.
+
+Q: Does it show the frame rate or codec?
+A: Browsers do not share those details with web pages, so this tool shows what they do share: size, duration, resolution and average bitrate.
+
+Q: Is the file uploaded?
+A: No. It is only read inside your browser.
+
+Q: What is bitrate?
+A: Bitrate is how much data is used per second of video. Higher bitrate usually means better quality and a larger file.
+
+Q: Does it show the codec?
+A: It shows what your browser can read, mainly size, duration and resolution.
+
+### Screen Recorder (https://vidnexastudio.com/tools/screen-recorder/)
+The Screen Recorder records your screen, a window or a browser tab, with optional sound, and saves it as a video, all in your browser.
+
+Press start, choose what to share and record tutorials, presentations or bug reports. Your browser asks for permission each time and the recording never leaves your device. Tab audio is available in some browsers, and a microphone can be added. Stop the recording and download the file. It works on desktop browsers; most mobile browsers do not support screen capture.
+
+How to use:
+1. Tick the microphone box if you want to add your voice.
+2. Press Start recording and choose what to share.
+3. Press Stop, preview the video and download it.
+
+Tips:
+- Close private tabs and notifications before sharing your screen.
+- Record a short test to check sound levels.
+- Use a desktop browser such as Chrome or Edge for the best support.
+
+Q: Is the recording uploaded?
+A: No. It is recorded and stored only on your device until you download it.
+
+Q: Can it record system sound?
+A: In Chrome and Edge you can tick 'share tab audio' or 'share system audio' in the share dialog on supported systems.
+
+Q: Does it work on phones?
+A: Most phone browsers do not allow screen recording from a web page. Use it on a computer.
+
+Q: Does it work on phones?
+A: Most mobile browsers do not allow screen capture from a web page. Use your phone's built-in screen recorder instead.
+
+Q: Is the recording uploaded?
+A: No. It is saved on your device only.
+
+### Voice Recorder (https://vidnexastudio.com/tools/voice-recorder/)
+The Voice Recorder records audio from your microphone and lets you play it back and download it, with no upload.
+
+Allow microphone access, press record and speak. Stop to listen and download the recording. It is handy for notes, interviews and quick voice messages. The audio stays on your device and is gone once you close the page unless you download it. Use headphones to avoid echo in your recording.
+
+How to use:
+1. Press Start recording and allow microphone access.
+2. Press Stop when you are done.
+3. Play it back and press Download.
+
+Tips:
+- Record in a quiet room and keep the microphone close.
+- Download the recording before closing the page.
+- If nothing records, check your browser's microphone permission.
+
+Q: Is my voice uploaded?
+A: No. The recording stays on your device.
+
+Q: Which file format is saved?
+A: WebM audio in Chrome, Edge and Firefox and MP4 audio in Safari.
+
+Q: How long can I record?
+A: As long as your device has memory and battery. Keep the page open while recording.
+
+Q: Why does it ask for microphone permission?
+A: Browsers require your permission before any site can use the microphone. You can revoke it at any time.
+
+Q: Where is my recording saved?
+A: Only on your device when you download it. It is not uploaded.
+
+## Games
+
+### Snake (https://vidnexastudio.com/games/snake/)
+Snake is a classic arcade game where you steer a growing snake to eat apples without hitting walls, rocks or yourself. This version has three modes: Classic, Wrap-around and Rocks. Golden stars give 3 points but vanish quickly. Your best score is saved in your own browser.
+
+Q: How do I control the snake?
+A: Use the arrow keys or WASD on a keyboard, or swipe on the board on a phone.
+
+Q: What are the game modes?
+A: Classic has deadly walls, Wrap-around lets you pass through the edges and Rocks adds new obstacles as you grow.
+
+Q: What are the golden stars?
+A: A golden star gives 3 points, but it disappears fast, so grab it only when the path is safe.
+
+### 2048 (https://vidnexastudio.com/games/2048/)
+2048 is a sliding number puzzle. Swipe or use the arrow keys to slide every tile, and when two tiles with the same number touch they merge into one with double the value. Reach 2048, then keep going for a higher score. You can undo a slip with Undo or the Z key.
+
+Q: How do I play 2048?
+A: Slide tiles with the arrow keys or by swiping. Equal tiles merge when they collide.
+
+Q: Can I undo a move?
+A: Yes. Use the Undo button or press Z.
+
+Q: Can I keep playing after reaching 2048?
+A: Yes. You can continue and try for 4096 and beyond.
+
+### Memory Match (https://vidnexastudio.com/games/memory-match/)
+Memory Match is a card-flipping game with levels. Flip two cards at a time and find every pair; fewer moves earn more stars. Each level unlocks after you finish the one before, and levels 10 to 12 give you only a limited number of moves.
+
+Q: How do I play Memory Match?
+A: Pick a level, flip two cards at a time and find every matching pair.
+
+Q: How do I earn more stars?
+A: Finish with fewer moves. Levels 10 to 12 also have a move limit.
+
+Q: Do I have to unlock levels?
+A: Yes. Each level unlocks after you finish the previous one.
+
+### Tic Tac Toe (https://vidnexastudio.com/games/tic-tac-toe/)
+Tic Tac Toe is the classic game of X and O. Choose a board size and an opponent, then get 3 in a row on the 3 by 3 board, or 4 in a row on the bigger boards. Hard mode on 3 by 3 never loses, so a draw is a great result.
+
+Q: How do I win at Tic Tac Toe?
+A: Get 3 in a row on the 3 by 3 board, or 4 in a row on bigger boards, before your opponent does.
+
+Q: Can I choose the board size and opponent?
+A: Yes. Pick a board size and an opponent before you start.
+
+Q: Can the hard computer be beaten on 3 by 3?
+A: No. Hard mode on 3 by 3 never loses, so a draw is the best result against it.
+
+### Glow Chain (https://vidnexastudio.com/games/glow-chain/)
+Glow Chain is a memory game of lights and sounds. Press Start, watch the pattern, then repeat it by tapping the pads or pressing keys 1 to 4 (1 to 6 on Hard). One step is added every round, and in Normal and Hard one mistake ends the game.
+
+Q: How do I play Glow Chain?
+A: Press Start, watch the lights, then repeat the same pattern by tapping the pads or using the number keys.
+
+Q: When does the game end?
+A: In Normal and Hard modes a single mistake ends the game.
+
+Q: When does sound start?
+A: Sound starts only after you press Start.
+
+### Mole Mallet (https://vidnexastudio.com/games/mole-mallet/)
+Mole Mallet tests your reflexes. Pick a level, read its target score and tap each mole as it pops up. Golden moles are worth 3 points, and you must never tap a bomb. Hitting moles in a row raises your combo up to x3, and reaching the target unlocks the next level.
+
+Q: How do I play Mole Mallet?
+A: Tap each mole as it pops up. Golden moles are worth 3 and bombs must be avoided.
+
+Q: What is the combo?
+A: Hit moles in a row to raise the combo up to x3 and score more per hit.
+
+Q: How do I unlock the next level?
+A: Reach the target score shown for the level you are playing.
+
+### Mine Radar (https://vidnexastudio.com/games/mine-radar/)
+Mine Radar is a logic puzzle. Tap a square to dig; a number shows how many mines touch it. Press and hold, or use Flag mode, to mark a mine. When you have flagged as many mines as a number says, tap that number to open all its neighbours quickly.
+
+Q: How do I play Mine Radar?
+A: Tap a square to dig. A number shows how many of the eight surrounding squares hold mines.
+
+Q: How do I place a flag on a phone?
+A: Press and hold a square, or switch on Flag mode.
+
+Q: What is the quick-open trick?
+A: Tap a number after flagging that many mines around it, and all its other neighbours open at once.
+
+### Sky Hop (https://vidnexastudio.com/games/sky-hop/)
+Sky Hop is a one-tap flying game. Tap, click or press Space to hop and fly through the gaps between the pillars. Each gap is one point, and reaching 10, 25, 40 and 60 points earns bronze, silver, gold and platinum medals.
+
+Q: How do I play Sky Hop?
+A: Tap, click or press Space to hop, and steer through the gap between each pair of pillars.
+
+Q: How do I earn medals?
+A: Score 10, 25, 40 and 60 points for bronze, silver, gold and platinum.
+
+Q: Is the score saved?
+A: Your best score is saved in your own browser.
+
+### Sliding Puzzle (https://vidnexastudio.com/games/sliding-puzzle/)
+Sliding Puzzle is a classic tile puzzle. Tap a tile in the same row or column as the gap to slide it, and put the tiles in order. Hold Peek to see the goal, and try to beat your best number of moves for each size.
+
+Q: How do I play the Sliding Puzzle?
+A: Tap a tile in the same row or column as the empty gap to slide it, and arrange the tiles in order.
+
+Q: Can I see the goal?
+A: Yes. Hold the Peek button to see the finished picture.
+
+Q: Is my best score saved?
+A: Yes, your best number of moves for each size is saved in your browser.
+
+### Teer Nikalo (https://vidnexastudio.com/games/teer-nikalo/)
+Teer Nikalo is a free puzzle game with three puzzles in one: Arrows, Ants and Screws. In the arrow puzzle every arrow leaves in the direction its tip points, and it only gets out if the path to the board edge is clear; otherwise it collides and you lose a heart. Clear the board before time runs out.
+
+Q: How do I play the arrow puzzle?
+A: Tap an arrow. It exits in the direction of its tip if the path to the edge is free. If another arrow blocks it, there is a collision and you lose a heart.
+
+Q: What are the other puzzles?
+A: Ant Sort moves ants between branches until each branch holds 4 ants of one colour, and in the Screw puzzle you unscrew only screws with no plate on top, sending each to its colour box or to the tray, which loses the level when full.
+
+Q: Is progress saved?
+A: Yes, in your own browser. Clearing browser data resets it.
+
+### Parking Ustad (https://vidnexastudio.com/games/parking-ustad/)
+Parking Ustad is a car parking puzzle. Tap a car and it drives out in the direction of its arrow, but only if the whole lane is clear; a car standing far away still blocks the road. Colliding costs a heart, and finishing a level with no collisions earns 3 stars. Hint, show-direction and remove boosters can help.
+
+Q: How do I play Parking Ustad?
+A: Tap a car. It leaves in its arrow direction only if the whole lane ahead is clear, so plan the order.
+
+Q: How do I get 3 stars?
+A: Clear the level without a single collision.
+
+Q: What do the boosters do?
+A: Hint suggests a move, Show direction reveals car directions and Remove takes a car off the board.
+
+### Bus Bharo (https://vidnexastudio.com/games/bus-bharo/)
+Bus Bharo is a queue-and-parking puzzle. Look at the passenger at the front of the line and send out a bus of the same colour. Parked buses take up limited spots, and the level fails if every spot is full and the front passenger matches none of the parked buses.
+
+Q: How do I play Bus Bharo?
+A: Check the colour of the passenger at the front of the queue and send a bus of that colour.
+
+Q: When do I lose?
+A: When all parking spots are full and the front passenger does not match any waiting bus.
+
+Q: Can I get extra space?
+A: Yes. You can buy an extra spot with coins.
+
+### Gulal Pop (https://vidnexastudio.com/games/gulal-pop/)
+Gulal Pop is a colourful rangoli puzzle for the festival of colours. Tap a bowl and it rides the belt, blasting open the pixels of its own colour in the rangoli. Waiting spots are limited, and every finished rangoli is added to your collection.
+
+Q: How do I play Gulal Pop?
+A: Tap a bowl. It travels around the belt and clears the open pixels of its colour from the rangoli.
+
+Q: When do I lose?
+A: When the waiting spots are full and no bowl can be played.
+
+Q: What do I get for finishing?
+A: Each completed rangoli is added to your collection.
+
+## Guides
+
+### How to Calculate EMI: Formula, Example and Ways to Reduce It (https://vidnexastudio.com/blog/how-to-calculate-emi/)
+EMI stands for equated monthly instalment. It is the fixed amount you pay to the lender every month until a home loan, car loan or personal loan is fully repaid. Each EMI contains two parts: interest on the outstanding balance and a repayment of the principal. Knowing how it is calculated helps you compare loans before you sign.
+
+#### The EMI formula
+EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1)
+- P is the loan amount (principal).
+- r is the monthly interest rate, which is the yearly rate divided by 12 and by 100.
+- n is the number of monthly instalments.
+
+#### A worked example
+Take a loan of ₹5,00,000 at 10% a year for 5 years. The monthly rate r is 10 ÷ 12 ÷ 100 = 0.008333 and n is 60. Putting these in the formula gives an EMI of about ₹10,624. Over 60 months you pay roughly ₹6,37,400 in total, so the interest is about ₹1,37,400. You can check this in seconds with the EMI Calculator.
+
+#### Why the first EMIs are mostly interest
+Interest is charged on the balance still owed. At the start the balance is large, so most of the EMI goes to interest. As the balance falls, a bigger share goes to principal. This is why the yearly schedule in the calculator shows the balance falling slowly at first and faster later.
+
+#### How to lower your EMI or total interest
+- Choose a longer tenure to lower the monthly EMI, but remember that total interest rises.
+- Make a larger down payment so the principal is smaller.
+- Compare interest rates and processing fees from several lenders.
+- Part-prepay when you have spare money. Check first whether your lender charges a prepayment fee.
+- Keep a good credit score, since it can help you get a lower rate.
+
+#### Fixed and floating rates
+With a fixed rate the EMI stays the same. With a floating rate the lender can change the rate, so your EMI or your tenure can change. The calculator assumes one fixed rate for the whole loan, so treat the result as a close estimate.
+This article is for general information and is not financial advice. Check the final figures in your loan agreement.
+
+Q: Is a lower EMI always better?
+A: Not always. A lower EMI usually comes from a longer tenure, which means you pay more interest overall.
+
+Q: Does the EMI Calculator include processing fees?
+A: No. It uses only the principal, rate and tenure, so add fees and insurance yourself when comparing offers.
+
+### How a SIP Works: Compounding Explained Simply (https://vidnexastudio.com/blog/how-sip-works-and-compounding/)
+A systematic investment plan, or SIP, lets you invest a fixed amount at regular intervals, usually every month, in a mutual fund. Instead of trying to pick the perfect day to invest, you invest steadily. Over time the money you invest and the returns on it can grow through compounding.
+
+#### What compounding means
+Compounding means you earn returns on your earlier returns as well as on the money you put in. If you invest ₹5,000 a month and the investment grows at an assumed 12% a year, the growth in later years is applied to a larger and larger base. That is why the same SIP looks much bigger after 20 years than twice the value after 10 years.
+
+#### How the SIP Calculator works
+You enter the monthly amount, an expected yearly return and the number of years. The tool treats each monthly instalment as growing for the remaining months and adds them up. It then shows the total you invested, the estimated gain and the final value. The calculator is only an illustration of the maths.
+
+#### What the calculator cannot tell you
+- Market-linked returns rise and fall. No return is guaranteed.
+- Actual returns will not be the same every year as the calculator assumes.
+- Costs, taxes and inflation reduce what you finally keep and what it can buy.
+
+#### Sensible ways to use it
+- Try a cautious return rate as well as an optimistic one.
+- Compare the same monthly amount for 10, 15 and 20 years to see how time matters.
+- Try increasing the SIP a little every year, a step-up, to see how it speeds up your goal.
+- Match the investment period to your goal. Money needed soon should not usually sit in risky investments.
+This article is for general education and is not investment advice. Speak to a qualified adviser before investing.
+
+Q: Is the SIP result guaranteed?
+A: No. It only shows what would happen if the entered return were earned every year.
+
+Q: Is it better to start early?
+A: Starting early gives compounding more time to work, which usually matters more than the exact return rate.
+
+### How GST Works: How to Add or Remove GST From a Price (https://vidnexastudio.com/blog/how-gst-works-add-and-remove-gst/)
+Goods and Services Tax, or GST, is the indirect tax charged on most goods and services in India. Shops, freelancers and small businesses often need to add GST to a price or work out how much GST is hidden inside a price that already includes it.
+
+#### CGST, SGST and IGST
+- When a sale is within one state, the GST is split into CGST (for the central government) and SGST (for the state). At 18% GST each half is 9%.
+- When a sale is between two states, IGST is charged as a single tax at the full rate.
+- The rate depends on the goods or service. Common slabs include 5%, 12%, 18% and 28%, and rates are revised from time to time, so always confirm the current rate.
+
+#### How to add GST
+GST amount = price × rate ÷ 100. Final price = price + GST. For a ₹1,000 item at 18%, GST is ₹180 and the final price is ₹1,180.
+
+#### How to remove GST from an inclusive price
+Net price = inclusive price ÷ (1 + rate ÷ 100). For ₹1,180 at 18%, the net price is 1,180 ÷ 1.18 = ₹1,000, and the GST inside it is ₹180. A common mistake is to take 18% off ₹1,180, which gives the wrong answer.
+
+#### Using the GST Calculator
+1. Enter the amount.
+2. Choose the GST rate.
+3. Pick add GST or remove GST.
+4. Read the net price, the GST and the CGST and SGST split.
+For invoices, the correct rate and place of supply matter, so confirm them with the official GST rate list or an accountant. This article is general information, not tax advice.
+
+Q: Why is removing GST not the same as subtracting 18%?
+A: Because GST was added on top of the net price. You must divide by 1.18, not subtract 18% of the total.
+
+Q: Which GST rate applies to my product?
+A: It depends on the item or service. Check the official GST notifications or ask an accountant.
+
+### How to Calculate Percentage: 3 Easy Methods With Examples (https://vidnexastudio.com/blog/how-to-calculate-percentage/)
+A percentage is a number out of 100. Percentages are used for marks, discounts, interest, tax, tips and growth. Three types of question cover almost every case.
+
+#### 1. Find X% of a number
+Multiply the number by X and divide by 100. Example: 15% of 200 = 200 × 15 ÷ 100 = 30.
+
+#### 2. Find what percent one number is of another
+Divide the part by the whole and multiply by 100. Example: if you scored 42 out of 60, then 42 ÷ 60 × 100 = 70%.
+
+#### 3. Find percentage increase or decrease
+Subtract the old value from the new value, divide by the old value and multiply by 100. Example: a price rising from 80 to 100 is (100 − 80) ÷ 80 × 100 = 25% increase. A drop from 100 to 80 is a 20% decrease, not 25%, because the base is different.
+
+#### Common mistakes
+- Dividing by the new value instead of the old value when finding change.
+- Thinking a 50% rise followed by a 50% fall returns to the start. It does not: 100 becomes 150, then 75.
+- Adding two discounts together. 20% off then 10% off equals 28% off, not 30%.
+
+#### Use the Percentage Calculator
+Choose the question type, type the numbers and the tool gives the answer with the formula, which is useful for checking homework or a quick price decision.
+
+Q: How do I turn a fraction into a percentage?
+A: Divide the top by the bottom and multiply by 100. For example 3/4 = 0.75 = 75%.
+
+Q: What is the difference between percentage and percentage points?
+A: If a rate goes from 10% to 12%, it rises by 2 percentage points, which is a 20% increase in the rate.
+
+### How to Calculate Age and the Days Between Two Dates (https://vidnexastudio.com/blog/how-to-calculate-age-and-days-between-dates/)
+Forms, exams, insurance and job applications often ask for your exact age on a certain date. Project plans and notice periods need the number of days between two dates. Doing it by hand is easy to get wrong because months have different lengths and leap years add an extra day.
+
+#### How age is calculated
+1. Subtract the birth year from the target year.
+2. If the birthday has not yet come in the target year, subtract one year.
+3. Count the remaining months and days from the last birthday to the target date.
+For example, from 15 August 2000 to 4 November 2026 is 26 years, 2 months and 20 days.
+
+#### Why leap years matter
+A leap year has 366 days because February has 29. A person born on 29 February has a birthday only every four years, and calculators usually treat the day after 28 February as their birthday in other years.
+
+#### Counting days between dates
+Computers convert both dates to a day count and subtract them. Decide whether to include the end date: from 1 to 10 of a month is 9 days apart, or 10 days if both the first and last day count. The Date Difference Calculator has an option for this.
+
+#### Useful uses
+- Checking minimum or maximum age for an exam or job.
+- Counting the days left to a deadline, trip or event.
+- Working out a notice period or the days since a start date.
+Calendar days include weekends and holidays. If you need working days only, subtract them separately.
+
+Q: Does the age calculator work for future dates?
+A: Yes. Enter any date in the age-at field to see how old someone will be on that date.
+
+Q: What if my form counts age on a fixed date?
+A: Many forms use a cut-off date such as 1 January. Enter that date as the age-at date.
+
+### What Is BMI? How It Is Calculated and What It Can and Cannot Tell You (https://vidnexastudio.com/blog/what-is-bmi-and-how-to-use-it/)
+BMI, or body mass index, is a number that relates your weight to your height. Doctors use it as a quick screening tool. It is simple to calculate but it has clear limits, so it should never be the only thing you look at.
+
+#### The formula
+BMI = weight in kilograms ÷ (height in metres)². A person who weighs 70 kg and is 1.75 m tall has a BMI of 70 ÷ 3.0625 = 22.9.
+
+#### The standard ranges for adults
+- Below 18.5: underweight
+- 18.5 to 24.9: normal range
+- 25 to 29.9: overweight
+- 30 and above: obese
+Some health guidelines for South Asian adults use lower cut-offs for overweight and obesity because health risks can rise at a lower BMI. A doctor can tell you which guidance applies to you.
+
+#### What BMI cannot show
+- It does not separate muscle from fat, so a muscular person may show a high BMI.
+- It does not show where fat is stored on the body.
+- It does not account for age, sex or medical conditions in the simple formula.
+- It is not a diagnosis.
+
+#### Using the BMI Calculator
+Enter your height and weight in the units you prefer. The tool shows your BMI, the range it falls in and a weight range that matches the normal BMI band for your height. Use it as a starting point for a conversation with a doctor or dietitian.
+This article is general information and not medical advice.
+
+Q: Is BMI accurate for athletes?
+A: Not always. Muscle weighs more than fat, so athletes can have a high BMI without excess body fat.
+
+Q: Can children use the same BMI ranges?
+A: No. Children's BMI is compared with charts for age and sex, so ask a paediatrician.
+
+### How to Compress Images Without Losing Quality (Free, in Your Browser) (https://vidnexastudio.com/blog/how-to-compress-images-without-losing-quality/)
+Large photos slow websites, fill storage and fail upload limits on forms. Compression makes the file smaller. Done well, you will not notice any difference on screen.
+
+#### How compression works
+JPG and WebP use lossy compression. They throw away fine detail that the human eye hardly notices, such as tiny colour differences. The lower the quality setting, the more detail is discarded and the smaller the file becomes. PNG uses lossless compression, which keeps every pixel but gives smaller savings on photos.
+
+#### Steps to compress an image
+1. Open the Image Compressor and choose your photos.
+2. Set the quality. Around 70 to 80 percent is a good starting point.
+3. Compare the sizes shown for the original and compressed versions.
+4. Download the new files.
+
+#### Get even smaller files
+- Resize first. A 4000 pixel wide photo is far larger than a web page needs. Use the Image Resizer to bring it down to 1200 to 1600 pixels.
+- Choose WebP for websites. It is usually smaller than JPG at similar quality.
+- Use JPG for photos and PNG for logos or screenshots with sharp text.
+
+#### Why browser-based compression is private
+The tool runs inside your browser. Your photos are never uploaded to a server, which matters for ID cards, documents and family pictures.
+
+#### Does compression harm quality?
+At moderate settings the loss is rarely visible. Very low settings create blocky patches and blurry edges, so check the preview before saving. Always keep your original file.
+
+Q: What quality should I choose for a website?
+A: Between 70 and 80 percent works for most photos. Check the preview if the picture has fine details.
+
+Q: Can I compress a PNG?
+A: PNG is lossless, so savings are small. Converting a photo from PNG to JPG or WebP usually saves much more.
+
+### PNG vs JPG vs WebP: Which Image Format Should You Use? (https://vidnexastudio.com/blog/png-vs-jpg-vs-webp/)
+Choosing the wrong image format can make a file too large or blur sharp text. Here is a quick guide to the three most common formats on the web.
+
+#### JPG (JPEG)
+Best for photographs. It uses lossy compression to make small files and works everywhere. It does not support transparency, and repeated saving lowers quality.
+
+#### PNG
+Best for logos, icons, screenshots and anything with sharp edges or text. It is lossless and supports transparent backgrounds. Photos saved as PNG can be very large.
+
+#### WebP
+A modern format that supports both lossy and lossless compression and transparency. WebP files are usually smaller than JPG or PNG at similar quality, which helps pages load faster. All current major browsers can display it, though some older software cannot open it.
+
+#### Quick choice table
+- Photo for a website: WebP, or JPG if you need maximum compatibility.
+- Logo with transparent background: PNG or WebP.
+- Screenshot with text: PNG.
+- Photo for a government form or email: JPG.
+
+#### How to convert
+1. Open the Image Converter.
+2. Choose your image.
+3. Pick PNG, JPG or WebP as the output.
+4. Download the converted file.
+When you convert a transparent PNG to JPG, the transparent area becomes a solid colour because JPG cannot store transparency. The conversion happens in your browser, so your image is not uploaded.
+
+Q: Is WebP better than JPG?
+A: Usually smaller at similar quality, but JPG is more widely supported in older software.
+
+Q: Why did my transparent logo get a white background?
+A: JPG cannot store transparency, so the empty area is filled with a solid colour. Keep the logo as PNG or WebP.
+
+### How to Merge and Split PDF Files for Free Without Uploading Them (https://vidnexastudio.com/blog/how-to-merge-and-split-pdf-files/)
+Job applications, loan papers, college forms and invoices often need several documents in one PDF, or just a few pages from a long one. You can do both in your browser, without installing software and without sending the files to a server.
+
+#### How to merge PDFs
+1. Open the PDF Merge tool.
+2. Add all the PDF files you want to join.
+3. Drag them into the order you need.
+4. Press merge and download the single combined PDF.
+
+#### How to split a PDF or extract pages
+1. Open the PDF Split tool and choose your file.
+2. Type the pages you want, for example 1-3, 7, 10-12.
+3. Download the new PDF that contains only those pages.
+
+#### How to turn images into a PDF
+Use the Image to PDF tool. Select your photos or scans, arrange the order, choose the page size and create the PDF. This is handy for ID copies, bills and handwritten notes you photographed.
+
+#### Tips for a smooth result
+- Check the page order before you merge.
+- Remove the password of protected PDFs first, as they may not merge.
+- Compress large photos before putting them in a PDF to keep it small for email and online forms.
+- Keep the original files until you have checked the final PDF.
+
+#### Is it private?
+Yes. The tools work with a PDF library running in your browser, so your documents stay on your device. This is useful for sensitive papers such as bank statements and IDs.
+
+Q: Can I merge a PDF with images?
+A: Convert the images to a PDF first using Image to PDF, then merge that PDF with the others.
+
+Q: Why will my PDF not merge?
+A: It may be password protected or damaged. Remove the password in a PDF reader and try again.
+
+### How to Clean Up Text: Remove Duplicates, Sort Lines and Fix Capitalisation (https://vidnexastudio.com/blog/how-to-clean-up-text-lists/)
+Messy lists waste time. Whether it is an email list, a set of keywords or a column copied from a spreadsheet, a few simple steps can make it clean.
+
+#### Step 1: remove duplicates
+Paste your list into the Remove Duplicate Lines tool. It keeps the first copy of each line and deletes the repeats. Turn on case-insensitive matching if you want Apple and apple treated as the same item.
+
+#### Step 2: sort the list
+Use the Text Sorter to arrange lines A to Z, Z to A or by length. Sorting makes it easy to spot near-duplicates and to find an item quickly. There is also a shuffle mode for random draws and team lists.
+
+#### Step 3: fix capitalisation
+The Case Converter changes text to UPPERCASE, lowercase, Title Case or Sentence case. It is perfect for text typed with Caps Lock on. For developers it can also produce camelCase and snake_case names.
+
+#### Step 4: make clean web addresses
+The Slug Generator turns a title into a short, lowercase, hyphen-separated slug. Short slugs that contain the main keyword are easier to read in search results and links.
+
+#### Why do it in the browser?
+These tools run on your device. Customer lists and private notes are not uploaded, which is safer than pasting them into unknown websites.
+
+#### A quick workflow
+1. Paste the raw list.
+2. Remove duplicates.
+3. Sort A to Z.
+4. Fix the case.
+5. Copy the result back to your document.
+
+Q: Does removing duplicates change the order?
+A: No. It keeps the first occurrence and the original order of the remaining lines.
+
+Q: What is a slug?
+A: A slug is the readable last part of a web address, such as how-to-merge-pdf.
+
+### How to Improve Your Typing Speed: Practical Tips and a Free Test (https://vidnexastudio.com/blog/how-to-improve-typing-speed/)
+Typing faster saves time every day, for studying, writing and office work. Speed comes from accuracy and good habits, not from rushing.
+
+#### How WPM is measured
+Typing tests count every five characters, including spaces, as one word. Words per minute is that word count divided by the time taken. Accuracy is the share of characters you typed correctly. A fast score with many mistakes is not useful, so look at both numbers.
+
+#### What is a good speed?
+- Around 35 to 45 WPM is typical for most people.
+- Above 60 WPM is fast for office work.
+- 70 WPM and above is common for professional typists.
+
+#### Habits that help
+1. Learn touch typing: keep your fingers on the home row and avoid looking at the keys.
+2. Prioritise accuracy. Slow down until mistakes are rare, then build speed.
+3. Practise 10 to 15 minutes every day rather than one long session a week.
+4. Sit upright with relaxed shoulders and wrists to avoid strain.
+5. Take the Typing Speed Test regularly and track your progress.
+
+#### Using the Word Counter for writing practice
+After a typing session, paste your writing into the Word Counter to see words, characters and reading time. Setting a daily word target is a good way to build the habit.
+Progress is usually steady: many learners add 5 to 10 WPM in the first few weeks of regular practice, though results differ from person to person.
+
+Q: Does a bigger keyboard or phone change my WPM?
+A: Yes. Phone typing is usually slower than a physical keyboard, so compare scores on the same device.
+
+Q: How often should I practise?
+A: A short daily session is more effective than occasional long ones.
+
+### How Browser-Based Tools Work (And Why Your Files Stay Private) (https://vidnexastudio.com/blog/how-browser-based-tools-work-without-uploading/)
+Most online tools ask you to upload a file to a server. The tools on Vidnexa Studio work differently: they run inside your browser, on your own phone or computer. Here is how that works and why it matters.
+
+#### Your browser is a small computer program platform
+Modern browsers can run JavaScript, draw on a canvas, record audio and video, read files you choose and decode images. A tool page simply ships a small program to your browser. When you choose a file, the program reads it from your device, changes it and gives you the result to download. The file never has to travel over the internet.
+
+#### Examples
+- The Image Compressor draws your photo on a canvas and saves it again at lower quality.
+- PDF Merge and PDF Split use a PDF library that runs in your browser.
+- Video tools replay the video and re-record it with the browser's recorder.
+- Text tools such as the Word Counter simply read the text box.
+
+#### Why it is better for privacy
+- Your ID cards, bank statements and family photos are not sent to a third party.
+- There is no waiting for a slow upload or download.
+- Tools keep working even on a weak connection after the page has loaded.
+
+#### How to check it yourself
+Open the tool, switch your phone to flight mode or turn off Wi-Fi, then use it. A browser-based tool still works because it does not need the internet to process your file. You can also look at the network tab of your browser developer tools and see that no file upload happens.
+
+#### Limits to know
+- Very large files depend on your device memory.
+- Video is processed in real time, so it takes as long as the video itself.
+- Features such as screen recording need browser support and your permission.
+See the Privacy Policy for what the site itself collects, such as standard visit statistics and ads.
+
+Q: Can I use the tools offline?
+A: After a tool page has loaded, most tools keep working without a connection, because processing happens on your device.
+
+Q: Do you keep a copy of my files?
+A: No. Files you choose in a tool are processed in your browser and are not uploaded to our servers.
+
+### How QR Codes Work and How to Make One for Free (https://vidnexastudio.com/blog/how-qr-codes-work-and-how-to-make-one/)
+A QR code is a square pattern of dark and light modules that stores data such as a web link, a message or Wi-Fi details. Your phone camera reads the pattern and turns it back into the data.
+
+#### How a QR code is built
+- Three large squares in the corners tell the camera where the code is and which way it faces.
+- The remaining modules store the data in a pattern.
+- Extra error-correction data lets the code still scan if part of it is dirty or covered.
+
+#### How to make a QR code
+1. Open the QR Code Generator.
+2. Choose what to encode: a link, plain text or Wi-Fi details.
+3. Type the information. For Wi-Fi, enter the network name, password and security type.
+4. Download the code as an image.
+
+#### Do QR codes expire?
+Codes made by this tool hold the data directly, so they do not expire. If the code points to a link, it works as long as that link works. Be careful with services that charge to keep codes working.
+
+#### Tips for printing
+- Use dark code on a light background with good contrast.
+- Leave a clear blank margin around the code.
+- Print at least 2 cm wide for close scanning and larger for posters.
+- Test the printed code with two or three phones before printing many copies.
+- Shorter links make simpler, easier-to-scan codes.
+
+#### Staying safe
+Only scan codes from sources you trust, because a code can lead to any web address. Look at the link your phone shows before you open it.
+
+Q: What can a QR code store?
+A: Links, plain text, contact details, Wi-Fi details and more. This tool supports links, text and Wi-Fi.
+
+Q: Why will my QR code not scan?
+A: Usually low contrast, too small a print size, or a missing blank border. Make it larger and use dark on light.
+
+### How to Create a Strong Password (and How a Generator Helps) (https://vidnexastudio.com/blog/how-to-create-a-strong-password/)
+Weak passwords are a leading cause of hacked accounts. A strong password is long, random and used for only one account.
+
+#### What makes a password strong
+- Length. Each extra character multiplies the number of guesses needed. Aim for at least 14 characters for important accounts.
+- Randomness. Names, birthdays and words like password123 are the first things attackers try.
+- Uniqueness. If one site leaks your password, attackers try it everywhere else.
+
+#### How the Password Generator works
+It uses your browser's cryptographic random generator, which is designed for security, unlike the simple generator used for games. You choose the length and which characters to include, and the password is created on your device. It is not sent anywhere or stored.
+
+#### Steps
+1. Open the Password Generator and set the length to 14 or more.
+2. Include letters, numbers and symbols if the site allows them.
+3. Copy the password straight into your password manager or the site.
+4. Never reuse it on another account.
+
+#### Remember all those passwords
+Nobody can remember dozens of random passwords. Use a trusted password manager and protect it with one strong passphrase, which is a string of several random words.
+
+#### Extra protection
+- Turn on two-factor authentication wherever it is offered.
+- Be careful about phishing messages that ask for your password.
+- Change a password at once if a service reports a data breach.
+
+#### A note about hashes
+Sites should store a hash of your password, not the password itself. The Hash Generator shows what hashes look like, but plain SHA hashes are not suitable for storing passwords. Real systems use slow methods such as bcrypt or Argon2.
+
+Q: Is it safe to use an online password generator?
+A: It is safe when the password is generated in your browser and never sent anywhere, as with this tool.
+
+Q: How long should my password be?
+A: At least 12 characters, and 14 or more for email, banking and other important accounts.
+
+### What Is JSON? How to Format It and Fix Common Errors (https://vidnexastudio.com/blog/what-is-json-and-how-to-fix-json-errors/)
+JSON, or JavaScript Object Notation, is a simple text format for storing and sending data. APIs, settings files and apps use it everywhere. It is easy to read but unforgiving: one wrong comma and the whole file fails.
+
+#### What JSON looks like
+Data is written as keys and values inside curly braces, with lists inside square brackets. For example: {"name": "Asha", "age": 25, "skills": ["design", "code"]}.
+
+#### The most common JSON errors
+- A trailing comma after the last item.
+- Single quotes instead of double quotes around keys and text.
+- Unquoted keys.
+- Missing commas between items or a missing closing bracket.
+- Comments, which JSON does not allow.
+
+#### How to use the JSON Formatter
+1. Paste your JSON into the box.
+2. Press Format to add neat indentation, or Minify to remove extra spaces.
+3. Press Validate. If the JSON is wrong you see a message and the position of the problem.
+4. Fix the problem and format again.
+
+#### Format or minify?
+Formatted JSON is easier for people to read. Minified JSON removes spaces and line breaks, which makes the data a little smaller to send. Use formatted JSON while working and minified JSON when sending data.
+
+#### Keep sensitive data safe
+The tool parses your JSON in your browser. Even so, avoid pasting live passwords or secret keys into any website.
+
+Q: Why does my JSON say unexpected token?
+A: There is usually a stray character, a missing comma or a trailing comma near the position shown in the error.
+
+Q: Can JSON have comments?
+A: No. Remove comments, or use a format designed for config files that allows them.
+
+### Base64 and URL Encoding Explained With Simple Examples (https://vidnexastudio.com/blog/base64-and-url-encoding-explained/)
+Computers often need to send data through systems that only handle plain text. Base64 and URL encoding are two ways of making data safe for those systems.
+
+#### What is Base64?
+Base64 represents any data using 64 safe characters: letters, numbers, plus and slash. It is used to put images in HTML or CSS, send attachments by email and carry data in JSON. Base64 makes data about one third larger, and it is not encryption. Anyone can decode it.
+
+#### What is URL encoding?
+Web addresses can only contain certain characters. Others, such as spaces, ampersands and non-English letters, are replaced by a percent sign and two digits. A space becomes %20, so "cake recipe" becomes cake%20recipe.
+
+#### When to use which
+- Use URL encoding for text inside a link or query string.
+- Use Base64 to carry binary data, such as a small image, as text.
+- Never use either one to hide a password.
+
+#### How to use the tools
+1. Open the Base64 Encoder Decoder, paste text and choose encode or decode.
+2. Open the URL Encoder Decoder to make text safe for a link or to read a messy encoded link.
+3. Open Image to Base64 to turn a small image into a data URI you can paste into code.
+
+#### Common problems
+- Decoding fails if characters were lost when copying.
+- Encoding a whole URL, instead of only its values, can break it.
+- Plus signs in query strings may mean a space in some systems.
+
+Q: Is Base64 a type of encryption?
+A: No. It is just a way of writing data as text and anyone can reverse it.
+
+Q: Why is %20 in my link?
+A: It is the encoded form of a space character.
+
+### Unix Timestamps and UUIDs Explained for Beginners (https://vidnexastudio.com/blog/how-unix-timestamps-and-uuids-work/)
+Developers use two kinds of identifiers all the time: timestamps, to record when something happened, and UUIDs, to give things unique names.
+
+#### What is a Unix timestamp?
+A Unix timestamp is the number of seconds that have passed since 1 January 1970 at 00:00 UTC. It is one simple number that every computer in the world can compare, whatever the time zone. A 10-digit value is usually in seconds and a 13-digit value is in milliseconds.
+
+#### How to convert one
+1. Open the Timestamp Converter.
+2. Paste the number to see the date in your local time and in UTC.
+3. Or pick a date to get its timestamp.
+
+#### Good habits
+- Store times as UTC timestamps and convert them to local time only for display.
+- Check whether your system uses seconds or milliseconds.
+- Remember that the same timestamp shows different clock times in different time zones.
+
+#### What is a UUID?
+A UUID is a 128-bit identifier written like 3f2b8c1e-9a4d-4e6f-8b21-5c7d9e0a1f34. Version 4 UUIDs are made from random numbers. The chance of two being the same is so small that they are treated as unique, which is why databases and APIs use them as IDs without checking with a central server.
+
+#### Using the UUID Generator
+Choose how many you need and copy them. Use them as record IDs, test data or request IDs. A UUID is an identifier, not a secret, so do not use it as a password.
+
+Q: Why does a timestamp start in 1970?
+A: It is a convention chosen by early Unix systems, called the Unix epoch.
+
+Q: Can two UUIDs ever match?
+A: In theory yes, but the probability is so tiny it is ignored in practice.
+
+### How to Compress, Trim and Change Video Speed in Your Browser (https://vidnexastudio.com/blog/how-to-compress-trim-and-speed-up-videos-in-browser/)
+Sharing a big video on WhatsApp or a form with an upload limit is a common problem. Three simple edits fix most cases: trim it, compress it and, if you like, change the speed.
+
+#### How browser video editing works
+The browser plays your video and re-records it as a new file while it applies the change, for example a smaller size or a different speed. Because this happens in real time on your device, a 2 minute video takes about 2 minutes. Nothing is uploaded.
+
+#### Step 1: check the video
+Use Video Info to see the resolution, duration, size and bitrate. A 1080p video of a few minutes can be hundreds of megabytes.
+
+#### Step 2: trim it
+Open the Video Trimmer, choose the start and end points and preview the section. Cutting unneeded seconds reduces size immediately.
+
+#### Step 3: compress it
+Open the Video Compressor and choose a lower resolution or quality. Reducing resolution, for example from 1080p to 720p, saves the most space and is usually fine for phones.
+
+#### Optional: change the speed
+The Video Speed Changer can slow a clip down to 0.25x for slow motion or speed it up to 4x for a time-lapse effect. Sound speeds up or slows down with the picture.
+
+#### Tips
+- Keep the browser tab open and visible until the file is ready.
+- Test with a short clip to find the best settings.
+- Trim first, then compress.
+- Use a desktop browser such as Chrome or Edge for the best results.
+- Only edit videos you own or have permission to use.
+
+Q: Why does compressing take as long as the video?
+A: The browser records the video again in real time, so processing time is about the length of the video.
+
+Q: Which output format do I get?
+A: It depends on your browser, usually WebM or MP4.
+
+### How to Make a GIF, Extract Audio and Save Frames From a Video (https://vidnexastudio.com/blog/how-to-make-gif-extract-audio-and-save-video-frames/)
+Sometimes you need only part of a video: a funny moment as a GIF, a song or lecture as audio, or one perfect frame as a picture. These tools do it in your browser without uploading the video.
+
+#### Make a GIF from a video
+1. Open Video to GIF and choose your video.
+2. Pick the start time and a length of a few seconds.
+3. Choose the width and frame rate. 480 pixels wide and 10 to 12 frames per second is a good balance.
+4. Create the GIF and download it.
+GIFs store every frame as an image, so they become large quickly. Short clips and smaller sizes keep the file easy to share. GIFs do not carry sound.
+
+#### Extract the audio
+Video to Audio pulls the sound track out of a video and saves it as a WAV file. WAV is uncompressed, so the file is large, but quality is full. Convert it to MP3 later if you need a smaller file. Only extract audio from videos you own or have the right to use.
+
+#### Save a frame as an image
+1. Open the Video Frame Extractor and load the video.
+2. Move to the exact moment, using the step buttons for precision.
+3. Save the frame as PNG for best quality or JPG for a smaller file.
+The picture has the same resolution as the video, so a Full HD video gives a 1920 by 1080 image.
+
+#### Tips
+- Pause on a sharp moment, as motion can blur a frame.
+- Trim long videos first if you only need a section.
+- Keep the tab open until processing is finished.
+
+Q: Why is my GIF file so big?
+A: Shorten the clip, make it narrower or lower the frame rate.
+
+Q: Can I get MP3 audio?
+A: The tool saves WAV. Use an audio app to convert it to MP3 if needed.
+
+### How to Record Your Screen and Your Voice Online (No Software) (https://vidnexastudio.com/blog/how-to-record-your-screen-and-voice-online/)
+Tutorials, bug reports, online classes and voice notes all start with a recording. Modern browsers can record your screen and microphone directly, with your permission, so you do not need extra software.
+
+#### How to record your screen
+1. Open the Screen Recorder on a desktop browser such as Chrome or Edge.
+2. Press start and choose what to share: the whole screen, one window or one browser tab.
+3. Optionally allow audio, for example tab audio or your microphone.
+4. Press stop and download the video.
+Most mobile browsers do not allow screen capture from a web page. On a phone, use the screen recorder built into your phone instead.
+
+#### How to record your voice
+1. Open the Voice Recorder and allow microphone access.
+2. Press record and speak.
+3. Stop, listen back and download the recording.
+
+#### Tips for clearer recordings
+- Record in a quiet room and keep the microphone close.
+- Use headphones so the speakers do not cause echo.
+- Make a 10 second test first to check levels.
+- Close private tabs and mute notifications before sharing a screen.
+
+#### Privacy
+The browser asks for your permission each time. The recording is made on your device and is not uploaded. It is lost when you close the page unless you download it, so save it before leaving.
+Only record people, calls or screens when you have the right to do so.
+
+Q: Why can I not record my screen on my phone browser?
+A: Mobile browsers generally do not support screen capture for web pages. Use the phone's built-in recorder.
+
+Q: Is my recording stored online?
+A: No. It stays on your device.
+
+### How to Play 2048: Rules, Tips and a Winning Strategy (https://vidnexastudio.com/blog/how-to-play-2048-tips-and-strategy/)
+2048 is a sliding puzzle played on a four by four grid of numbered tiles. It is easy to learn and surprisingly deep.
+
+#### The rules
+1. Swipe or use the arrow keys to slide every tile in one direction.
+2. When two tiles with the same number touch, they merge into one tile with double the value.
+3. After every move a new tile appears.
+4. Reach the 2048 tile to win. You can keep playing for a higher score.
+5. The game ends when the board is full and no merge is possible. Use Undo, or press Z, if you slip.
+
+#### Strategy that works
+- Keep your biggest tile in one corner and never move it out. Choose a corner and mostly use only two directions, for example down and left.
+- Build a chain of tiles in descending order along one edge, so merges ripple along it.
+- Avoid pressing the direction that would move your corner tile away from the corner. If you must, plan to return it at once.
+- Keep the board tidy. Merge small tiles early rather than letting many different numbers fill the grid.
+- Think two moves ahead instead of making a move for a quick merge.
+
+#### Why people enjoy it
+The game rewards planning and patience. A session can last a minute or an hour, which makes it easy to play in short breaks. It is a good exercise in thinking ahead, and a session is just entertainment.
+Your best score is saved in your own browser. Try the game on Vidnexa Studio, free and with no sign-up.
+
+Q: What is the highest tile in 2048?
+A: The game continues beyond 2048. In theory the largest possible tile on a 4 by 4 board is 131072.
+
+Q: Is 2048 luck or skill?
+A: Both, but strategy matters a lot. Corner play greatly improves your results.
+
+### How to Play Snake: Modes, Controls and Tips for a High Score (https://vidnexastudio.com/blog/how-to-play-snake-modes-and-tips/)
+Snake is one of the oldest and most loved arcade games. You guide a snake around the board, eat apples to grow and avoid crashing.
+
+#### Controls
+- On a keyboard, use the arrow keys or WASD.
+- On a phone or tablet, swipe on the board in the direction you want to go.
+
+#### The three modes
+- Classic: the walls are deadly, so hitting an edge ends the game.
+- Wrap-around: the snake can pass through one edge and come out on the opposite side.
+- Rocks: obstacles appear as you grow, so you must plan routes around them.
+
+#### Scoring
+Each apple adds to your score and makes the snake longer. A golden star is worth 3 points but disappears quickly, so take it only when the route is safe.
+
+#### Tips
+1. Plan your path a few steps ahead, especially as the snake grows.
+2. Use the edges and make long loops so you keep open space in the middle.
+3. Do not chase every golden star. A safe route is worth more than 3 points.
+4. In Wrap-around mode, remember that you can turn at an edge instead of stopping.
+5. Stay calm. Panicky quick turns usually lead to crashing into your own tail.
+Your best score is saved in your own browser. Play Snake free on Vidnexa Studio.
+
+Q: Can I play Snake on my phone?
+A: Yes. Swipe on the board to steer.
+
+Q: Which mode is the easiest?
+A: Wrap-around is usually the most forgiving because the edges are not deadly.
+
+### How to Play Mine Radar: Rules, Flags and Strategy for Beginners (https://vidnexastudio.com/blog/how-to-play-mine-radar-rules-and-tips/)
+Mine Radar is a logic puzzle: clear a grid of squares without digging up a hidden mine. No luck is needed once you learn to read the numbers.
+
+#### The basics
+1. Tap a square to dig it.
+2. A number shows how many of the eight surrounding squares contain mines.
+3. A blank square means no mines are adjacent, and the game opens its neighbours for you.
+4. Mark squares you believe are mines with a flag, by pressing and holding or by using Flag mode.
+5. Clear every safe square to win.
+
+#### The quick-open trick
+When you have flagged exactly as many mines around a number as the number says, tap that number. All its other neighbours open at once. It saves many taps, but a wrong flag will make you hit a mine, so be careful.
+
+#### Simple logic patterns
+- If a number equals the count of unopened squares next to it, all of them are mines.
+- If a number already has all its mines flagged, the other neighbours are safe.
+- Corners and edges have fewer neighbours, so start there when you can.
+
+#### Tips
+- Start on the easiest level and learn the patterns.
+- Flag only mines you are sure about.
+- If you are stuck, look for a different area of the board instead of guessing.
+Mine Radar is free to play on Vidnexa Studio in your browser.
+
+Q: How do I flag a square on a phone?
+A: Press and hold the square, or turn on Flag mode.
+
+Q: Is the first tap safe?
+A: In most versions the first tap is safe. Check the rules shown in the game.
+
+### Memory and Reflex Games: How to Play Memory Match, Glow Chain, Mole Mallet and Sky Hop (https://vidnexastudio.com/blog/memory-and-reflex-games-guide/)
+Short games that test memory and reaction time are fun breaks, and each has a few simple tricks.
+
+#### Memory Match
+Flip two cards at a time and find every pair. Fewer moves earn more stars, and levels 10 to 12 have a limited number of moves. Tip: remember the position of every card you flip, even when it is not a match, and work in one area of the grid at a time.
+
+#### Glow Chain
+Press Start and watch the lights, then repeat the pattern by tapping the pads or by pressing keys 1 to 4 (1 to 6 on Hard). One step is added every round. In Normal and Hard, one mistake ends the game. Tip: group the sequence into chunks of three and say the colours quietly to yourself.
+
+#### Mole Mallet
+Pick a level and read its target score. Tap each mole as it pops up. Golden moles are worth 3 and you must never tap a bomb. Hits in a row build a combo up to x3. Tip: keep your eyes on the whole board, not one hole, and do not rush a tap on a bomb.
+
+#### Sky Hop
+Tap, click or press Space to hop through the gaps between pillars. Each gap is a point, and 10, 25, 40 and 60 points earn bronze, silver, gold and platinum medals. Tip: use short, steady taps and keep your rhythm.
+
+#### Do such games help your brain?
+Playing practises the specific game, and many people find it a relaxing way to focus. Research on whether casual games improve everyday memory or thinking is mixed, so enjoy them as entertainment and as a short mental break, not as a medical treatment. Regular sleep, exercise and learning new skills matter much more for brain health.
+
+Q: Which of these games is best for memory practice?
+A: Memory Match and Glow Chain both ask you to remember positions or sequences.
+
+Q: Are these games free?
+A: Yes. They run in your browser with no download or sign-up.
+
+### How to Play Teer Nikalo, Parking Ustad, Bus Bharo and Gulal Pop (https://vidnexastudio.com/blog/how-to-play-puzzle-games-teer-nikalo-parking-ustad-bus-bharo-gulal-pop/)
+These four puzzles reward thinking before tapping. Here is how each one works.
+
+#### Teer Nikalo
+Teer Nikalo has three puzzles in one.
+- Arrows: every arrow leaves in the direction its tip points. It gets out only if the path to the edge of the board is clear. If another arrow is in the way, there is a collision and you lose a heart. Clear the board before time runs out.
+- Ants: tap one branch, then another, to move the ants. Put four ants of the same colour on each branch.
+- Screws: only a screw with no plate on top can be opened. It goes to the box of its colour, or to the tray if there is no box. If the tray is full, you lose.
+
+#### Parking Ustad
+Tap a car and it drives out in the direction of its arrow, but only if the whole lane is clear. Even a car standing far away blocks the road. Finish a level without a single collision for 3 stars. Hint, Show direction and Remove boosters are there for hard levels.
+
+#### Bus Bharo
+Look at the passenger at the front of the queue and send out a bus of the same colour. Parking spots are limited. If all spots are full and the front passenger does not match any waiting bus, the level fails. You can buy one extra spot with coins.
+
+#### Gulal Pop
+Tap a bowl and it rides the belt, blasting open the pixels of its colour in the rangoli. Waiting spots are limited. Each finished rangoli is added to your collection.
+
+#### Tips for all four
+1. Look at the whole board before your first tap.
+2. Start with the pieces that are already free and work towards the blocked ones.
+3. Do not use boosters on early levels. Save them for hard ones.
+4. If you get stuck, restart the level. A fresh plan often works better than undoing.
+Progress and scores are saved in your own browser, so clearing your browser data resets them.
+
+Q: Do I need to download these games?
+A: No. They run in your browser.
+
+Q: Are the boosters free?
+A: Some boosters use coins you earn by playing. There is no payment needed.
+
+### How to Win at Tic Tac Toe and Solve the Sliding Puzzle (https://vidnexastudio.com/blog/how-to-play-tic-tac-toe-and-sliding-puzzle/)
+
+#### Tic Tac Toe
+Choose a board size and an opponent, then place your marks. On the 3 by 3 board you need 3 in a row, and on bigger boards you need 4 in a row. Hard mode on 3 by 3 never loses, so a draw is a good result against it.
+- Take the centre if you can, or a corner if the centre is taken.
+- Always check whether your opponent has two in a row and block the third.
+- Create a fork: a move that gives you two ways to win at once.
+- On bigger boards, build open lines with space on both ends.
+
+#### Sliding Puzzle
+Tap a tile in the same row or column as the gap to slide it. Put the tiles in order. Hold Peek to see the goal, and try to beat your best number of moves for each size.
+1. Solve the top row first and do not disturb it afterwards.
+2. Then solve the left column of what remains.
+3. Continue layer by layer, so the puzzle becomes smaller and smaller.
+4. Finish the last two by two area by rotating the tiles around the gap.
+The puzzles are generated so that they can always be solved. Practice makes you faster.
+
+Q: Can I always draw at Tic Tac Toe?
+A: Yes, with perfect play from both sides the 3 by 3 game is a draw.
+
+Q: What does Peek do in Sliding Puzzle?
+A: Hold it to see the finished picture while you play.
+
+### How to Edit a PDF for Free: Add Text, Sign, Highlight and Cover Mistakes (https://vidnexastudio.com/blog/how-to-edit-a-pdf-for-free-add-text-sign-and-highlight/)
+Many PDFs are not fillable forms, but you still need to write on them: a date, a name, a tick box or a signature. You do not need to install software for this. A browser-based PDF editor opens the file on your own device, lets you place items on the page and saves a new PDF.
+
+#### What you can do
+- Edit existing text: click a line and type the change in the same font, size and colour.
+- Add text anywhere on a page, with your choice of size and colour.
+- Draw a signature with your finger or mouse and place it on the page.
+- Insert an image such as a stamp or a scanned signature.
+- Add a tick or a cross.
+- Highlight lines you want to stand out.
+- Cover a mistake with a white box.
+
+#### Step by step
+1. Open the PDF Editor and choose your file.
+2. Pick Add text and click on the page where the text should start, then type.
+3. Drag the purple handle to move an item. For images, signatures and boxes, drag the corner square to resize.
+4. Use the arrows to go to the next page and repeat.
+5. Press Download edited PDF.
+
+#### How to correct existing text
+Choose Edit text and click the line you want to change. The editor reads that line's font, size and colour, covers the old words and writes your new words in the same style. When the PDF still holds the letters you type, the new text is drawn with the PDF's own font. If you type a letter the PDF never used, the editor switches to a close matching font such as a look-alike of Arial, Times or Calibri, so the line still looks natural. Press Enter when you finish, then check the page.
+One thing to know: the old words are covered, not erased. They remain hidden in the file and could still be found by copying or searching. So use this for corrections, not for hiding private information. For scanned pages there is no text to select, so use Whiteout and Add text on top.
+
+#### What it cannot do
+- Permanently remove the old words from the file or reflow a whole paragraph, which needs desktop PDF software.
+- Type in Hindi or other scripts. The built-in font supports basic Latin letters, numbers and common symbols.
+- Open a password protected PDF without the password.
+- Make a legally certified digital signature. A drawn signature is an image of your handwriting.
+
+#### Why your file stays private
+The editor opens and saves the PDF inside your browser. The file is not uploaded, so bank forms and ID copies stay on your device. See our guide on how browser-based tools work for the details.
+
+#### Tips for a clean result
+- Zoom the page so you can place text exactly on the line.
+- Use the same colour as the rest of the form, usually black or dark blue.
+- Open the downloaded file and check every page before you send it.
+
+Q: Will edited text look the same as the rest of the page?
+A: For common fonts such as Arial, Times New Roman, Calibri and Courier it usually does. The editor copies the size and colour and matches the background colour. A very decorative font or a photo behind the text can show a small difference, so zoom in and check before you send the file.
+
+Q: Is the signature legally valid?
+A: A drawn signature is an image of your handwriting. Many everyday documents accept it, but some need a certified digital signature or a witnessed signature. Check what the receiver requires.
+
+Q: Can I edit a scanned PDF?
+A: You can add text, signatures and boxes on top of a scanned page. You cannot change the scanned words, because they are part of the picture.
+
+### How to Rotate, Reorder and Delete PDF Pages, Add Page Numbers and a Watermark (https://vidnexastudio.com/blog/how-to-rotate-reorder-delete-pdf-pages-add-page-numbers-and-watermark/)
+A scanned or merged PDF is often messy: pages sideways, a blank page in the middle, the last page in the wrong place and no page numbers. These four jobs can be done in the browser without uploading the file.
+
+#### Rotate, move and delete pages
+1. Open the PDF Page Organizer and choose your file. Wait for the page thumbnails.
+2. Use the rotate buttons under a page to turn it left or right.
+3. Use the arrow buttons to move a page earlier or later.
+4. Use the cross button to remove a page.
+5. Press Download PDF.
+You can also press Add another PDF to bring in pages from a second file, or Add blank page to insert a blank sheet.
+
+#### Add page numbers
+1. Open the PDF Page Numbers and Watermark tool and choose Page numbers.
+2. Choose the position, such as bottom centre, and a format such as Page 1 of 10.
+3. Set the starting number. If your PDF has a cover page, tick the option to skip the first page.
+4. Check the preview and download.
+
+#### Add a watermark
+Choose Watermark, type a word such as DRAFT or CONFIDENTIAL and set the size, colour, opacity and angle. A light opacity of 15 to 25 percent keeps the page readable. The watermark is added to every page. Keep a copy of the original file, because the watermark cannot be removed afterwards.
+
+#### Turn PDF pages into images
+Use PDF to Image when you need a page as a picture, for example to put it on a slide or post it online. Choose PNG for sharp text or JPG for smaller files, choose the quality and optionally type the pages you want. Download single pages or all of them in a ZIP file.
+
+#### Good order of work
+1. Merge your files first with PDF Merge if you have several.
+2. Fix the pages in the Page Organizer.
+3. Add page numbers last, so the numbers match the final order.
+4. Add a watermark if the file must be marked.
+All four tools run on your device, so your documents are not uploaded.
+
+Q: Can I undo a watermark?
+A: No. Keep your original file. The watermark becomes part of the page in the new PDF.
+
+Q: Why should I add page numbers last?
+A: Because the numbers are written on the pages. If you move pages afterwards, the numbers will no longer be in order.
