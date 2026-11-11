@@ -1,6 +1,6 @@
 # Vidnexa Studio
 
-> Vidnexa Studio is an independent studio from India that makes Android apps, 50 free online tools and 13 free browser games. Tools run inside the visitor's browser: files and text are not uploaded. No sign-up is needed. Contact: info@vidnexastudio.com
+> Vidnexa Studio is an independent studio from India that makes Android apps, 50 free online tools and 18 free browser games. Tools run inside the visitor's browser: files and text are not uploaded. No sign-up is needed. Contact: info@vidnexastudio.com
 
 ## Apps
 - [Vidnexa Player](https://vidnexastudio.com/apps/vidnexa-player/): A clean video player for your Android phone.
@@ -65,6 +65,11 @@
 - [Voice Recorder](https://vidnexastudio.com/tools/voice-recorder/): The Voice Recorder records audio from your microphone and lets you play it back and download it, with no upload.
 
 ## Browser games
+- [Ludo](https://vidnexastudio.com/games/ludo/): The classic board game, 2 or 4 players.
+- [Carrom](https://vidnexastudio.com/games/carrom/): Flick the striker, pocket your coins.
+- [Block Puzzle](https://vidnexastudio.com/games/block-puzzle/): Fit the blocks, clear lines, no timer.
+- [Bubble Shooter](https://vidnexastudio.com/games/bubble-shooter/): Aim, shoot and pop groups of 3.
+- [Cricket Batting](https://vidnexastudio.com/games/cricket/): Time your shot: six, four or out.
 - [Snake](https://vidnexastudio.com/games/snake/): Eat, grow and don't hit the wall.
 - [2048](https://vidnexastudio.com/games/2048/): Slide and merge tiles to reach 2048.
 - [Memory Match](https://vidnexastudio.com/games/memory-match/): 12 levels of flipping cards.
@@ -108,6 +113,10 @@
 - [How to Win at Tic Tac Toe and Solve the Sliding Puzzle](https://vidnexastudio.com/blog/how-to-play-tic-tac-toe-and-sliding-puzzle/): Winning strategy for Tic Tac Toe on 3 by 3 and bigger boards, and a layer-by-layer method for solving the sliding tile puzzle.
 - [How to Edit a PDF for Free: Add Text, Sign, Highlight and Cover Mistakes](https://vidnexastudio.com/blog/how-to-edit-a-pdf-for-free-add-text-sign-and-highlight/): Edit a PDF in your browser: add text to a form, sign, insert an image, highlight and cover a mistake, plus what a browser-only editor cannot do.
 - [How to Rotate, Reorder and Delete PDF Pages, Add Page Numbers and a Watermark](https://vidnexastudio.com/blog/how-to-rotate-reorder-delete-pdf-pages-add-page-numbers-and-watermark/): Fix a messy PDF in your browser: rotate sideways pages, move or delete pages, add numbers and a watermark, and turn pages into images.
+- [How to Play Ludo: Rules, Safe Squares and Winning Tips](https://vidnexastudio.com/blog/how-to-play-ludo-rules-safe-squares-and-tips/): The full rules of Ludo in plain words: getting out with a 6, safe squares, capturing, the home column and the exact finish, plus tips that win more games.
+- [Carrom Rules and Tips for Beginners](https://vidnexastudio.com/blog/carrom-rules-and-tips-for-beginners/): How to play carrom: the striker, the coins and the queen, fouls, and a few tips for aiming and power that work on the board and in our online game.
+- [Block Puzzle: 7 Tips to Score Higher and Play Longer](https://vidnexastudio.com/blog/block-puzzle-tips-to-score-higher/): Simple strategy for block puzzle games: keep the board open, plan for the long piece, clear two lines at once and avoid the traps that end a game early.
+- [Cricket Batting Game: How to Time Your Shots for Sixes](https://vidnexastudio.com/blog/cricket-batting-game-timing-tips/): How the timing works in our Cricket Batting game, what gets you out, and how to chase a target with 3 wickets in 2 overs.
 
 ## Main pages
 - [Home](https://vidnexastudio.com/): Overview of apps, tools, games and guides

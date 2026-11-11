@@ -1422,6 +1422,84 @@ A: Only on your device when you download it. It is not uploaded.
 
 ## Games
 
+### Ludo (https://vidnexastudio.com/games/ludo/)
+Ludo is the classic Indian board game of dice and tokens. Each player has four tokens that start in a base, and you need a 6 to bring a token onto the track. Tokens travel clockwise around the board and then up their own coloured home column into the centre. Landing on an opponent sends it back to its base unless it is standing on a safe square, and the first player to bring all four tokens home wins. This version lets you play 2 or 4 players against the computer or pass the phone between friends.
+
+Q: How do I get a token out of the base?
+A: Roll a 6. A 6 also gives you another turn, but three 6s in a row lose the turn.
+
+Q: Which squares are safe?
+A: The four start squares and the four star squares. A token standing there cannot be captured.
+
+Q: Do I need the exact number to finish?
+A: Yes. A token in the home column moves only if the roll fits exactly into the centre.
+
+Q: Can I play with friends?
+A: Yes. Choose With friends and pass the phone around. Each colour takes its turn.
+
+Q: Does the computer cheat?
+A: No. It rolls the same random dice as you and simply picks a sensible move.
+
+### Carrom (https://vidnexastudio.com/games/carrom/)
+Carrom is a tabletop game from India where you flick a heavy striker to knock small wooden coins into the four corner pockets. In this browser version you play white against the computer. Drag the striker along your baseline, pull back to aim and set the power, and release to shoot. Pocket your own coins to keep your turn, avoid pocketing the striker, and cover the red queen with one of your coins to claim her. The first player to pocket all nine coins wins.
+
+Q: How do I aim?
+A: Press on the striker and drag away from the direction you want to shoot, like pulling a catapult. The dotted line shows the direction and the red line shows the power.
+
+Q: What happens if I pocket the striker?
+A: It is a foul. One of your pocketed coins is placed back in the centre and your turn ends.
+
+Q: What is the queen?
+A: The red coin. If you pocket her, you must pocket one of your own coins in the same turn to cover her, otherwise she returns to the centre.
+
+Q: Can I play with a friend?
+A: Not yet. This version is you against the computer with three skill levels.
+
+### Block Puzzle (https://vidnexastudio.com/games/block-puzzle/)
+Block Puzzle is a calm puzzle game played on an 8 by 8 board. You get three pieces at a time and drag each one onto the board where it fits. Pieces cannot be rotated, so you have to plan. When a row or a column is completely filled it clears and you score. Clearing several lines at once, or clearing on consecutive moves, scores more. The game has no timer and ends only when none of your pieces fits anywhere.
+
+Q: Can I rotate the pieces?
+A: No. Each piece must be placed as shown, which is what makes the puzzle interesting.
+
+Q: How is the score calculated?
+A: One point per block placed, plus a bonus for every line cleared. Multiple lines in one move and combos on consecutive moves add extra.
+
+Q: Is there a time limit?
+A: No. Take as long as you like.
+
+Q: What is a good strategy?
+A: Keep the board open, avoid leaving single holes, and save a straight line of space for the long five-block piece.
+
+### Bubble Shooter (https://vidnexastudio.com/games/bubble-shooter/)
+Bubble Shooter is a classic aim-and-pop puzzle. A shooter at the bottom fires coloured bubbles into a honeycomb of bubbles at the top. When the bubble you shoot touches three or more of the same colour, the whole group pops, and any bubbles left hanging without support fall down for extra points. Every few shots a new row is pushed in from the top, so you have to keep clearing. Pop the whole board to finish a level and start the next one with more colours.
+
+Q: How do I aim?
+A: Move your finger or mouse to point the dotted line, then release or click to shoot. On a keyboard use the arrow keys and Space.
+
+Q: Can I bounce the bubble off the walls?
+A: Yes. Aim at a side wall to reach bubbles hidden behind others.
+
+Q: What are the levels?
+A: The board is refilled with a bigger mix of colours each time you clear it. Hard mode starts with more rows and colours.
+
+Q: When is the game over?
+A: When the bubbles reach the dotted line near the bottom.
+
+### Cricket Batting (https://vidnexastudio.com/games/cricket/)
+Cricket Batting is a quick timing game. The bowler runs in and the ball comes down the pitch, and your job is to tap exactly when it reaches the bat. Perfect timing sends the ball for six, slightly early or late gives a four or a couple of runs, and a very early or very late swing can get you bowled or caught. Choose a 2 over or 5 over innings to set a high score, or Chase mode to beat a random target within 2 overs and 3 wickets.
+
+Q: When should I tap?
+A: When the ball is in the yellow zone in front of the bat. Tap Hit, tap the pitch or press Space.
+
+Q: Why did I get out?
+A: Swinging far too early or far too late loses a wicket. Letting the ball go through without a swing is bowled.
+
+Q: How many wickets do I have?
+A: Three in every mode.
+
+Q: Does the bowling get harder?
+A: Yes. Hard bowling is faster and the timing window is smaller. Easy is slower and more forgiving.
+
 ### Snake (https://vidnexastudio.com/games/snake/)
 Snake is a classic arcade game where you steer a growing snake to eat apples without hitting walls, rocks or yourself. This version has three modes: Classic, Wrap-around and Rocks. Golden stars give 3 points but vanish quickly. Your best score is saved in your own browser.
 
@@ -2424,3 +2502,114 @@ A: No. Keep your original file. The watermark becomes part of the page in the ne
 
 Q: Why should I add page numbers last?
 A: Because the numbers are written on the pages. If you move pages afterwards, the numbers will no longer be in order.
+
+### How to Play Ludo: Rules, Safe Squares and Winning Tips (https://vidnexastudio.com/blog/how-to-play-ludo-rules-safe-squares-and-tips/)
+Ludo is one of the most played board games in India. It is simple enough for children and still has real decisions in it. Here are the rules as used in our free Ludo game, followed by the tips that matter most.
+
+#### The rules
+1. Each player has four tokens in a base. You need a 6 to bring a token onto the track. A 6 also gives you an extra roll.
+2. Tokens move clockwise around the board by the number rolled. If you roll three 6s in a row, you lose that turn.
+3. If your token lands on a square with an opponent's token, the opponent is sent back to its base and you roll again.
+4. Start squares and star squares are safe. A token standing on them cannot be captured.
+5. After one full lap, a token turns into its own coloured home column. It needs the exact number to reach the centre.
+6. The first player to bring all four tokens to the centre wins.
+
+#### Tips to win more often
+- Bring more than one token out early. With only one token on the track you often waste good rolls.
+- Prefer moves that end on a safe square, especially when an opponent is one to six squares behind you.
+- Capturing is worth more than racing: it costs the opponent a whole lap.
+- Keep a token near your home column entry, so a late 6 is not wasted.
+- Count the squares. If the opponent sits exactly six squares ahead of you, you have a one in six chance to capture it this roll.
+
+#### Playing with friends on one phone
+Choose With friends and 2 or 4 players. The colour whose turn it is shows above the board, so pass the phone around. The game saves your settings in your browser, nothing is uploaded.
+
+Q: Can I play Ludo offline?
+A: Once the page has loaded, the game runs in your browser and does not need the internet.
+
+Q: Is the dice fair?
+A: Yes. Every roll is a random number from 1 to 6 for every player, including the computer.
+
+Q: What if no token can move?
+A: The turn passes to the next player automatically.
+
+### Carrom Rules and Tips for Beginners (https://vidnexastudio.com/blog/carrom-rules-and-tips-for-beginners/)
+Carrom is India's tabletop game of flicks and angles. You hit a heavy striker with your finger to knock the small coins into the corner pockets. Our online Carrom follows the same ideas, so the tips below help in both.
+
+#### The basics
+- There are 9 white coins, 9 black coins and one red queen. One player takes white, the other black.
+- Place the striker anywhere on your baseline and flick it. You keep your turn as long as you pocket one of your own coins.
+- Pocketing the striker is a foul: one of your pocketed coins returns to the centre.
+- The queen must be covered. After pocketing her, pocket one of your own coins in the same turn, otherwise she goes back to the centre.
+- The first player to pocket all nine coins wins. The queen adds 3 points.
+
+#### Aiming
+Imagine a straight line from the pocket through the coin you want to hit and a little further. The striker has to arrive at that point on the far side of the coin. In the online game, drag the striker to the spot on your baseline that lines up with that point, then pull back in the opposite direction and release.
+
+#### Tips
+- Use less power than you think. A slow coin drops into the pocket; a fast one bounces out.
+- Use the cushions. A coin near a side wall can be pocketed by bouncing the striker off the wall first.
+- Break the centre pile with medium power so coins spread but do not fly into the opponent's pockets.
+- Leave the queen until a coin of yours is easy to pocket afterwards, otherwise you lose her again.
+- On Hard, the computer rarely misses an open shot, so do not leave your coins hanging near a pocket.
+
+Q: How do I set the power?
+A: The red line that appears when you pull back shows the power. A longer line is a harder shot.
+
+Q: Can I pocket the queen first?
+A: You can, but she only counts if you pocket one of your coins in the same turn.
+
+Q: Does the game work on phones?
+A: Yes. Drag with your finger. Landscape or portrait both work.
+
+### Block Puzzle: 7 Tips to Score Higher and Play Longer (https://vidnexastudio.com/blog/block-puzzle-tips-to-score-higher/)
+Block puzzle games look like luck, but most games end because of a few avoidable mistakes. These tips apply to our free Block Puzzle and to most block games on phones.
+1. Look at all three pieces before placing any of them. Sometimes the order matters.
+2. Keep one long straight gap open at all times. The five-block line is the piece that ends most games.
+3. Fill from the edges and corners inward, so the middle stays flexible.
+4. Never leave single-square holes. Only the one-block piece can fill them, and it does not come often.
+5. Set up double clears: a row and a column that will both complete with one piece. They score far more than two separate clears.
+6. Place the big 3 by 3 square as soon as it appears. It is the hardest piece to fit later.
+7. When the board is almost full, use the small pieces to open a line rather than to score.
+
+#### How scoring works
+You get one point for every block you place and a bonus for every line you clear. Clearing two or more lines in one move multiplies the bonus, and clearing on consecutive moves builds a combo. So a patient game that sets up big clears beats a fast one.
+
+Q: Can I rotate pieces in Block Puzzle?
+A: No. Pieces are placed as shown, which is why planning matters.
+
+Q: Is there a time limit?
+A: No. The game only ends when no piece fits.
+
+Q: Does the game save my best score?
+A: Yes, in your own browser. Nothing is uploaded.
+
+### Cricket Batting Game: How to Time Your Shots for Sixes (https://vidnexastudio.com/blog/cricket-batting-game-timing-tips/)
+Our Cricket Batting game is all about timing. The ball comes down the pitch and you tap once when it reaches the bat. Here is how the timing zones work and how to score more.
+
+#### The timing zones
+- Perfect, right in the yellow zone: six runs.
+- Slightly early or late: four runs.
+- A bit more off: two runs if early, one run if late.
+- Clearly early or late: a dot ball, no run.
+- Far too early: caught. Far too late, or no swing at all: bowled.
+
+#### Modes
+- 2 overs: 12 balls, 3 wickets, set a high score.
+- 5 overs: 30 balls, 3 wickets, a longer innings.
+- Chase: beat a random target in 12 balls with 3 wickets.
+
+#### Tips
+- Watch the ball, not the bowler. The speed changes from ball to ball.
+- In Chase mode, count what you need. If 8 runs are needed from 4 balls, two fours are enough. Do not swing wildly for a six on every ball.
+- On Hard the window is small and the ball is fast, so wait a fraction longer than feels natural.
+- Three boundaries in a row show a streak. Keep it going for bragging rights, not extra runs.
+
+Q: How many wickets do I get?
+A: Three in every mode.
+
+Q: Does the game work with a keyboard?
+A: Yes. Press Space or Enter to bowl and to hit.
+
+Q: Is my best score saved?
+A: Yes, separately for each mode and bowling level, in your own browser.
