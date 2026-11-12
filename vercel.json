@@ -1,14 +1,14 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "www.vidnexastudio.com"
         }
       ],
-      "destination": "https://vidnexastudio.com/:path*",
+      "destination": "https://vidnexastudio.com/$1",
       "permanent": true
     },
     {
