@@ -3,8 +3,8 @@
  "short_name": "Vidnexa",
  "start_url": "/",
  "display": "standalone",
- "background_color": "#0E0B1F",
- "theme_color": "#0E0B1F",
+ "background_color": "#070A1F",
+ "theme_color": "#070A1F",
  "icons": [
   {
    "src": "/img/icon-192.png",

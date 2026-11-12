@@ -50,3 +50,27 @@
     });
   }
 })();
+
+/* scroll reveal + hero parallax */
+(function () {
+  "use strict";
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var els = document.querySelectorAll(".rv");
+  if (reduce || !("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("seen"); }); }
+  else {
+    var io = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("seen"); io.unobserve(x.target); } }); }, { rootMargin: "0px 0px -8% 0px", threshold: .08 });
+    els.forEach(function (e) { io.observe(e); });
+  }
+  var hx = document.querySelector(".hx");
+  if (hx && !reduce && window.matchMedia("(pointer:fine)").matches) {
+    var raf = 0;
+    window.addEventListener("pointermove", function (e) {
+      if (raf) return;
+      raf = requestAnimationFrame(function () {
+        raf = 0; var b = hx.getBoundingClientRect();
+        var mx = Math.max(-1, Math.min(1, (e.clientX - (b.left + b.width / 2)) / (b.width))), my = Math.max(-1, Math.min(1, (e.clientY - (b.top + b.height / 2)) / (b.height)));
+        hx.style.setProperty("--mx", mx.toFixed(3)); hx.style.setProperty("--my", my.toFixed(3));
+      });
+    }, { passive: true });
+  }
+})();

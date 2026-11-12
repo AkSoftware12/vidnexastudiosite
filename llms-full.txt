@@ -1422,6 +1422,24 @@ A: Only on your device when you download it. It is not uploaded.
 
 ## Games
 
+### Bead Snake 3D (https://vidnexastudio.com/games/bead-snake/)
+Bead Snake 3D is a fast runner game played on a 3D track. You control a snake made of beads that moves forward on its own, and you steer it left and right. Numbered blocks stand in the way: running into a block costs as many beads as the number on it, so you look for the cheapest gap. White bead bundles along the track add beads, and walls between the lanes stop you from sliding sideways. Each level is a little faster, and the run ends when your snake has no beads left.
+
+Q: How do I steer?
+A: Drag your finger or mouse left and right anywhere on the track. On a keyboard use the arrow keys or A and D.
+
+Q: What do the block colours mean?
+A: Colours compare the block to your length. Green blocks are cheap, yellow and orange cost a good part of your snake, and red blocks cost about as much as you have or more.
+
+Q: How do I get more beads?
+A: Collect the white bead bundles. The number above a bundle is how many beads it adds.
+
+Q: Is it a real 3D game?
+A: The track, blocks and beads are drawn in 3D perspective right in your browser, with no download and no plug-in.
+
+Q: Is my best score saved?
+A: Yes, in your own browser. Nothing is uploaded.
+
 ### Ludo (https://vidnexastudio.com/games/ludo/)
 Ludo is the classic Indian board game of dice and tokens. Each player has four tokens that start in a base, and you need a 6 to bring a token onto the track. Tokens travel clockwise around the board and then up their own coloured home column into the centre. Landing on an opponent sends it back to its base unless it is standing on a safe square, and the first player to bring all four tokens home wins. This version lets you play 2 or 4 players against the computer or pass the phone between friends.
 
@@ -2613,3 +2631,29 @@ A: Yes. Press Space or Enter to bowl and to hit.
 
 Q: Is my best score saved?
 A: Yes, separately for each mode and bowling level, in your own browser.
+
+### Bead Snake 3D: How to Play and Tips to Go Further (https://vidnexastudio.com/blog/bead-snake-3d-how-to-play-and-tips/)
+Bead Snake 3D is a runner game: your snake of beads moves forward on its own and you only steer it left and right. The trick is choosing which blocks to hit and which bead bundles to grab.
+
+#### The rules
+- The number above the snake's head is how many beads you have.
+- Running into a block costs as many beads as the number on the block. The block breaks when its number reaches zero.
+- White bead bundles add beads. The number above a bundle tells you how many.
+- Walls between lanes cannot be crossed, so plan your lane early.
+- The run ends when you have no beads left. Every level is a little faster.
+
+#### Tips
+- Look two rows ahead, not just at the next one. The cheapest block is often on the other side of the track.
+- In a full row of blocks there is always at least one cheap block. Find it before you arrive.
+- Grab bundles even if it means a small detour, as long as no wall blocks your way back.
+- Block colours compare the block to your length: go for green, avoid red.
+- Use Slow mode to learn the patterns, then try Fast for higher scores.
+
+Q: Does Bead Snake 3D need a download?
+A: No. It runs in your browser on phones and computers.
+
+Q: Can I play with a keyboard?
+A: Yes. Use the left and right arrow keys or A and D.
+
+Q: Is it free?
+A: Yes, completely free, with no sign-up.

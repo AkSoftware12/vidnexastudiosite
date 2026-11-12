@@ -1,6 +1,6 @@
 # Vidnexa Studio
 
-> Vidnexa Studio is an independent studio from India that makes Android apps, 50 free online tools and 18 free browser games. Tools run inside the visitor's browser: files and text are not uploaded. No sign-up is needed. Contact: info@vidnexastudio.com
+> Vidnexa Studio is an independent studio from India that makes Android apps, 50 free online tools and 19 free browser games. Tools run inside the visitor's browser: files and text are not uploaded. No sign-up is needed. Contact: info@vidnexastudio.com
 
 ## Apps
 - [Vidnexa Player](https://vidnexastudio.com/apps/vidnexa-player/): A clean video player for your Android phone.
@@ -65,6 +65,7 @@
 - [Voice Recorder](https://vidnexastudio.com/tools/voice-recorder/): The Voice Recorder records audio from your microphone and lets you play it back and download it, with no upload.
 
 ## Browser games
+- [Bead Snake 3D](https://vidnexastudio.com/games/bead-snake/): Steer a bead snake, smash number blocks.
 - [Ludo](https://vidnexastudio.com/games/ludo/): The classic board game, 2 or 4 players.
 - [Carrom](https://vidnexastudio.com/games/carrom/): Flick the striker, pocket your coins.
 - [Block Puzzle](https://vidnexastudio.com/games/block-puzzle/): Fit the blocks, clear lines, no timer.
@@ -117,6 +118,7 @@
 - [Carrom Rules and Tips for Beginners](https://vidnexastudio.com/blog/carrom-rules-and-tips-for-beginners/): How to play carrom: the striker, the coins and the queen, fouls, and a few tips for aiming and power that work on the board and in our online game.
 - [Block Puzzle: 7 Tips to Score Higher and Play Longer](https://vidnexastudio.com/blog/block-puzzle-tips-to-score-higher/): Simple strategy for block puzzle games: keep the board open, plan for the long piece, clear two lines at once and avoid the traps that end a game early.
 - [Cricket Batting Game: How to Time Your Shots for Sixes](https://vidnexastudio.com/blog/cricket-batting-game-timing-tips/): How the timing works in our Cricket Batting game, what gets you out, and how to chase a target with 3 wickets in 2 overs.
+- [Bead Snake 3D: How to Play and Tips to Go Further](https://vidnexastudio.com/blog/bead-snake-3d-how-to-play-and-tips/): How Bead Snake 3D works: steering, bead bundles, numbered blocks, walls and levels, plus simple tips to keep your snake long and reach higher levels.
 
 ## Main pages
 - [Home](https://vidnexastudio.com/): Overview of apps, tools, games and guides
